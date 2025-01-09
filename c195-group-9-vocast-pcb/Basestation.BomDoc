@@ -1,0 +1,28 @@
+|RECORD=BOM|VERSION=6|FILENAME=C:\Users\aymanalamayri\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.$$$|KIND=ALTIUM_DESIGNER_LIVEBOM|DATE=09.01.2025|TIME=13:49:08|CURRENCY=USD|PRODUCTIONQUANTITY=1|PERUNITTARGETPRICE=0|PERUNITACTUALPRICE=0
+|RECORD=GeneralOptions|OPENEXPORTED=False|ADDTOPROJECT=False|FORCEFIT=False|NOTFITTED=False|TEMPLATEFILENAME=|BATCHMODE=0|SUPPLIERPRODQTY=0|SUPPLIERAUTOQTY=False|SUPPLIERUSECACHEDPRICING=False|SUPPLIERCURRENCY=|SOLUTIONSPERITEM=1|SUPPLIERSPERSOLUTION=1|DISPLAYTOTALROW=False|DISPLAYSUBTOTALSFORGROUPS=False|INCLUDEPCBPARAMETERS=False|INCLUDEDBPARAMETERS=False|INCLUDEVAULTPARAMETERS=False|INCLUDECLOUDPARAMETERS=False|INCLUDEDOCUMENTPARAMETERS=False|FILTEROUTRISKYSOLUTIONS=True|DESIGNATORGROUPING=No
+|RECORD=SortOrderOptions|SORTORDER=
+|RECORD=GroupOrderOptions|GROUPORDER=
+|RECORD=VisibleOrderOptions|VISIBLEORDER=Line #=52!Comment=102!Description=109!Designator=75!Manufacturer 1=97!Manufacturer Part Number 1=161!Manufacturer Lifecycle 1=141!Supplier 1=72!Supplier Part Number 1=136!Supplier Unit Price 1=121!Supplier Subtotal 1=115
+|RECORD=VisibleOrderOptions2|BASEVIEW=Line #=52!Comment=102!Description=109!Designator=75!Quantity=64!Manufacturer 1=97!Manufacturer Part Number 1=161!Manufacturer Lifecycle 1=141!Supplier 1=72!Supplier Part Number 1=136!Supplier Unit Price 1=121!Supplier Subtotal 1=115|FLATVIEW=Line #=52!Comment=102!Description=109!Designator=75!Manufacturer 1=97!Manufacturer Part Number 1=161!Manufacturer Lifecycle 1=141!Supplier 1=72!Supplier Part Number 1=136!Supplier Unit Price 1=121!Supplier Subtotal 1=115|CONSOLIDATEDVIEW=Line #=52!Comment=102!Description=109!Designator=75!Quantity=64!Manufacturer 1=97!Manufacturer Part Number 1=161!Manufacturer Lifecycle 1=141!Supplier 1=72!Supplier Part Number 1=136!Supplier Unit Price 1=121!Supplier Subtotal 1=115
+|RECORD=CustomColumns|CUSTOMCOLUMNS=
+|RECORD=ColumnsAliases|COLUMNSALIASES=Comment=Name
+|RECORD=FilterOptions|FILTER=
+|RECORD=CheckGroupCompParamsOptions|CHECKGROUPCOMPPARAMS=Comment=0,Description=0,Value=0,Footprint=1
+|RECORD=ManufacturerLinkOptions|MANUFACTURERLINKPARAMETERS=
+|RECORD=FavoriteSuppliers|PARTSOURCES=|SUPPLIERS=|USESUPPLIERORDER=False
+|RECORD=CheckOptions|CHECKLEVELS=
+|RECORD=ExternalCheckOptions|CHECKLEVELS=
+|RECORD=LineNumberingOptions|STARTVALUE=|INCREMENT=
+|RECORD=Catalog|DBLINKFILEPATH=
+|RECORD=CatalogItem|ITEMTYPE=Automatic-NonVault|UNIQUEID=*\AP7387-33SA-7|DESIGNITEMID=AP7387-33SA-7|ITEMSOURCE=*|STATUS=Unknown|DESCRIPTION=Integrated Circuit|USERCOMMENTS=AP7387-33SA-7|NOTE=|LINENUMBER=|SELECTEDPARAMETERSHASH=AP7387-33SA-7,"Integrated Circuit"|COMPONENTPARAMETERS="Arrow Part Number=AP7387-33SA-7","Arrow Price/Stock=https://www.arrow.com/en/products/ap7387-33sa-7/diodes-incorporated?region=nac",Comment=AP7387-33SA-7,"Component Kind=Standard","Datasheet Link=https://www.diodes.com//assets/Datasheets/AP7387.pdf","Description=Integrated Circuit",Footprint=SOT96P240X110-3N,Height=1.1mm,"Ibis Model=","Library Name=","Library Reference=AP7387-33SA-7","Manufacturer_Name=Diodes Incorporated",Manufacturer_Part_Number=AP7387-33SA-7,"Mouser Part Number=621-AP7387-33SA-7","Mouser Price/Stock=https://www.mouser.co.uk/ProductDetail/Diodes-Incorporated/AP7387-33SA-7?qs=Li%252BoUPsLEns03p83ewgDsA%3D%3D",PCB3D=,"Pin Info=",Simulation=|CUSTOMPARAMETERS=
+|RECORD=ManufacturerLink|MANUFACTURER=Diodes|MPN=AP7387-33SA-7
+|RECORD=PartChoiceGroups|GROUPBYFIELDCOUNT=0
+|RECORD=CatalogItem|ITEMTYPE=Automatic-NonVault|UNIQUEID=*\ESP32-S3|DESIGNITEMID=ESP32-S3|ITEMSOURCE=*|STATUS=Unknown|DESCRIPTION=Integrated Circuit|USERCOMMENTS=ESP32-S3|NOTE=|LINENUMBER=|SELECTEDPARAMETERSHASH=ESP32-S3,"Integrated Circuit"|COMPONENTPARAMETERS="Arrow Part Number=","Arrow Price/Stock=",Comment=ESP32-S3,"Component Kind=Standard","Datasheet Link=https://nl.mouser.com/datasheet/2/891/Espressif_ESP32_S3_Datasheet-2904763.pdf","Description=Integrated Circuit",Footprint=QFN40P700X700X90-57N-D,Height=0.9mm,"Ibis Model=","Library Name=","Library Reference=ESP32-S3","Manufacturer_Name=Espressif Systems",Manufacturer_Part_Number=ESP32-S3,"Mouser Part Number=356-ESP32-S3","Mouser Price/Stock=https://www.mouser.co.uk/ProductDetail/Espressif-Systems/ESP32-S3?qs=Rp5uXu7WBW%2FNWuUy%252BBihNw%3D%3D",PCB3D=,"Pin Info=",Simulation=|CUSTOMPARAMETERS=
+|RECORD=ManufacturerLink|MANUFACTURER=Espressif Systems|MPN=ESP32-S3
+|RECORD=PartChoiceGroups|GROUPBYFIELDCOUNT=0
+|RECORD=CatalogItem|ITEMTYPE=Automatic-NonVault|UNIQUEID=*\IEC-EW-4|DESIGNITEMID=IEC-EW-4|ITEMSOURCE=*|STATUS=Unknown|DESCRIPTION=Connector
+AC Mains|USERCOMMENTS=IEC-EW-4|NOTE=|LINENUMBER=|SELECTEDPARAMETERSHASH="Connector
+AC Mains",IEC-EW-4|COMPONENTPARAMETERS="Arrow Part Number=IEC-EW-4","Arrow Price/Stock=https://www.arrow.com/en/products/iec-ew-4/adam-tech",Comment=IEC-EW-4,"Component Kind=Standard","Datasheet Link=https://app.adam-tech.com/products/download/data_sheet/203624/iec-ew-4-data-sheet.pdf","Description=Connector
+AC Mains",Footprint=IECEW4,Height=28.1686mm,"Ibis Model=","Library Name=","Library Reference=IEC-EW-4","Manufacturer_Name=Adam Tech",Manufacturer_Part_Number=IEC-EW-4,"Mouser Part Number=737-IEC-EW-4","Mouser Price/Stock=https://www.mouser.co.uk/ProductDetail/Adam-Tech/IEC-EW-4?qs=TTVbHWoAP%2FR9RTj60Q%2FRRg%3D%3D",PCB3D=,"Pin Info=",Simulation=|CUSTOMPARAMETERS=
+|RECORD=ManufacturerLink|MANUFACTURER=Adam Equipment|MPN=IEC-EW-4
+|RECORD=PartChoiceGroups|GROUPBYFIELDCOUNT=0
