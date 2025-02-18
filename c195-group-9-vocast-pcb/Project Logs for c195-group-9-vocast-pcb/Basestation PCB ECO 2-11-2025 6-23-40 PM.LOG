@@ -1,0 +1,38 @@
+Add Component: Footprint Not Found QFN40P700X700X90-57N-D
+Add Component: Footprint Not Found SOT96P240X110-3N
+Add Component: Footprint Not Found IECEW4
+Added Net: Name=+3.3
+Added Net: Name=GND
+Added Net: Name=NetIC?_2
+Added Net: Name=NetIC?_5
+Added Net: Name=NetIC?_6
+Added Net: Name=NetIC?_7
+Added Net: Name=NetIC?_8
+Added Net: Name=NetIC?_9
+Added Net: Name=NetIC?_10
+Added Net: Name=NetIC?_11
+Added Net: Name=NetIC?_12
+Added Net: Name=NetIC?_13
+Added Net: Name=NetIC?_14
+Added Net: Name=NetIC?_15
+Added Net: Name=NetIC?_16
+Added Net: Name=NetIC?_17
+Added Net: Name=NetIC?_18
+Added Net: Name=NetIC?_19
+Added Net: Name=NetIC?_23
+Added Net: Name=NetIC?_24
+Added Net: Name=NetIC?_25
+Added Net: Name=NetIC?_26
+Added Net: Name=NetIC?_27
+Added Net: Name=NetIC?_38
+Added Net: Name=NetIC?_39
+Added Net: Name=NetIC?_40
+Added Net: Name=NetIC?_41
+Added Net: Name=NetIC?_42
+Added Net: Name=NetIC?_43
+Added Net: Name=NetIC?_51
+Added Net: Name=NetIC?_52
+Added Class: Name=Power
+Added Class: Name=Wireless
+Added Rule: Name=Schematic Supply Nets
+Added Rule: Name=Schematic Supply Nets_1

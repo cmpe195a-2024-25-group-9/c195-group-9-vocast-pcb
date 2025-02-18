@@ -84,6 +84,23 @@ GenerateClassCluster=0
 DocumentUniqueId=IJFQOAJP
 
 [Document3]
+DocumentPath=DSP.SchDoc
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=0
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=EMFPSIEP
+
+[Document4]
 DocumentPath=Wireless.SchDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -99,23 +116,6 @@ ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=BEVKNCNX
-
-[Document4]
-DocumentPath=Audio.SchDoc
-AnnotationEnabled=1
-AnnotateStartValue=1
-AnnotationIndexControlEnabled=0
-AnnotateSuffix=
-AnnotateScope=All
-AnnotateOrder=-1
-DoLibraryUpdate=1
-DoDatabaseUpdate=1
-ClassGenCCAutoEnabled=1
-ClassGenCCAutoRoomEnabled=0
-ClassGenNCAutoScope=None
-DItemRevisionGUID=
-GenerateClassCluster=0
-DocumentUniqueId=
 
 [Document5]
 DocumentPath=Power.SchDoc
@@ -135,7 +135,7 @@ GenerateClassCluster=0
 DocumentUniqueId=DCXCDLNH
 
 [Document6]
-DocumentPath=Display.SchDoc
+DocumentPath=IO.SchDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
@@ -149,7 +149,7 @@ ClassGenCCAutoRoomEnabled=0
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=OJNVZEAU
+DocumentUniqueId=LEXEJDPH
 
 [Document7]
 DocumentPath=Basestation.PcbDoc
@@ -205,12 +205,22 @@ OutputName1=PCAD Netlist
 OutputDocumentPath1=
 OutputVariantName1=
 OutputDefault1=0
+OutputType2=XSpiceNetlist
+OutputName2=Mixed Sim Netlist
+OutputDocumentPath2=
+OutputVariantName2=
+OutputDefault2=0
 
 [OutputGroup2]
 Name=Simulator Outputs
 Description=
 TargetPrinter=Brother HL-L2390DW
 PrinterOptions=Record=PrinterOptions|Copies=1|Duplex=1|TrueTypeOptions=3|Collate=1|PrintJobKind=1|PrintWhat=1
+OutputType1=AdvSimNetlist
+OutputName1=Mixed Sim
+OutputDocumentPath1=
+OutputVariantName1=
+OutputDefault1=0
 
 [OutputGroup3]
 Name=Documentation Outputs
@@ -543,6 +553,21 @@ OutputName6=AutoCAD dwg/dxf File Schematic
 OutputDocumentPath6=
 OutputVariantName6=
 OutputDefault6=0
+OutputType7=ExportPARASOLID
+OutputName7=Export PARASOLID
+OutputDocumentPath7=
+OutputVariantName7=[No Variations]
+OutputDefault7=0
+OutputType8=ExportSTEP
+OutputName8=Export STEP
+OutputDocumentPath8=
+OutputVariantName8=[No Variations]
+OutputDefault8=0
+OutputType9=ExportVRML
+OutputName9=Export VRML
+OutputDocumentPath9=
+OutputVariantName9=[No Variations]
+OutputDefault9=0
 
 [OutputGroup10]
 Name=PostProcess Outputs
