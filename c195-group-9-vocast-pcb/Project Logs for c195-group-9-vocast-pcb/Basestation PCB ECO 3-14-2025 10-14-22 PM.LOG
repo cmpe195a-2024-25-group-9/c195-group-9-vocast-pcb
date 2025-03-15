@@ -1,0 +1,9 @@
+Removed Pin From Net: NetName=DC_NEUTRAL Pin=J1-2
+Removed Pin From Net: NetName=DC_NEUTRAL Pin=ST1-1
+Removed Pin From Net: NetName=DC_NEUTRAL Pin=ST2-1
+Added Pin To Net: NetName=EARTH_GND Pin=J1-2
+Added Pin To Net: NetName=EARTH_GND Pin=ST1-1
+Added Pin To Net: NetName=EARTH_GND Pin=ST2-1
+Added Net: Name=EARTH_GND
+Added Member To Class: ClassName=Power Member=Component R8 RG3216P-9532-B-T5
+Added Rule: Name=Schematic Supply Nets
