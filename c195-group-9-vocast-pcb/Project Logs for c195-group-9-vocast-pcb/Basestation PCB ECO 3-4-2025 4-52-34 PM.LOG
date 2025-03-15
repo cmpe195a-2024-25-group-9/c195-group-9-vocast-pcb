@@ -1,0 +1,11 @@
+Added Component: Designator=T?(Z9007BL)
+Add component (AddParameter): Name = "Arrow Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Arrow Price/Stock"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet Link"; Value = "https://www.coilcraft.com/getmedia/04e8f70d-a647-4b17-980a-cbfeb91a7699/y8844.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = "29.7mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Name"; Value = "COILCRAFT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "Z9007-BL"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Part Number"; Value = "994-Z9007-BL"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Price/Stock"; Value = "https://www.mouser.co.uk/ProductDetail/Coilcraft/Z9007-BL?qs=ZYnrCdKdyefNGXV8jniB1Q%3D%3D"; VariantName = "[No Variations]"
+Added Member To Class: ClassName=Wireless Member=Component R? RC0603JR-070RL
+Added Member To Class: ClassName=Power Member=Component T? Z9007-BL

@@ -1,0 +1,16 @@
+Removed Member From Class: ClassName=Power Member=F?
+Added Component: Designator=U?(03450121H)
+Add component (AddParameter): Name = "Arrow Part Number"; Value = "03450121H"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Arrow Price/Stock"; Value = "https://www.arrow.com/en/products/03450121h/littelfuse?region=nac"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet Link"; Value = "https://componentsearchengine.com/Datasheets/1/03450121H.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = "12.2mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Name"; Value = "LITTELFUSE"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "03450121H"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Part Number"; Value = "576-03450121H"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Price/Stock"; Value = "https://www.mouser.co.uk/ProductDetail/Littelfuse/03450121H?qs=gu7KAQ731UTyGxoC8AawrA%3D%3D"; VariantName = "[No Variations]"
+Added Member To Class: ClassName=Power Member=Component Q? IPT60R028G7XTMA1
+Added Member To Class: ClassName=Power Member=Component Q? IPT60R028G7XTMA1
+Added Member To Class: ClassName=Power Member=Component Q? IPT60R028G7XTMA1
+Added Member To Class: ClassName=Wireless Member=Component R? RC0603JR-070RL
+Added Member To Class: ClassName=Power Member=Component T? Z9007-BL
+Added Member To Class: ClassName=Power Member=Component U? 03450121H

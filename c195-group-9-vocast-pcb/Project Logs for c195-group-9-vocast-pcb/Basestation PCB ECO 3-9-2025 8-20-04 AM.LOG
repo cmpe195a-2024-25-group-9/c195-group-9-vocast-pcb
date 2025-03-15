@@ -1,0 +1,79 @@
+Removed Pin From Net: NetName=DC_NEUTRAL Pin=IC1-7
+Removed Member From Class: ClassName=DSP Member=IC?
+Removed Member From Class: ClassName=Power Member=T?
+Change Component Designator: OldDesignator=IC1 NewDesignator=IC3
+Change Component Designator: OldDesignator=IC? NewDesignator=IC1
+Change Component Designator: OldDesignator=IC? NewDesignator=IC2
+Change Component Designator: OldDesignator=J? NewDesignator=J1
+Change Component Designator: OldDesignator=R? NewDesignator=R1
+Change Component Designator: OldDesignator=R? NewDesignator=R2
+Change Component Designator: OldDesignator=T? NewDesignator=T1
+Change Component Designator: OldDesignator=U? NewDesignator=U1
+Added Component: Designator=C1(CAPC2012X145N)
+Add component (AddParameter): Name = "Arrow Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Arrow Price/Stock"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet Link"; Value = "http://www.yageo.com/documents/recent/UPY-AC_NP0X7R_16V-to-630V_12.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = "1.45mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Name"; Value = "KEMET"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "AC0805KFX7R9BB224"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Price/Stock"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=C2(CAPC2012X145N)
+Add component (AddParameter): Name = "Arrow Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Arrow Price/Stock"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet Link"; Value = "http://www.yageo.com/documents/recent/UPY-AC_NP0X7R_16V-to-630V_12.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = "1.45mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Name"; Value = "KEMET"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "AC0805KFX7R9BB224"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Price/Stock"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=C3(CAPC3225X200N)
+Add component (AddParameter): Name = "Arrow Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Arrow Price/Stock"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet Link"; Value = "http://www.rubycon.co.jp/en/catalog/e_pdfs/pmlcap/e_MU.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = "2mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Name"; Value = "Rubycon"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "25MU225MB23225"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Part Number"; Value = "232-25MU225MB23225"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Price/Stock"; Value = "https://www.mouser.co.uk/ProductDetail/Rubycon/25MU225MB23225?qs=T3oQrply3y80th0zXFlwOw%3D%3D"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=AC_LIVE Pin=C1-1
+Added Pin To Net: NetName=AC_NEUTRAL Pin=C2-1
+Added Pin To Net: NetName=GND Pin=C3-1
+Added Pin To Net: NetName=GND Pin=IC3-7
+Added Pin To Net: NetName=AC_NEUTRAL Pin=IC3-10
+Added Pin To Net: NetName=GND Pin=U1-4
+Change Net Name : Old Net Name=NetIC?_5 New Net Name=NetIC2_5
+Change Net Name : Old Net Name=NetIC?_7 New Net Name=NetIC2_7
+Change Net Name : Old Net Name=NetIC?_8 New Net Name=NetIC2_8
+Change Net Name : Old Net Name=NetIC?_9 New Net Name=NetIC2_9
+Change Net Name : Old Net Name=NetIC?_10 New Net Name=NetIC2_10
+Change Net Name : Old Net Name=NetIC?_11 New Net Name=NetIC2_11
+Change Net Name : Old Net Name=NetIC?_13 New Net Name=NetIC2_13
+Change Net Name : Old Net Name=NetIC?_14 New Net Name=NetIC2_14
+Change Net Name : Old Net Name=NetIC?_20 New Net Name=NetIC2_20
+Change Net Name : Old Net Name=NetIC?_29 New Net Name=NetIC2_29
+Change Net Name : Old Net Name=NetIC?_44 New Net Name=NetIC2_44
+Change Net Name : Old Net Name=NetIC?_45 New Net Name=NetIC2_45
+Change Net Name : Old Net Name=NetIC?_47 New Net Name=NetIC2_47
+Change Net Name : Old Net Name=NetIC?_48 New Net Name=NetIC2_48
+Added Pin To Net: NetName=NetC1_2 Pin=C1-2
+Added Pin To Net: NetName=NetC1_2 Pin=IC3-2
+Added Net: Name=NetC1_2
+Added Pin To Net: NetName=NetC2_2 Pin=C2-2
+Added Pin To Net: NetName=NetC2_2 Pin=IC3-11
+Added Net: Name=NetC2_2
+Added Pin To Net: NetName=NetC3_2 Pin=C3-2
+Added Pin To Net: NetName=NetC3_2 Pin=IC3-6
+Added Net: Name=NetC3_2
+Added Pin To Net: NetName=NetT1_1 Pin=T1-1
+Added Pin To Net: NetName=NetT1_1 Pin=T1-3
+Added Net: Name=NetT1_1
+Added Pin To Net: NetName=NetT1_4 Pin=T1-4
+Added Pin To Net: NetName=NetT1_4 Pin=T1-6
+Added Net: Name=NetT1_4
+Added Member To Class: ClassName=Power Member=Component C1 220nF 50VAC 0805
+Added Member To Class: ClassName=Power Member=Component C2 220nF 50VAC 0805
+Added Member To Class: ClassName=Power Member=Component C3 22uF 25VDC 1210
+Added Member To Class: ClassName=DSP Member=Component IC1 MIMXRT1062DVJ6B
+Added Member To Class: ClassName=Wireless Member=Component R1 RC0603JR-070RL
+Added Member To Class: ClassName=Power Member=Component T1 Z9007-BL

@@ -1,0 +1,138 @@
+Removed Pin From Net: NetName=DC_NEUTRAL Pin=Q1-3-4-5-6-7-8
+Removed Pin From Net: NetName=AC_LIVE Pin=Q1-9
+Removed Pin From Net: NetName=DC_NEUTRAL Pin=Q2-3-4-5-6-7-8
+Removed Pin From Net: NetName=AC_NEUTRAL Pin=Q2-9
+Removed Pin From Net: NetName=AC_LIVE Pin=Q3-3-4-5-6-7-8
+Removed Pin From Net: NetName=DC_POSITIVE Pin=Q3-9
+Removed Pin From Net: NetName=AC_NEUTRAL Pin=Q4-3-4-5-6-7-8
+Removed Pin From Net: NetName=DC_POSITIVE Pin=Q4-9
+Change Component Footprint: Designator=Q1 Old Footprint=FP-PG-HSOF-8-MFG New Footprint=TO546P531X1980X2918-3P
+Change Component Footprint: Designator=Q2 Old Footprint=FP-PG-HSOF-8-MFG New Footprint=TO546P531X1980X2918-3P
+Change Component Footprint: Designator=Q3 Old Footprint=FP-PG-HSOF-8-MFG New Footprint=TO546P531X1980X2918-3P
+Change Component Footprint: Designator=Q4 Old Footprint=FP-PG-HSOF-8-MFG New Footprint=TO546P531X1980X2918-3P
+Change Component Comment : Designator=Q1 Old Comment=IPT60R028G7XTMA1 New Comment=IXFK140N30P
+Change Component Comment : Designator=Q2 Old Comment=IPT60R028G7XTMA1 New Comment=IXFK140N30P
+Change Component Comment : Designator=Q3 Old Comment=IPT60R028G7XTMA1 New Comment=IXFK140N30P
+Change Component Comment : Designator=Q4 Old Comment=IPT60R028G7XTMA1 New Comment=IXFK140N30P
+Change Component Designator: OldDesignator=C? NewDesignator=C4
+Change Component Designator: OldDesignator=C? NewDesignator=C5
+Change Component Designator: OldDesignator=C? NewDesignator=C6
+Change Component Designator: OldDesignator=C? NewDesignator=C7
+Change Component Designator: OldDesignator=F? NewDesignator=F1
+Change Component Designator: OldDesignator=R? NewDesignator=R3
+Change Component Designator: OldDesignator=R? NewDesignator=R4
+Change Component Designator: OldDesignator=R? NewDesignator=R5
+Change Component Designator: OldDesignator=R? NewDesignator=R6
+Change Component Designator: OldDesignator=R? NewDesignator=R7
+Change Component Designator: OldDesignator=R? NewDesignator=R8
+Change Component Designator: OldDesignator=R? NewDesignator=R9
+Change Component Designator: OldDesignator=R? NewDesignator=R10
+Change Component Designator: OldDesignator=SW? NewDesignator=SW1
+Change Component Designator: OldDesignator=T? NewDesignator=T1
+Change Component Designator: OldDesignator=U? NewDesignator=U1
+Change Managed Component Library Link : Designator=Q1 Old VaultGUID=B7D15EC3-160A-466F-A46C-7801FE6295A7 New VaultGUID= Old ItemGUID=08701C5A-A680-4ECC-AD1A-C5A3CE9DF592 New ItemGUID= Old RevisionGUID=850F1C9C-88A0-43EB-8A42-390437491544 New RevisionGUID=
+Change Managed Component Library Link : Designator=Q2 Old VaultGUID=B7D15EC3-160A-466F-A46C-7801FE6295A7 New VaultGUID= Old ItemGUID=08701C5A-A680-4ECC-AD1A-C5A3CE9DF592 New ItemGUID= Old RevisionGUID=850F1C9C-88A0-43EB-8A42-390437491544 New RevisionGUID=
+Change Managed Component Library Link : Designator=Q3 Old VaultGUID=B7D15EC3-160A-466F-A46C-7801FE6295A7 New VaultGUID= Old ItemGUID=08701C5A-A680-4ECC-AD1A-C5A3CE9DF592 New ItemGUID= Old RevisionGUID=850F1C9C-88A0-43EB-8A42-390437491544 New RevisionGUID=
+Change Managed Component Library Link : Designator=Q4 Old VaultGUID=B7D15EC3-160A-466F-A46C-7801FE6295A7 New VaultGUID= Old ItemGUID=08701C5A-A680-4ECC-AD1A-C5A3CE9DF592 New ItemGUID= Old RevisionGUID=850F1C9C-88A0-43EB-8A42-390437491544 New RevisionGUID=
+Change component parameters: Designator = "Q1" ("Q1"); Footprint = "FP-PG-HSOF-8-MFG"; UniqueID = "\DDLERSLP" ("\DDLERSLP")
+Change component parameters (AddParameter): Name = "Arrow Part Number"; Value = "IXFK140N30P"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Arrow Price/Stock"; Value = "https://www.arrow.com/en/products/ixfk140n30p/ixys"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Datasheet Link"; Value = "https://componentsearchengine.com/Datasheets/2/IXFK140N30P.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Height"; Value = "5.31mm"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer_Name"; Value = "LITTELFUSE"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer_Part_Number"; Value = "IXFK140N30P"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mouser Part Number"; Value = "747-IXFK140N30P"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mouser Price/Stock"; Value = "https://www.mouser.co.uk/ProductDetail/IXYS/IXFK140N30P?qs=t7yjd2JO%2FgTrzNUezcCXnA%3D%3D"; VariantName = "[No Variations]"
+Change component parameters: Designator = "Q2" ("Q2"); Footprint = "FP-PG-HSOF-8-MFG"; UniqueID = "\MLTYBSAT" ("\MLTYBSAT")
+Change component parameters (AddParameter): Name = "Arrow Part Number"; Value = "IXFK140N30P"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Arrow Price/Stock"; Value = "https://www.arrow.com/en/products/ixfk140n30p/ixys"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Datasheet Link"; Value = "https://componentsearchengine.com/Datasheets/2/IXFK140N30P.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Height"; Value = "5.31mm"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer_Name"; Value = "LITTELFUSE"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer_Part_Number"; Value = "IXFK140N30P"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mouser Part Number"; Value = "747-IXFK140N30P"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mouser Price/Stock"; Value = "https://www.mouser.co.uk/ProductDetail/IXYS/IXFK140N30P?qs=t7yjd2JO%2FgTrzNUezcCXnA%3D%3D"; VariantName = "[No Variations]"
+Change component parameters: Designator = "Q3" ("Q3"); Footprint = "FP-PG-HSOF-8-MFG"; UniqueID = "\LDCZZOKT" ("\LDCZZOKT")
+Change component parameters (AddParameter): Name = "Arrow Part Number"; Value = "IXFK140N30P"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Arrow Price/Stock"; Value = "https://www.arrow.com/en/products/ixfk140n30p/ixys"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Datasheet Link"; Value = "https://componentsearchengine.com/Datasheets/2/IXFK140N30P.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Height"; Value = "5.31mm"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer_Name"; Value = "LITTELFUSE"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer_Part_Number"; Value = "IXFK140N30P"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mouser Part Number"; Value = "747-IXFK140N30P"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mouser Price/Stock"; Value = "https://www.mouser.co.uk/ProductDetail/IXYS/IXFK140N30P?qs=t7yjd2JO%2FgTrzNUezcCXnA%3D%3D"; VariantName = "[No Variations]"
+Change component parameters: Designator = "Q4" ("Q4"); Footprint = "FP-PG-HSOF-8-MFG"; UniqueID = "\GRRQUWPI" ("\GRRQUWPI")
+Change component parameters (AddParameter): Name = "Arrow Part Number"; Value = "IXFK140N30P"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Arrow Price/Stock"; Value = "https://www.arrow.com/en/products/ixfk140n30p/ixys"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Datasheet Link"; Value = "https://componentsearchengine.com/Datasheets/2/IXFK140N30P.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Height"; Value = "5.31mm"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer_Name"; Value = "LITTELFUSE"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer_Part_Number"; Value = "IXFK140N30P"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mouser Part Number"; Value = "747-IXFK140N30P"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mouser Price/Stock"; Value = "https://www.mouser.co.uk/ProductDetail/IXYS/IXFK140N30P?qs=t7yjd2JO%2FgTrzNUezcCXnA%3D%3D"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=AC_LIVE Pin=Q1-2
+Added Pin To Net: NetName=DC_NEUTRAL Pin=Q1-3
+Added Pin To Net: NetName=AC_NEUTRAL Pin=Q2-2
+Added Pin To Net: NetName=DC_NEUTRAL Pin=Q2-3
+Added Pin To Net: NetName=DC_POSITIVE Pin=Q3-2
+Added Pin To Net: NetName=AC_LIVE Pin=Q3-3
+Added Pin To Net: NetName=DC_POSITIVE Pin=Q4-2
+Added Pin To Net: NetName=AC_NEUTRAL Pin=Q4-3
+Change Net Name : Old Net Name=NetC?_1 New Net Name=NetC7_1
+Change Net Name : Old Net Name=NetC?_2 New Net Name=NetC5_2
+Change Net Name : Old Net Name=NetF?_1 New Net Name=NetF1_1
+Change Net Name : Old Net Name=NetR?_1 New Net Name=NetR5_1
+Added Pin To Net: NetName=NetC5_1 Pin=C5-1
+Added Pin To Net: NetName=NetC5_1 Pin=U1-7
+Added Net: Name=NetC5_1
+Added Pin To Net: NetName=NetC6_2 Pin=C6-2
+Added Pin To Net: NetName=NetC6_2 Pin=U1-6
+Added Net: Name=NetC6_2
+Added Pin To Net: NetName=NetR3_1 Pin=R3-1
+Added Pin To Net: NetName=NetR3_1 Pin=R4-2
+Added Pin To Net: NetName=NetR3_1 Pin=U1-16
+Added Net: Name=NetR3_1
+Added Pin To Net: NetName=NetR5_2 Pin=R5-2
+Added Pin To Net: NetName=NetR5_2 Pin=R6-1
+Added Pin To Net: NetName=NetR5_2 Pin=U1-12
+Added Net: Name=NetR5_2
+Added Pin To Net: NetName=NetR7_1 Pin=R7-1
+Added Pin To Net: NetName=NetR7_1 Pin=R8-1
+Added Pin To Net: NetName=NetR7_1 Pin=U1-2
+Added Pin To Net: NetName=NetR7_1 Pin=U1-3
+Added Pin To Net: NetName=NetR7_1 Pin=U1-4
+Added Net: Name=NetR7_1
+Added Pin To Net: NetName=NetR7_2 Pin=R7-2
+Added Pin To Net: NetName=NetR7_2 Pin=R9-1
+Added Pin To Net: NetName=NetR7_2 Pin=U1-5
+Added Net: Name=NetR7_2
+Added Pin To Net: NetName=NetR8_2 Pin=R8-2
+Added Pin To Net: NetName=NetR8_2 Pin=R10-1
+Added Pin To Net: NetName=NetR8_2 Pin=U1-1
+Added Net: Name=NetR8_2
+Added Pin To Net: NetName=TRAN_AUX_N Pin=T1-7
+Added Net: Name=TRAN_AUX_N
+Added Pin To Net: NetName=TRAN_AUX_P Pin=T1-6
+Added Net: Name=TRAN_AUX_P
+Added Pin To Net: NetName=TRAN_IN_N Pin=T1-4
+Added Net: Name=TRAN_IN_N
+Added Pin To Net: NetName=TRAN_IN_P Pin=T1-2
+Added Net: Name=TRAN_IN_P
+Added Pin To Net: NetName=TRAN_OUT_N Pin=T1-8
+Added Pin To Net: NetName=TRAN_OUT_N Pin=T1-9
+Added Pin To Net: NetName=TRAN_OUT_N Pin=T1-10
+Added Net: Name=TRAN_OUT_N
+Added Pin To Net: NetName=TRAN_OUT_P Pin=T1-12
+Added Pin To Net: NetName=TRAN_OUT_P Pin=T1-13
+Added Pin To Net: NetName=TRAN_OUT_P Pin=T1-14
+Added Net: Name=TRAN_OUT_P
+Added Member To Class: ClassName=Power Member=Component C5 CC0603KRX7R7BB104
+Added Member To Class: ClassName=Power Member=Component C6 GRM188R71A225KE15D
+Added Member To Class: ClassName=Power Member=Component C7 GRM188R61E475KE11D
+Added Member To Class: ClassName=Power Member=Component R4 CRCW1206499KFKEA
+Added Member To Class: ClassName=Power Member=Component R5 RT1206BRD071ML
+Added Member To Class: ClassName=Power Member=Component R6 RG3216P-9532-B-T5
+Added Member To Class: ClassName=Power Member=Component R7 100kohm 1% 0603
+Added Member To Class: ClassName=Power Member=Component R8 40.2kohm 1% 0603
+Added Member To Class: ClassName=Power Member=Component R9 221kohm 1% 0603
+Added Member To Class: ClassName=Power Member=Component R10 16.5kohm 1% 0603

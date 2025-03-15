@@ -1,0 +1,63 @@
+Change Component Designator: OldDesignator=IC? NewDesignator=IC1
+Change Component Designator: OldDesignator=Q? NewDesignator=Q1
+Change Component Designator: OldDesignator=Q? NewDesignator=Q2
+Change Component Designator: OldDesignator=Q? NewDesignator=Q3
+Change Component Designator: OldDesignator=Q? NewDesignator=Q4
+Added Component: Designator=F1(SS5H4AAPH)
+Add component (AddParameter): Name = "Arrow Part Number"; Value = "SS-5H-4A-APH"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Arrow Price/Stock"; Value = "https://www.arrow.com/en/products/ss-5h-4a-aph/eaton"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet Link"; Value = "https://www.eaton.com/content/dam/eaton/products/electronic-components/resources/data-sheet/eaton-ss-5h-subminiature-radial-leaded-time-delay-fuses-data-sheet.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = "8.55mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Name"; Value = "Eaton"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "SS-5H-4A-APH"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Part Number"; Value = "504-SS-5H-4A-APH"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Price/Stock"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=F?(3132874)
+Add component (AddParameter): Name = "Arrow Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Arrow Price/Stock"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet Link"; Value = "https://www.schurter.com/en/datasheet/ogn"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = "12.7mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Name"; Value = "SCHURTER"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "3-132-874"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Part Number"; Value = "693-3-132-874"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Price/Stock"; Value = "https://www.mouser.co.uk/ProductDetail/Schurter/3-132-874?qs=vvQtp7zwQdNVuNUsJ79Inw%3D%3D"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=GND Pin=J?-2
+Added Pin To Net: NetName=AC_LIVE Pin=F1-2
+Added Pin To Net: NetName=AC_LIVE Pin=IC1-1
+Added Pin To Net: NetName=AC_LIVE Pin=Q1-9
+Added Pin To Net: NetName=AC_LIVE Pin=Q3-3-4-5-6-7-8
+Added Net: Name=AC_LIVE
+Added Pin To Net: NetName=AC_NEUTRAL Pin=J?-1
+Added Pin To Net: NetName=AC_NEUTRAL Pin=Q2-9
+Added Pin To Net: NetName=AC_NEUTRAL Pin=Q4-3-4-5-6-7-8
+Added Net: Name=AC_NEUTRAL
+Added Pin To Net: NetName=DC_NEUTRAL Pin=IC1-7
+Added Pin To Net: NetName=DC_NEUTRAL Pin=Q1-3-4-5-6-7-8
+Added Pin To Net: NetName=DC_NEUTRAL Pin=Q2-3-4-5-6-7-8
+Added Net: Name=DC_NEUTRAL
+Added Pin To Net: NetName=DC_POSITIVE Pin=IC1-14
+Added Pin To Net: NetName=DC_POSITIVE Pin=Q3-9
+Added Pin To Net: NetName=DC_POSITIVE Pin=Q4-9
+Added Net: Name=DC_POSITIVE
+Added Pin To Net: NetName=GATE_HL Pin=IC1-3
+Added Pin To Net: NetName=GATE_HL Pin=Q3-1
+Added Net: Name=GATE_HL
+Added Pin To Net: NetName=GATE_HR Pin=IC1-12
+Added Pin To Net: NetName=GATE_HR Pin=Q4-1
+Added Net: Name=GATE_HR
+Added Pin To Net: NetName=GATE_LL Pin=IC1-5
+Added Pin To Net: NetName=GATE_LL Pin=Q1-1
+Added Net: Name=GATE_LL
+Added Pin To Net: NetName=GATE_LR Pin=IC1-8
+Added Pin To Net: NetName=GATE_LR Pin=Q2-1
+Added Net: Name=GATE_LR
+Added Pin To Net: NetName=NetF1_1 Pin=F1-1
+Added Pin To Net: NetName=NetF1_1 Pin=J?-3
+Added Net: Name=NetF1_1
+Added Member To Class: ClassName=Power Member=Component F1 SS-5H-4A-APH
+Added Member To Class: ClassName=Power Member=Component F? 3-132-874
+Added Member To Class: ClassName=Power Member=Component Q1 IPT60R028G7XTMA1
+Added Member To Class: ClassName=Power Member=Component Q2 IPT60R028G7XTMA1
+Added Member To Class: ClassName=Power Member=Component Q3 IPT60R028G7XTMA1
+Added Member To Class: ClassName=Wireless Member=Component R? RC0603JR-070RL
+Added Member To Class: ClassName=Power Member=Component T? Z9007-BL

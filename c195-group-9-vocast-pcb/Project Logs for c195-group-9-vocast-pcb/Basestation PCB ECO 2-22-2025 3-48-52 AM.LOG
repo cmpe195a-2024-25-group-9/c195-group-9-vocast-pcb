@@ -1,0 +1,16 @@
+Added Component: Designator=T?(WE-UOST , EE16_8_5 , SMD)
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Manufacturer URL"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "http://www.we-online.com"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2Description"; Value = "Datasheet"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2URL"; Value = "http://katalog.we-online.de/pbs/datasheet/760871543.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Inductance"; Value = "1310 µH"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "Wuerth Elektronik"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Output Current 1"; Value = "0.30A"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Output Current 2"; Value = "1.15A"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Output votage 1"; Value = "24V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Output votage 2"; Value = "5V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageReference"; Value = "WE-UOST , EE16_8_5 , SMD"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PartNumber"; Value = "760871543"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Turns Ratio"; Value = ""140 "," 22 : 6 : 16""; VariantName = "[No Variations]"
+Added Member To Class: ClassName=Wireless Member=Component R? RC0603JR-070RL
+Added Member To Class: ClassName=Power Member=Component T? 760871543

@@ -1,0 +1,20 @@
+Added Component: Designator=H?(69450)
+Add component (AddParameter): Name = "Arrow Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Arrow Price/Stock"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet Link"; Value = "https://wakefieldthermal.com/content/data_sheets/690%20%281%29.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = "35.05mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Name"; Value = "Wakefield Thermal"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "694-50"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Part Number"; Value = "567-694-50"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Price/Stock"; Value = "https://www.mouser.co.uk/ProductDetail/Wakefield-Vette/694-50?qs=vLWxofP3U2yyl70GNsSaJQ%3D%3D"; VariantName = "[No Variations]"
+Added Component: Designator=H?(69450)
+Add component (AddParameter): Name = "Arrow Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Arrow Price/Stock"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet Link"; Value = "https://wakefieldthermal.com/content/data_sheets/690%20%281%29.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = "35.05mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Name"; Value = "Wakefield Thermal"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "694-50"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Part Number"; Value = "567-694-50"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Price/Stock"; Value = "https://www.mouser.co.uk/ProductDetail/Wakefield-Vette/694-50?qs=vLWxofP3U2yyl70GNsSaJQ%3D%3D"; VariantName = "[No Variations]"
+Added Member To Class: ClassName=Overview Member=Component H? 694-50
+Added Member To Class: ClassName=Overview Member=Component H? 694-50

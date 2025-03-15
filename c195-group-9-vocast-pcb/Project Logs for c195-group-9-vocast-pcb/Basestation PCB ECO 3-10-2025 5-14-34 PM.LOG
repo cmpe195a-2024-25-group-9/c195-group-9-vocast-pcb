@@ -1,0 +1,53 @@
+Removed Pin From Net: NetName=GND Pin=U1-4
+Removed Member From Class: ClassName=DSP Member=IC3
+Removed Member From Class: ClassName=Power Member=T1
+Removed Member From Class: ClassName=Power Member=U1
+Added Component: Designator=T?(ETD34_750811330)
+Add component (AddParameter): Name = "Auxiliary Voltage"; Value = "18V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Case/Package"; Value = "ETD34"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Category"; Value = "Transformers For AC-DC Converter"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Component Type"; Value = "Standard"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Website Link"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "https://www.we-online.com/redexpert/article/750811330?ad"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2Description"; Value = "Datasheet Link"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2URL"; Value = "https://www.we-online.com/redexpert/spec/750811330?ad"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Design Item ID"; Value = "750811330"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = "30.48mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Inductance"; Value = "300uH"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Input Voltage"; Value = "85 - 265V (AC)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Insulation Test Voltage"; Value = "4500V (AC)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Length"; Value = "39.6mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "Wurth Elektronik"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number"; Value = "750811330"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Match Code"; Value = "WE-OLLT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mount"; Value = "Through Hole"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Operating Temperature Max"; Value = "125°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Operating Temperature Min"; Value = "-40°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Output Current"; Value = "5A"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Output Voltage"; Value = "18V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Packaging"; Value = "Tray"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Pins"; Value = "10"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Saturation Current"; Value = "4A"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Source"; Value = "WE-OLLT.SchLib"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Switching Frequency"; Value = "200kHz"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Width"; Value = "43.18mm"; VariantName = "[No Variations]"
+Added Component: Designator=U?(LT-MSE-16-EDP_L)
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Manufacturer URL"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "http://www.linear.com/"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2Description"; Value = "Datasheet"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2URL"; Value = "http://cds.linear.com/docs/en/datasheet/3798fa.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink3Description"; Value = "Package Specification"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink3URL"; Value = "http://cds.linear.com/docs/en/packaging/05081667_F_MSE16.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "DatasheetVersion"; Value = "Rev. A"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "Linear Technology"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mounting Technology"; Value = "Surface Mount"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Number of Outputs"; Value = "1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageDescription"; Value = "16-Pin Plastic MSOP, Exposed Die Pad, Body 4.039 x 3 mm, Pitch 0.5 mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageReference"; Value = "MSE-16"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageVersion"; Value = "Rev. F, 05/2013"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PartNumber"; Value = "LT3798EMSE#PBF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RoHS"; Value = "TRUE"; VariantName = "[No Variations]"
+Added Member To Class: ClassName=DSP Member=Component IC1 MIMXRT1062DVJ6B
+Added Member To Class: ClassName=Wireless Member=Component R2 RC0603JR-070RL
+Added Member To Class: ClassName=Power Member=Component T? 750811330
+Added Member To Class: ClassName=Power Member=Component U? LT3798EMSE#PBF

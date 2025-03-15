@@ -1,0 +1,9 @@
+Removed Member From Class: ClassName=Power Member=F?
+Removed Member From Class: ClassName=DSP Member=IC1
+Removed Member From Class: ClassName=Wireless Member=IC1
+Added Member To Class: ClassName=DSP Member=Component IC? MIMXRT1062DVJ6B
+Added Member To Class: ClassName=Wireless Member=Component IC? ESP32-S3FN8
+Added Member To Class: ClassName=Power Member=Component Q4 IPT60R028G7XTMA1
+Added Member To Class: ClassName=Wireless Member=Component R? RC0603JR-070RL
+Added Member To Class: ClassName=Power Member=Component T? Z9007-BL
+Added Member To Class: ClassName=Power Member=Component U? NCP1200D40R2G

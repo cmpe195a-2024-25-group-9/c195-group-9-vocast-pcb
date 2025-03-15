@@ -1,0 +1,34 @@
+Added Component: Designator=ST1(PTH-M2D5X5)
+Add component (AddParameter): Name = "Case/Package"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Max Operating Temperature"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Min Operating Temperature"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mounting Technology"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Pins"; Value = "1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RoHS Compliant"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=ST2(PTH-M2D5X5)
+Add component (AddParameter): Name = "Case/Package"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Max Operating Temperature"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Min Operating Temperature"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mounting Technology"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Pins"; Value = "1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RoHS Compliant"; Value = ""; VariantName = "[No Variations]"
+Added Pin To Net: NetName=DC_NEUTRAL Pin=ST1-1
+Added Pin To Net: NetName=DC_NEUTRAL Pin=ST2-1
+Add Net: Net with name "NetC?_1" already exists
+Add Net: Net with name "NetC?_2" already exists
+Add Net: Net with name "NetR?_1" already exists
+Add Net: Net with name "NetR?_1" already exists
+Add Net: Net with name "NetR?_1" already exists
+Add Net: Net with name "NetR?_1" already exists
+Add Net: Net with name "NetR?_1" already exists
+Added Class: Name=Overview
+Added Member To Class: ClassName=Power Member=Component C? GRM188R71A225KE15D
+Added Member To Class: ClassName=Power Member=Component C? CC0603KRX7R7BB104
+Added Member To Class: ClassName=Power Member=Component C? C1206C104KARACTU
+Added Member To Class: ClassName=Power Member=Component R? 221kohm 1% 0603
+Added Member To Class: ClassName=Power Member=Component R? 40.2kohm 1% 0603
+Added Member To Class: ClassName=Power Member=Component R? RT1206BRD071ML
+Added Member To Class: ClassName=Power Member=Component R? CRCW1206499KFKEA
+Added Member To Class: ClassName=Power Member=Component R? RG3216P-9532-B-T5
+Added Member To Class: ClassName=Power Member=Component R? 100kohm 1% 0603
+Added Member To Class: ClassName=Power Member=Component R? 16.5kohm 1% 0603

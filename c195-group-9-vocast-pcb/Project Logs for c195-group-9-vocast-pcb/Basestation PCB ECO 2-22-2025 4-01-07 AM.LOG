@@ -1,0 +1,13 @@
+Change Component Footprint: Designator=T? Old Footprint=WE-UOST , EE16_8_5 , SMD New Footprint=750811630
+Change Component Comment : Designator=T? Old Comment=760871543 New Comment=750811630
+Change Managed Component Library Link : Designator=T? Old VaultGUID=B7D15EC3-160A-466F-A46C-7801FE6295A7 New VaultGUID= Old ItemGUID=1EBD1C64-9A6E-4E96-AF6C-356AC6C497E3 New ItemGUID= Old RevisionGUID=AA979C12-77E6-4333-B80D-360DDA4E3699 New RevisionGUID=
+Change component parameters: Designator = "T?" ("T?"); Footprint = "WE-UOST , EE16_8_5 , SMD"; UniqueID = "\BGADZTXA" ("\BGADZTXA")
+Change component parameters (AddParameter): Name = "Arrow Part Number"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Arrow Price/Stock"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Datasheet Link"; Value = "https://www.mouser.com/datasheet/2/445/750811630-1483950.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Height"; Value = "25mm"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer_Name"; Value = "Wurth Elektronik"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer_Part_Number"; Value = "750811630"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mouser Part Number"; Value = "710-750811630"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mouser Price/Stock"; Value = "https://www.mouser.co.uk/ProductDetail/Wurth-Elektronik/750811630?qs=%252BUQ4csG8RsduFLXf85hUFw%3D%3D"; VariantName = "[No Variations]"
+Added Member To Class: ClassName=Wireless Member=Component R? RC0603JR-070RL
