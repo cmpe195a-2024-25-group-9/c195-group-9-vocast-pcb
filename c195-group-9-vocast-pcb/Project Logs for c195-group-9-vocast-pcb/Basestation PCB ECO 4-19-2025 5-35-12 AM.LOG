@@ -1,0 +1,56 @@
+Removed Member From Class: ClassName=DAC_and_amp Member=IC2
+Removed Member From Class: ClassName=DAC_and_amp Member=U4
+Change Component Designator: OldDesignator=IC2 NewDesignator=IC1
+Change Component Designator: OldDesignator=IC3 NewDesignator=IC2
+Change Component Designator: OldDesignator=IC4 NewDesignator=IC3
+Change Component Designator: OldDesignator=J1 NewDesignator=J3
+Change Component Designator: OldDesignator=U3 NewDesignator=U2
+Change Component Designator: OldDesignator=U4 NewDesignator=U3
+Change Component Designator: OldDesignator=U5 NewDesignator=U4
+Added Component: Designator=J1(RHDR14W80P0X254_1X14_3606X254X850P)
+Add component (AddParameter): Name = "Arrow Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Arrow Price/Stock"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet Link"; Value = "http://www.sullinscorp.com/drawings/78_P(N)PxCxxxLFBN-RC,_10492-H.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = "8.5mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Name"; Value = "Sullins"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "PPTC141LFBN-RC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Price/Stock"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=J2(RHDR14W80P0X254_1X14_3606X254X850P)
+Add component (AddParameter): Name = "Arrow Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Arrow Price/Stock"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet Link"; Value = "http://www.sullinscorp.com/drawings/78_P(N)PxCxxxLFBN-RC,_10492-H.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = "8.5mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Name"; Value = "Sullins"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "PPTC141LFBN-RC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Price/Stock"; Value = ""; VariantName = "[No Variations]"
+Change Net Name : Old Net Name=NetIC3_5 New Net Name=NetIC2_5
+Change Net Name : Old Net Name=NetIC3_7 New Net Name=NetIC2_7
+Change Net Name : Old Net Name=NetIC3_8 New Net Name=NetIC2_8
+Change Net Name : Old Net Name=NetIC3_9 New Net Name=NetIC2_9
+Change Net Name : Old Net Name=NetIC3_10 New Net Name=NetIC2_10
+Change Net Name : Old Net Name=NetIC3_11 New Net Name=NetIC2_11
+Change Net Name : Old Net Name=NetIC3_13 New Net Name=NetIC2_13
+Change Net Name : Old Net Name=NetIC3_14 New Net Name=NetIC2_14
+Change Net Name : Old Net Name=NetIC3_20 New Net Name=NetIC2_20
+Change Net Name : Old Net Name=NetIC3_29 New Net Name=NetIC2_29
+Change Net Name : Old Net Name=NetIC3_44 New Net Name=NetIC2_44
+Change Net Name : Old Net Name=NetIC3_45 New Net Name=NetIC2_45
+Change Net Name : Old Net Name=NetIC3_47 New Net Name=NetIC2_47
+Change Net Name : Old Net Name=NetIC3_48 New Net Name=NetIC2_48
+Change Net Name : Old Net Name=NetJ1_3 New Net Name=NetJ3_3
+Added Class: Name=Wireless_and_DSP
+Added Member To Class: ClassName=Power Member=Component C1 CC0603KRX7R7BB104
+Added Member To Class: ClassName=Power Member=Component C2 GRM188R71A225KE15D
+Added Member To Class: ClassName=Power Member=Component C3 220nF 50VAC 0805
+Added Member To Class: ClassName=Power Member=Component C4 GRM188R61E475KE11D
+Added Member To Class: ClassName=Power Member=Component C5 220nF 50VAC 0805
+Added Member To Class: ClassName=Power Member=Component C6 22uF 25VDC 1210
+Added Member To Class: ClassName=Power Member=Component C8 1206 10uF
+Added Member To Class: ClassName=Power Member=Component C9 1000uF 25v
+Added Member To Class: ClassName=Power Member=Component C10 1000uF 25v
+Added Member To Class: ClassName=Power Member=Component C12 1206 22pF
+Added Member To Class: ClassName=DAC_and_amp Member=Component IC1 PCM5102AQPWRQ1
+Added Member To Class: ClassName=Power Member=Component U2 LT3798EMSE#PBF
+Added Room: Name=DSP

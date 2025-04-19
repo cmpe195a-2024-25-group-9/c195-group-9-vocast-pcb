@@ -1,0 +1,11 @@
+Added Component: Designator=IC1(BGA196C80P14X14_1200X1200X152)
+Add component (AddParameter): Name = "Arrow Part Number"; Value = "MIMXRT1062DVJ6B"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Arrow Price/Stock"; Value = "https://www.arrow.com/en/products/mimxrt1062dvj6b/nxp-semiconductors?utm_currency=USD&region=nac"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet Link"; Value = "https://www.nxp.com/docs/en/nxp/data-sheets/IMXRT1060CEC.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = "1.52mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Name"; Value = "NXP"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "MIMXRT1062DVJ6B"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Part Number"; Value = "771-MIMXRT1062DVJ6B"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Price/Stock"; Value = "https://www.mouser.co.uk/ProductDetail/NXP-Semiconductors/MIMXRT1062DVJ6B?qs=BJlw7L4Cy7%252B08A9rbTO5WQ%3D%3D"; VariantName = "[No Variations]"
+Added Member To Class: ClassName=DAC_and_amp Member=Component IC1 PCM5102AQPWRQ1
+Added Member To Class: ClassName=DSP Member=Component IC1 MIMXRT1062DVJ6B
