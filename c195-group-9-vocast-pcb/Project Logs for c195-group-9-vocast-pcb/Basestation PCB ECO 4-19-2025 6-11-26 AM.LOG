@@ -1,0 +1,14 @@
+Change Component Designator: OldDesignator=J1 NewDesignator=J2
+Change Component Designator: OldDesignator=J2 NewDesignator=J3
+Change Component Designator: OldDesignator=J3 NewDesignator=J4
+Added Component: Designator=J1(1706206)
+Add component (AddParameter): Name = "Arrow Part Number"; Value = "1706206"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Arrow Price/Stock"; Value = "https://www.arrow.com/en/products/1706206/phoenix-contact?region=nac"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet Link"; Value = "http://www.phoenixcontact.net/product/1706206"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = "18.8mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Name"; Value = "Phoenix Contact"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "1706206"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Part Number"; Value = "651-1706206"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Price/Stock"; Value = "https://www.mouser.co.uk/ProductDetail/Phoenix-Contact/1706206?qs=bbdZqDPQhEWA1qkUO4PAfg%3D%3D"; VariantName = "[No Variations]"
+Change Net Name : Old Net Name=NetJ3_3 New Net Name=NetJ4_3
+Added Member To Class: ClassName=Overview Member=Component J1 1706206

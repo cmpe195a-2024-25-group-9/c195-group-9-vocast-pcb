@@ -1,0 +1,14 @@
+Removed Member From Class: ClassName=Overview Member=J3
+Change Component Footprint: Designator=J1 Old Footprint=1706206 New Footprint=1702558
+Change Component Comment : Designator=J1 Old Comment=1706206 New Comment=1702558
+Change component parameters: Designator = "J1" ("J1"); Footprint = "1706206"; UniqueID = "\ZMJRGOBX" ("\ZMJRGOBX")
+Change component parameters (AddParameter): Name = "Arrow Part Number"; Value = "1702558"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Arrow Price/Stock"; Value = "https://www.arrow.com/en/products/1702558/phoenix-contact?utm_currency=USD&region=nac"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Datasheet Link"; Value = "http://www.phoenixcontact.com/product/1702558"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Height"; Value = "19.6mm"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer_Name"; Value = "Phoenix Contact"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer_Part_Number"; Value = "1702558"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mouser Part Number"; Value = "651-1702558"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mouser Price/Stock"; Value = "https://www.mouser.co.uk/ProductDetail/Phoenix-Contact/1702558?qs=bX1%252BNvsK%2FBqLrAYKddEg%2FA%3D%3D"; VariantName = "[No Variations]"
+Added Member To Class: ClassName=Overview Member=Component J1 1702558
+Added Member To Class: ClassName=Wireless_and_DSP Member=Component J2 PPTC141LFBN-RC
