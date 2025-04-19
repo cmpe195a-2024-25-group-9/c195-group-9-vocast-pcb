@@ -1,0 +1,80 @@
+Removed Pin From Net: NetName=GATE_LR Pin=Q1-1
+Removed Pin From Net: NetName=AC_NEUTRAL Pin=Q1-2
+Removed Pin From Net: NetName=GATE_LL Pin=Q2-1
+Removed Pin From Net: NetName=AC_LIVE Pin=Q2-2
+Change Component Footprint: Designator=Q1 Old Footprint=TO545P521X1594X2566-3P New Footprint=TO546P531X1980X2918-3P
+Change Component Footprint: Designator=Q2 Old Footprint=TO545P521X1594X2566-3P New Footprint=TO546P531X1980X2918-3P
+Change Component Footprint: Designator=Q3 Old Footprint=TO545P521X1594X2566-3P New Footprint=TO546P531X1980X2918-3P
+Change Component Footprint: Designator=Q4 Old Footprint=TO545P521X1594X2566-3P New Footprint=TO546P531X1980X2918-3P
+Change Component Comment : Designator=Q1 Old Comment=IXFH98N60X3 New Comment=IXTX102N65X2
+Change Component Comment : Designator=Q2 Old Comment=IXFH98N60X3 New Comment=IXTX102N65X2
+Change Component Comment : Designator=Q3 Old Comment=IXFH98N60X3 New Comment=IXTX102N65X2
+Change Component Comment : Designator=Q4 Old Comment=IXFH98N60X3 New Comment=IXTX102N65X2
+Change Component Designator: OldDesignator=C1 NewDesignator=C2
+Change Component Designator: OldDesignator=C2 NewDesignator=C3
+Change Component Designator: OldDesignator=C3 NewDesignator=C4
+Change Component Designator: OldDesignator=C4 NewDesignator=C1
+Change Component Designator: OldDesignator=R5 NewDesignator=R6
+Change Component Designator: OldDesignator=R6 NewDesignator=R9
+Change Component Designator: OldDesignator=R7 NewDesignator=R10
+Change Component Designator: OldDesignator=R9 NewDesignator=R11
+Change Component Designator: OldDesignator=R10 NewDesignator=R12
+Change component parameters: Designator = "Q1" ("Q1"); Footprint = "TO545P521X1594X2566-3P"; UniqueID = "\RCGIZIXL" ("\RCGIZIXL")
+Change component parameters (AddParameter): Name = "Arrow Part Number"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Arrow Price/Stock"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Datasheet Link"; Value = "http://ixapps.ixys.com/DataSheet/DS100655B(IXTK-TX102N65X2).pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Height"; Value = "5.31mm"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer_Name"; Value = "LITTELFUSE"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer_Part_Number"; Value = "IXTX102N65X2"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mouser Part Number"; Value = "747-IXTX102N65X2"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mouser Price/Stock"; Value = "https://www.mouser.com/Search/Refine.aspx?Keyword=747-IXTX102N65X2"; VariantName = "[No Variations]"
+Change component parameters: Designator = "Q2" ("Q2"); Footprint = "TO545P521X1594X2566-3P"; UniqueID = "\SVLTDDGI" ("\SVLTDDGI")
+Change component parameters (AddParameter): Name = "Arrow Part Number"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Arrow Price/Stock"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Datasheet Link"; Value = "http://ixapps.ixys.com/DataSheet/DS100655B(IXTK-TX102N65X2).pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Height"; Value = "5.31mm"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer_Name"; Value = "LITTELFUSE"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer_Part_Number"; Value = "IXTX102N65X2"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mouser Part Number"; Value = "747-IXTX102N65X2"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mouser Price/Stock"; Value = "https://www.mouser.com/Search/Refine.aspx?Keyword=747-IXTX102N65X2"; VariantName = "[No Variations]"
+Change component parameters: Designator = "Q3" ("Q3"); Footprint = "TO545P521X1594X2566-3P"; UniqueID = "\KRBFMBTK" ("\KRBFMBTK")
+Change component parameters (AddParameter): Name = "Arrow Part Number"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Arrow Price/Stock"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Datasheet Link"; Value = "http://ixapps.ixys.com/DataSheet/DS100655B(IXTK-TX102N65X2).pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Height"; Value = "5.31mm"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer_Name"; Value = "LITTELFUSE"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer_Part_Number"; Value = "IXTX102N65X2"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mouser Part Number"; Value = "747-IXTX102N65X2"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mouser Price/Stock"; Value = "https://www.mouser.com/Search/Refine.aspx?Keyword=747-IXTX102N65X2"; VariantName = "[No Variations]"
+Change component parameters: Designator = "Q4" ("Q4"); Footprint = "TO545P521X1594X2566-3P"; UniqueID = "\UYSWMSUP" ("\UYSWMSUP")
+Change component parameters (AddParameter): Name = "Arrow Part Number"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Arrow Price/Stock"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Datasheet Link"; Value = "http://ixapps.ixys.com/DataSheet/DS100655B(IXTK-TX102N65X2).pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Height"; Value = "5.31mm"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer_Name"; Value = "LITTELFUSE"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer_Part_Number"; Value = "IXTX102N65X2"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mouser Part Number"; Value = "747-IXTX102N65X2"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mouser Price/Stock"; Value = "https://www.mouser.com/Search/Refine.aspx?Keyword=747-IXTX102N65X2"; VariantName = "[No Variations]"
+Added Component: Designator=R5(RESC3216X60X45NL10T20)
+Add component (AddParameter): Name = "Manufacturer"; Value = "Vishay Dale"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Part Number"; Value = "CRCW1206100KFKEA"; VariantName = "[No Variations]"
+Added Component: Designator=R7(RESC3216X60X45NL10T20)
+Add component (AddParameter): Name = "Manufacturer"; Value = "Vishay Dale"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Part Number"; Value = "CRCW1206100KFKEA"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=GATE_LL Pin=Q1-1
+Added Pin To Net: NetName=AC_LIVE Pin=Q1-2
+Added Pin To Net: NetName=GATE_LR Pin=Q2-1
+Added Pin To Net: NetName=AC_NEUTRAL Pin=Q2-2
+Added Pin To Net: NetName=LT3798_VIN_SENSE Pin=R3-1
+Added Pin To Net: NetName=LT3798_VIN_SENSE Pin=R4-2
+Added Pin To Net: NetName=LT3798_VIN Pin=R6-1
+Added Pin To Net: NetName=LT3798_EN/UVLO Pin=R6-2
+Added Pin To Net: NetName=LT3798_EN/UVLO Pin=R8-1
+Change Net Name : Old Net Name=NetC1_2 New Net Name=NetC2_2
+Change Net Name : Old Net Name=NetC2_2 New Net Name=NetC3_2
+Change Net Name : Old Net Name=NetC3_2 New Net Name=NetC4_2
+Change Net Name : Old Net Name=NetR6_1 New Net Name=NetR9_1
+Change Net Name : Old Net Name=NetR6_2 New Net Name=NetR9_2
+Change Net Name : Old Net Name=NetR7_2 New Net Name=NetR10_2
+Added Member To Class: ClassName=Power Member=Component R11 221kohm 1% 0603
+Added Member To Class: ClassName=Power Member=Component R12 16.5kohm 1% 0603
