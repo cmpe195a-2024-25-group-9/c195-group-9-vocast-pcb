@@ -1,0 +1,88 @@
+Removed Member From Class: ClassName=Amplifier Member=C23
+Removed Member From Class: ClassName=Amplifier Member=C27
+Removed Member From Class: ClassName=ESP32 Member=C32
+Removed Member From Class: ClassName=Amplifier Member=C34
+Removed Member From Class: ClassName=ESP32 Member=C34
+Removed Member From Class: ClassName=Power Member=C48
+Removed Member From Class: ClassName=Power Member=C53
+Removed Member From Class: ClassName=Amplifier Member=R14
+Removed Member From Class: ClassName=Misc Member=R14
+Removed Member From Class: ClassName=Amplifier Member=R15
+Removed Member From Class: ClassName=Misc Member=R15
+Removed Member From Class: ClassName=Amplifier Member=R16
+Removed Member From Class: ClassName=ESP32 Member=R16
+Removed Member From Class: ClassName=Amplifier Member=R17
+Removed Member From Class: ClassName=ESP32 Member=R17
+Removed Member From Class: ClassName=Amplifier Member=R18
+Removed Member From Class: ClassName=ESP32 Member=R18
+Removed Member From Class: ClassName=Power Member=R34
+Removed Member From Class: ClassName=Power Member=R35
+Removed Member From Class: ClassName=Power Member=R36
+Change Component Footprint: Designator=R6 Old Footprint=RESAD8570W107L4762D952 New Footprint=TO508P350X1040X2030-2P
+Change Component Comment : Designator=R6 Old Comment=CW01010R00JE12 New Comment=LTO050F10R00JTE3
+Change component parameters: Designator = "R6" ("R6"); Footprint = "RESAD8570W107L4762D952"; UniqueID = "\BSIWASGD" ("\BSIWASGD")
+Change component parameters (AddParameter): Name = "Arrow Part Number"; Value = "LTO050F10R00JTE3"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Arrow Price/Stock"; Value = "https://www.arrow.com/en/products/lto050f10r00jte3/vishay?region=nac"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Datasheet Link"; Value = "https://componentsearchengine.com/Datasheets/2/LTO050F10R00JTE3.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Height"; Value = "3.5mm"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer_Name"; Value = "Vishay"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer_Part_Number"; Value = "LTO050F10R00JTE3"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mouser Part Number"; Value = "72-LTO050F10R00JTE3"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mouser Price/Stock"; Value = "https://www.mouser.co.uk/ProductDetail/Vishay-Sfernice/LTO050F10R00JTE3?qs=YEvEAkYMKXtbfJC7MrgrfA%3D%3D"; VariantName = "[No Variations]"
+Added Member To Class: ClassName=Amplifier Member=Component C2 0603 1uF
+Added Member To Class: ClassName=Amplifier Member=Component C3 0603 1uF
+Added Member To Class: ClassName=Amplifier Member=Component C5 0603 1uF
+Added Member To Class: ClassName=Amplifier Member=Component C7 1206 0.22uF
+Added Member To Class: ClassName=Amplifier Member=Component C8 0603 1uF
+Added Member To Class: ClassName=Amplifier Member=Component C9 1206 0.22uF
+Added Member To Class: ClassName=Amplifier Member=Component C10 1206 1000pF
+Added Member To Class: ClassName=Amplifier Member=Component C11 1206 1000pF
+Added Member To Class: ClassName=Amplifier Member=Component C14 0603 0.1uF
+Added Member To Class: ClassName=Amplifier Member=Component C16 0603 1uF
+Added Member To Class: ClassName=Amplifier Member=Component C18 100uF
+Added Member To Class: ClassName=Amplifier Member=Component C19 0603 1uF
+Added Member To Class: ClassName=Amplifier Member=Component C20 0603 0.1uF
+Added Member To Class: ClassName=Amplifier Member=Component C21 0603 1000pF
+Added Member To Class: ClassName=ESP32 Member=Component C22 22uF
+Added Member To Class: ClassName=ESP32 Member=Component C24 Capacitor 1µF +/-0.1% 25V 0603
+Added Member To Class: ClassName=ESP32 Member=Component C25 12pF
+Added Member To Class: ClassName=ESP32 Member=Component C26 06035C104K4T2A
+Added Member To Class: ClassName=Power Member=Component C28 CC0603KRX7R7BB104
+Added Member To Class: ClassName=Power Member=Component C29 GRM188R71A225KE15D
+Added Member To Class: ClassName=Power Member=Component C30 220nF 50VAC 0805
+Added Member To Class: ClassName=Power Member=Component C31 220nF 50VAC 0805
+Added Member To Class: ClassName=Power Member=Component C35 2.2nF y-cap
+Added Member To Class: ClassName=Power Member=Component C36 1000uF 25v
+Added Member To Class: ClassName=Power Member=Component C38 1206 10uF
+Added Member To Class: ClassName=Power Member=Component C39 1206 22pF
+Added Member To Class: ClassName=Power Member=Component C40 1206 10uF
+Added Member To Class: ClassName=Power Member=Component C43 10uF 25V
+Added Member To Class: ClassName=Power Member=Component C44 10uF 25V Tantalum
+Added Member To Class: ClassName=Power Member=Component C45 0603 6.3V 10uF
+Added Member To Class: ClassName=DAC Member=Component C47 0603 0.1uF 16V
+Added Member To Class: ClassName=DAC Member=Component C49 0603 10uF 16V
+Added Member To Class: ClassName=DAC Member=Component C50 0603 10uF 16V
+Added Member To Class: ClassName=DAC Member=Component C51 0603 0.1uF 16V
+Added Member To Class: ClassName=DAC Member=Component C52 0603 1uF 16V
+Added Member To Class: ClassName=Misc Member=Component R4 CRM2512QJW-103ELF
+Added Member To Class: ClassName=Misc Member=Component R5 CRM2512QJW-103ELF
+Added Member To Class: ClassName=Amplifier Member=Component R6 LTO050F10R00JTE3
+Added Member To Class: ClassName=Amplifier Member=Component R7 0603 10k
+Added Member To Class: ClassName=Amplifier Member=Component R8 0603 10k
+Added Member To Class: ClassName=Amplifier Member=Component R9 0603 100k
+Added Member To Class: ClassName=Amplifier Member=Component R10 0603 1k
+Added Member To Class: ClassName=ESP32 Member=Component R11 CRCW060310K0JNEA
+Added Member To Class: ClassName=ESP32 Member=Component R12 Jumper 0603
+Added Member To Class: ClassName=ESP32 Member=Component R13 Jumper 0603
+Added Member To Class: ClassName=Power Member=Component R19 16.5kohm 1% 0603
+Added Member To Class: ClassName=Power Member=Component R20 1206 20
+Added Member To Class: ClassName=Power Member=Component R21 1206 499k
+Added Member To Class: ClassName=Power Member=Component R23 1206 0.03
+Added Member To Class: ClassName=Power Member=Component R24 1206 47ohm
+Added Member To Class: ClassName=Power Member=Component R27 1206 2.4M
+Added Member To Class: ClassName=Power Member=Component R28 1206 100k
+Added Member To Class: ClassName=Power Member=Component R29 1206 33k
+Added Member To Class: ClassName=Power Member=Component R30 1206 301k
+Added Member To Class: ClassName=Power Member=Component R31 1206 5.49k
+Added Member To Class: ClassName=Amplifier Member=Component U1 TPA3110D2PWPR
+Added Member To Class: ClassName=Power Member=Component U3 LM1085ISX-ADJ/NOPB
