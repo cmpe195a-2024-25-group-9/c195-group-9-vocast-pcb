@@ -1,0 +1,48 @@
+Removed Pin From Net: NetName=DC_NEUTRAL Pin=TP_GND1-1
+Removed Member From Class: ClassName=Misc Member=D4
+Removed Member From Class: ClassName=Misc Member=D8
+Removed Member From Class: ClassName=Misc Member=D9
+Removed Member From Class: ClassName=Amplifier Member=R7
+Removed Member From Class: ClassName=Misc Member=R7
+Removed Member From Class: ClassName=Misc Member=R9
+Removed Member From Class: ClassName=Amplifier Member=R11
+Removed Member From Class: ClassName=ESP32 Member=R11
+Removed Member From Class: ClassName=Misc Member=R11
+Removed Member From Class: ClassName=ESP32 Member=R16
+Removed Member From Class: ClassName=Misc Member=TP_GND1
+Added Component: Designator=TP_DC-GND(6037)
+Add component (AddParameter): Name = "Arrow Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Arrow Price/Stock"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet Link"; Value = "https://www.keyelco.com/product-pdf.cfm?p=3184"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = "8.22mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Name"; Value = "Keystone Electronics"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "6037"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Part Number"; Value = "534-6037"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Price/Stock"; Value = "https://www.mouser.co.uk/ProductDetail/Keystone-Electronics/6037?qs=RfgnRl00reQ%2FAdfdXZ%2FHVQ%3D%3D"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=DC_NEUTRAL Pin=TP_DC-GND-1
+Add Net: Net with name "TPA311_LINP" already exists
+Add Net: Net with name "TPA311_RINP" already exists
+Added Member To Class: ClassName=Misc Member=Component D1 GRN
+Added Member To Class: ClassName=Misc Member=Component D2 YLW
+Added Member To Class: ClassName=Misc Member=Component D3 RED
+Added Member To Class: ClassName=Power Member=Component D5 CMR1U-06M_TR13_PBFREE
+Added Member To Class: ClassName=Power Member=Component D6 MBRB20200CT
+Added Member To Class: ClassName=Misc Member=Component J1 ED555_2DS
+Added Member To Class: ClassName=Misc Member=Component R1 0603 1k
+Added Member To Class: ClassName=Misc Member=Component R2 0603 130
+Added Member To Class: ClassName=Misc Member=Component R3 0603 130
+Added Member To Class: ClassName=Amplifier Member=Component R4 0603 100k
+Added Member To Class: ClassName=Amplifier Member=Component R5 0603 1k
+Added Member To Class: ClassName=ESP32 Member=Component R6 CRCW060310K0JNEA
+Added Member To Class: ClassName=ESP32 Member=Component R8 Jumper 0603
+Added Member To Class: ClassName=ESP32 Member=Component R10 Jumper 0603
+Added Member To Class: ClassName=Power Member=Component R13 221kohm 1% 0603
+Added Member To Class: ClassName=Power Member=Component R14 16.5kohm 1% 0603
+Added Member To Class: ClassName=Power Member=Component R15 1206 20
+Added Member To Class: ClassName=Power Member=Component R18 1206 0.03
+Added Member To Class: ClassName=Power Member=Component R19 1206 47ohm
+Added Member To Class: ClassName=Power Member=Component R21 1206 100k
+Added Member To Class: ClassName=Power Member=Component R23 1206 100k
+Added Member To Class: ClassName=Power Member=Component R24 1206 33k
+Added Member To Class: ClassName=Power Member=Component R25 1206 301k
+Added Member To Class: ClassName=Misc Member=Component TP_DC-GND 6038

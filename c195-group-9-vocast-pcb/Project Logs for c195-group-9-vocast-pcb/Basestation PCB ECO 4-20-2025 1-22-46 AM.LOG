@@ -1,0 +1,89 @@
+Removed Member From Class: ClassName=DAC Member=C16
+Removed Member From Class: ClassName=ESP32 Member=C16
+Removed Member From Class: ClassName=Power Member=C16
+Removed Member From Class: ClassName=DAC Member=C20
+Removed Member From Class: ClassName=Power Member=C20
+Removed Member From Class: ClassName=DAC Member=C23
+Removed Member From Class: ClassName=Power Member=C23
+Removed Member From Class: ClassName=DAC Member=C24
+Removed Member From Class: ClassName=Power Member=C24
+Removed Member From Class: ClassName=DAC Member=C38
+Removed Member From Class: ClassName=DAC Member=C39
+Removed Member From Class: ClassName=DAC Member=C43
+Removed Member From Class: ClassName=DAC Member=IC2
+Removed Member From Class: ClassName=Amplifier Member=J4
+Removed Member From Class: ClassName=Power Member=R6
+Removed Member From Class: ClassName=Power Member=R7
+Removed Member From Class: ClassName=DAC Member=R23
+Removed Member From Class: ClassName=DAC Member=R24
+Added Component: Designator=J5(SHDR2W90P0X350_1X2_700X650X820P)
+Add component (AddParameter): Name = "Arrow Part Number"; Value = "ED555/2DS"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Arrow Price/Stock"; Value = "https://www.arrow.com/en/products/ed5552ds/on-shore-technology?utm_currency=USD&region=nac"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet Link"; Value = "http://www.on-shore.com/wp-content/uploads/ED555XDS.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = "8.2mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Name"; Value = "On Shore Technology Inc."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "ED555/2DS"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Price/Stock"; Value = ""; VariantName = "[No Variations]"
+Added Pin To Net: NetName=NetJ5_1 Pin=J5-1
+Added Net: Name=NetJ5_1
+Added Pin To Net: NetName=NetJ5_2 Pin=J5-2
+Added Net: Name=NetJ5_2
+Add Net: Net with name "TPA311_LINP" already exists
+Add Net: Net with name "TPA311_RINP" already exists
+Added Member To Class: ClassName=Amplifier Member=Component C2 1206 1000pF
+Added Member To Class: ClassName=Amplifier Member=Component C5 1206 0.22uF
+Added Member To Class: ClassName=Amplifier Member=Component C8 0603 0.1uF
+Added Member To Class: ClassName=Amplifier Member=Component C10 1206 1000pF
+Added Member To Class: ClassName=Amplifier Member=Component C11 1206 0.22uF
+Added Member To Class: ClassName=Amplifier Member=Component C12 100uF
+Added Member To Class: ClassName=Amplifier Member=Component C15 0603 1uF
+Added Member To Class: ClassName=Amplifier Member=Component C16 0603 1uF
+Added Member To Class: ClassName=Amplifier Member=Component C17 0603 1uF
+Added Member To Class: ClassName=Amplifier Member=Component C18 0603 1uF
+Added Member To Class: ClassName=ESP32 Member=Component C19 22uF
+Added Member To Class: ClassName=ESP32 Member=Component C21 Capacitor 1µF +/-0.1% 25V 0603
+Added Member To Class: ClassName=ESP32 Member=Component C22 12pF
+Added Member To Class: ClassName=Power Member=Component C25 CC0603KRX7R7BB104
+Added Member To Class: ClassName=Power Member=Component C26 GRM188R71A225KE15D
+Added Member To Class: ClassName=Power Member=Component C27 220nF 50VAC 0805
+Added Member To Class: ClassName=Power Member=Component C28 220nF 50VAC 0805
+Added Member To Class: ClassName=Power Member=Component C29 22uF 25VDC 1210
+Added Member To Class: ClassName=Power Member=Component C30 GRM188R61E475KE11D
+Added Member To Class: ClassName=Power Member=Component C32 2.2nF y-cap
+Added Member To Class: ClassName=Power Member=Component C33 1000uF 25v
+Added Member To Class: ClassName=Power Member=Component C34 1000uF 25v
+Added Member To Class: ClassName=Power Member=Component C35 1206 10uF
+Added Member To Class: ClassName=Power Member=Component C36 1206 22pF
+Added Member To Class: ClassName=Power Member=Component C37 1206 10uF
+Added Member To Class: ClassName=Power Member=Component C40 10uF 25V
+Added Member To Class: ClassName=Power Member=Component C41 10uF 25V Tantalum
+Added Member To Class: ClassName=Power Member=Component C42 0603 6.3V 10uF
+Added Member To Class: ClassName=DAC Member=Component C44 0603 2.2uF
+Added Member To Class: ClassName=DAC Member=Component C45 10uF
+Added Member To Class: ClassName=DAC Member=Component C46 0603 0.1uF
+Added Member To Class: ClassName=DAC Member=Component C47 10uF
+Added Member To Class: ClassName=DAC Member=Component C48 0603 0.1uF
+Added Member To Class: ClassName=DAC Member=Component C49 0603 2.2uF
+Added Member To Class: ClassName=DAC Member=Component C50 0603 2.2nF
+Added Member To Class: ClassName=DAC Member=Component C51 0603 2.2nF
+Added Member To Class: ClassName=DAC Member=Component C52 10uF
+Added Member To Class: ClassName=DAC Member=Component C53 0603 0.1uF
+Added Member To Class: ClassName=DAC Member=Component C54 0603 0.1uF
+Added Member To Class: ClassName=DAC Member=Component C55 10uF
+Added Member To Class: ClassName=ESP32 Member=Component IC1 ESP32-S3-WROOM-2-N32R16V
+Added Member To Class: ClassName=DAC Member=Component IC3 PCM5102AQPWRQ1
+Added Member To Class: ClassName=Amplifier Member=Component J2 1984992
+Added Member To Class: ClassName=Misc Member=Component J5 ED555_2DS
+Added Member To Class: ClassName=ESP32 Member=Component R3 CRCW060310K0JNEA
+Added Member To Class: ClassName=ESP32 Member=Component R4 Jumper 0603
+Added Member To Class: ClassName=ESP32 Member=Component R6 Jumper 0603
+Added Member To Class: ClassName=ESP32 Member=Component R7 Jumper 0603
+Added Member To Class: ClassName=Power Member=Component R9 40.2kohm 1% 0603
+Added Member To Class: ClassName=Power Member=Component R12 1206 20
+Added Member To Class: ClassName=Power Member=Component R15 1206 0.03
+Added Member To Class: ClassName=Power Member=Component R16 1206 47ohm
+Added Member To Class: ClassName=Power Member=Component R20 1206 100k
+Added Member To Class: ClassName=Power Member=Component R25 0603 1.2k 1% 1/3W
+Added Member To Class: ClassName=DAC Member=Component R26 0603 470
+Added Member To Class: ClassName=DAC Member=Component R27 0603 470

@@ -1,0 +1,6 @@
+Removed Pin From Net: NetName=NetD1_2 Pin=TP_1-1
+Removed Pin From Net: NetName=NetD2_2 Pin=TP_2-1
+Change Component Designator: OldDesignator=TP_1 NewDesignator=TP_13VDC
+Change Component Designator: OldDesignator=TP_2 NewDesignator=TP_3.3VDC
+Add Net: Net with name "TPA311_LINP" already exists
+Add Net: Net with name "TPA311_RINP" already exists

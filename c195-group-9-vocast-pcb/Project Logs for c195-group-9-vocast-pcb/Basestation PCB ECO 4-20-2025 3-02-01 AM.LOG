@@ -1,0 +1,48 @@
+Change Component Designator: OldDesignator=R7 NewDesignator=R8
+Change Component Designator: OldDesignator=R8 NewDesignator=R7
+Change Component Designator: OldDesignator=TP_3.3VDC NewDesignator=TP_2
+Change Component Designator: OldDesignator=TP_13VDC NewDesignator=TP_1
+Change Component Designator: OldDesignator=TP_DC-GND NewDesignator=TP_DC-GND1
+Added Component: Designator=IC4(TAD5242IRGER)
+Add component (AddParameter): Name = "Arrow Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Arrow Price/Stock"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet Link"; Value = "https://www.ti.com/lit/ds/symlink/tad5242.pdf?ts=1736249226355&ref_url=https%253A%252F%252Fwww.ti.com%252Fproduct%252FTAD5242"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = "1mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Name"; Value = "Texas Instruments"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "TAD5242IRGER"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Part Number"; Value = "595-TAD5242IRGER"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Price/Stock"; Value = "https://www.mouser.co.uk/ProductDetail/Texas-Instruments/TAD5242IRGER?qs=%252BXxaIXUDbq07iiss%252B1zA7A%3D%3D"; VariantName = "[No Variations]"
+Added Component: Designator=U6(FP-PW0020A-IPC_A)
+Add component (AddParameter): Name = "Case/Package"; Value = "TSSOP"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Contact Plating"; Value = "Gold"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Conversion Rate"; Value = "384KS/s"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Interface"; Value = "Serial"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Lead Free"; Value = "Lead Free"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Max Operating Temperature"; Value = "85°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Max Power Dissipation"; Value = "187mW"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Max Supply Voltage"; Value = "3.6V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Min Operating Temperature"; Value = "-25°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Min Supply Voltage"; Value = "3V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mount"; Value = "Surface Mount"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Number of Analog Inputs"; Value = "0"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Number of Analog Outputs"; Value = "2"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Number of Bits"; Value = "32"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Number of Converters"; Value = "2"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Number of DAC Channels"; Value = "2"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Number of Pins"; Value = "20"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Operating Supply Voltage"; Value = "3.3V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Output Type"; Value = "Voltage"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package Quantity"; Value = "2000"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Packaging"; Value = "Tape and Reel"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Polarity"; Value = "Unipolar"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Power Consumption"; Value = "59.4mW"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "REACH SVHC"; Value = "No SVHC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Resolution"; Value = "32b"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Sampling Rate"; Value = "384KS/s"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Series"; Value = "DirectPath™"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Signal to Noise Ratio (SNR)"; Value = "112dB"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supply Type"; Value = "Analog"; VariantName = "[No Variations]"
+Add Net: Net with name "TPA311_LINP" already exists
+Add Net: Net with name "TPA311_RINP" already exists
+Added Member To Class: ClassName=DAC Member=Component IC4 TAD5242IRGER
+Added Member To Class: ClassName=DAC Member=Component U6 PCM5102APWR
