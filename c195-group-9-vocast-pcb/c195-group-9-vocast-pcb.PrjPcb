@@ -67,23 +67,6 @@ GenerateClassCluster=0
 DocumentUniqueId=BKVWDHJA
 
 [Document2]
-DocumentPath=Power.SchDoc
-AnnotationEnabled=1
-AnnotateStartValue=1
-AnnotationIndexControlEnabled=0
-AnnotateSuffix=
-AnnotateScope=All
-AnnotateOrder=4
-DoLibraryUpdate=1
-DoDatabaseUpdate=1
-ClassGenCCAutoEnabled=1
-ClassGenCCAutoRoomEnabled=0
-ClassGenNCAutoScope=None
-DItemRevisionGUID=
-GenerateClassCluster=0
-DocumentUniqueId=DCXCDLNH
-
-[Document3]
 DocumentPath=ESP32.SchDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -100,7 +83,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=BEVKNCNX
 
-[Document4]
+[Document3]
 DocumentPath=DAC.SchDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -117,8 +100,8 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=PJQYEHRR
 
-[Document5]
-DocumentPath=PowerV2.SchDoc
+[Document4]
+DocumentPath=Power.SchDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
@@ -134,7 +117,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=IGFCXJWG
 
-[Document6]
+[Document5]
 DocumentPath=Amplifier.SchDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -151,7 +134,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=IJFQOAJP
 
-[Document7]
+[Document6]
 DocumentPath=Basestation.PcbDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -168,7 +151,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=EVVDLULC
 
-[Document8]
+[Document7]
 DocumentPath=Basestation.BomDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -185,7 +168,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document9]
+[Document8]
 DocumentPath=c195-group-9-vocast-pcb.OutJob
 AnnotationEnabled=1
 AnnotateStartValue=1
