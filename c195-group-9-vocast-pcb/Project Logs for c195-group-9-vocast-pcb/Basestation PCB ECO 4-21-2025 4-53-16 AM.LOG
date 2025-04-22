@@ -1,0 +1,127 @@
+Removed Member From Class: ClassName=DAC Member=C39
+Removed Member From Class: ClassName=PowerV2 Member=C39
+Removed Member From Class: ClassName=PowerV2 Member=C47
+Removed Member From Class: ClassName=PowerV2 Member=C48
+Added Component: Designator=C?(CAPC1608X87X35LL15T15)
+Add component (AddParameter): Name = "Manufacturer"; Value = "Kemet"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Part Number"; Value = "C0603C105K3RACTU"; VariantName = "[No Variations]"
+Added Component: Designator=C?(FP-ECA-2CHG010I-MFG)
+Add component (AddParameter): Name = "Capacitance"; Value = "1uF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Case/Package"; Value = "Radial"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Diameter"; Value = "6.3mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = "11.2mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height - Seated (Max)"; Value = "0.48inch"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Lead Pitch"; Value = "2.5mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Lead/Base Style"; Value = "Straight"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Length"; Value = "11.2mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Life (Hours)"; Value = "2000Hour"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Max Operating Temperature"; Value = "105°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Min Operating Temperature"; Value = "-25°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mount"; Value = "Through Hole"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package Quantity"; Value = "2000"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Packaging"; Value = "Ammo Pack"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Radiation Hardening"; Value = "No"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ripple Current"; Value = "17mA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RoHS Compliant"; Value = "Yes"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Series"; Value = "NHG"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Termination"; Value = "Radial"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "20%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage Rating"; Value = "160V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage Rating (DC)"; Value = "160V"; VariantName = "[No Variations]"
+Added Component: Designator=C?(CAPPRD1000W190D2575H4200)
+Add component (AddParameter): Name = "Arrow Part Number"; Value = "LGU2G221MELA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Arrow Price/Stock"; Value = "https://www.arrow.com/en/products/lgu2g221mela/nichicon"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet Link"; Value = "https://www.mouser.com/datasheet/2/293/e-lgu-876296.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = "42mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Name"; Value = "Nichicon"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "LGU2G221MELA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Part Number"; Value = "647-LGU2G221MELA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Price/Stock"; Value = "https://www.mouser.co.uk/ProductDetail/Nichicon/LGU2G221MELA?qs=UR%252BAsA3ox60HgAqnU3auRQ%3D%3D"; VariantName = "[No Variations]"
+Added Component: Designator=R?(FP-CRG0603-IPC_C)
+Add component (AddParameter): Name = "Case Code (Imperial)"; Value = "0603"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Case Code (Metric)"; Value = "1608"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Case/Package"; Value = "0603"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Depth"; Value = "0.8mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ELV"; Value = "Compliant"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = "0.45mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Length"; Value = "1.6mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Max Operating Temperature"; Value = "125°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Max Power Dissipation"; Value = "100mW"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Min Operating Temperature"; Value = "-55°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mount"; Value = "Surface Mount"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Number of Resistors"; Value = "1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Number of Terminations"; Value = "2"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package Quantity"; Value = "5000"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Packaging"; Value = "Tape and Reel"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Power Rating"; Value = "100mW"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Radiation Hardening"; Value = "No"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Resistance"; Value = "0mR"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Resistor Type"; Value = "Thick Film"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RoHS Compliant"; Value = "Yes"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Series"; Value = "CRG, Neohm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Technology"; Value = "THICK FILM"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Temperature Coefficient"; Value = "100ppm/°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Termination"; Value = "Solder"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "0%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage Rating"; Value = "50V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Weight"; Value = "7.1E-05oz"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Width"; Value = "0.8mm"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=DC_NEUTRAL Pin=C?-1
+Added Pin To Net: NetName=DC_NEUTRAL Pin=C?-2
+Added Pin To Net: NetName=AC_NEUTRAL Pin=D?-1
+Added Pin To Net: NetName=AC_LIVE Pin=D?-3
+Added Pin To Net: NetName=DC_NEUTRAL Pin=IC5-3
+Add Net: Net with name "DC_NEUTRAL" already exists
+Add Net: Net with name "DC_POSITIVE" already exists
+Added Pin To Net: NetName=NetC?_1 Pin=C?-1
+Added Pin To Net: NetName=NetC?_1 Pin=R?-1
+Added Net: Name=NetC?_1
+Added Pin To Net: NetName=NetC?_2 Pin=C?-2
+Added Pin To Net: NetName=NetC?_2 Pin=IC5-1
+Added Pin To Net: NetName=NetC?_2 Pin=R?-2
+Added Net: Name=NetC?_2
+Added Pin To Net: NetName=NetD?_4 Pin=D?-4
+Added Pin To Net: NetName=NetD?_4 Pin=IC5-8
+Added Net: Name=NetD?_4
+Add Net: Net with name "SCHOTTKY_OUT" already exists
+Add Net: Net with name "TRAN_AUX_P" already exists
+Add Net: Net with name "TRAN_IN_P" already exists
+Add Net: Net with name "TRAN_OUT_P" already exists
+Added Member To Class: ClassName=Amplifier Member=Component C1 0603 1uF
+Added Member To Class: ClassName=Amplifier Member=Component C8 1206 0.22uF
+Added Member To Class: ClassName=Amplifier Member=Component C14 0603 1uF
+Added Member To Class: ClassName=Amplifier Member=Component C15 0603 0.1uF
+Added Member To Class: ClassName=Amplifier Member=Component C19 0603 0.1uF
+Added Member To Class: ClassName=Power Member=Component C30 GRM188R61E475KE11D
+Added Member To Class: ClassName=Power Member=Component C31 C1206C104KARACTU
+Added Member To Class: ClassName=Power Member=Component C32 2.2nF y-cap
+Added Member To Class: ClassName=Power Member=Component C33 1000uF 25v
+Added Member To Class: ClassName=Power Member=Component C34 1000uF 25v
+Added Member To Class: ClassName=Power Member=Component C37 1206 10uF
+Added Member To Class: ClassName=Power Member=Component C38 1206 10uF
+Added Member To Class: ClassName=Power Member=Component C39 1206 22pF
+Added Member To Class: ClassName=DAC Member=Component C42 0603 10uF 16V
+Added Member To Class: ClassName=DAC Member=Component C43 0603 10uF 16V
+Added Member To Class: ClassName=DAC Member=Component C44 0603 0.1uF 16V
+Added Member To Class: ClassName=DAC Member=Component C45 0603 1uF 16V
+Added Member To Class: ClassName=DAC Member=Component C46 0603 10uF 16V
+Added Member To Class: ClassName=PowerV2 Member=Component C49 10uF 25V
+Added Member To Class: ClassName=PowerV2 Member=Component C50 10uF 25V Tantalum
+Added Member To Class: ClassName=PowerV2 Member=Component C51 220nF 50VAC 0805
+Added Member To Class: ClassName=PowerV2 Member=Component C52 220nF 50VAC 0805
+Added Member To Class: ClassName=PowerV2 Member=Component C53 22uF 25VDC 1210
+Added Member To Class: ClassName=PowerV2 Member=Component C54 0603 6.3V 10uF
+Added Member To Class: ClassName=PowerV2 Member=Component C55 0603 25V 0.1uF
+Added Member To Class: ClassName=PowerV2 Member=Component C? 0603 1uF 25v
+Added Member To Class: ClassName=PowerV2 Member=Component C? 1uF 160v
+Added Member To Class: ClassName=PowerV2 Member=Component C? 220uF 400v Bulk
+Added Member To Class: ClassName=DAC Member=Component IC2 TAD5242IRGER
+Added Member To Class: ClassName=PowerV2 Member=Component IC3 RAPC322X
+Added Member To Class: ClassName=Amplifier Member=Component R8 0603 100k
+Added Member To Class: ClassName=DAC Member=Component R32 0603 1k
+Added Member To Class: ClassName=DAC Member=Component R33 0603 1k
+Added Member To Class: ClassName=DAC Member=Component R34 0603 1k
+Added Member To Class: ClassName=DAC Member=Component R35 0603 1k
+Added Member To Class: ClassName=PowerV2 Member=Component R36 0603 121 1% 1/3W
+Added Member To Class: ClassName=PowerV2 Member=Component R37 0603 1.2k 1% 1/3W
+Added Member To Class: ClassName=PowerV2 Member=Component R? CRG0603ZR

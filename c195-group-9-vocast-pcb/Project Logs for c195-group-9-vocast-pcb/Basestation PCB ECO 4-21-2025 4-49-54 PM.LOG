@@ -1,0 +1,24 @@
+Change Component Footprint: Designator=FL? Old Footprint=SC0515J New Footprint=B82724J8612N040
+Change Component Comment : Designator=FL? Old Comment=SC-05-15J New Comment=B82724J8612N040
+Change component parameters: Designator = "FL?" ("FL?"); Footprint = "SC0515J"; UniqueID = "\OTOVNCFO" ("\OTOVNCFO")
+Change component parameters (AddParameter): Name = "Arrow Part Number"; Value = "B82724J8612N040"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Arrow Price/Stock"; Value = "https://www.arrow.com/en/products/b82724j8612n040/epcos-tdk"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Datasheet Link"; Value = "https://product.tdk.com/system/files/dam/doc/product/emc/emc/line-filter/data_sheet/30/ds/b82724j8xn.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Height"; Value = "33.2mm"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer_Name"; Value = "TDK"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer_Part_Number"; Value = "B82724J8612N040"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mouser Part Number"; Value = "871-B82724J8612N040"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mouser Price/Stock"; Value = "https://www.mouser.co.uk/ProductDetail/EPCOS-TDK/B82724J8612N040?qs=%252BEew9%252B0nqrBT9b22V%2FvVhg%3D%3D"; VariantName = "[No Variations]"
+Add Net: Net with name "DC_NEUTRAL" already exists
+Add Net: Net with name "DC_POSITIVE" already exists
+Add Net: Net with name "SCHOTTKY_OUT" already exists
+Add Net: Net with name "TRAN_AUX_P" already exists
+Add Net: Net with name "TRAN_IN_P" already exists
+Add Net: Net with name "TRAN_OUT_P" already exists
+Added Member To Class: ClassName=PowerV2 Member=Component C? 1uF 160v
+Added Member To Class: ClassName=PowerV2 Member=Component C? 220uF 400v Bulk
+Added Member To Class: ClassName=PowerV2 Member=Component D? Unsure
+Added Member To Class: ClassName=PowerV2 Member=Component D? MBRB20200CT
+Added Member To Class: ClassName=PowerV2 Member=Component R? CRG0603ZR
+Added Member To Class: ClassName=PowerV2 Member=Component R? CRG0603ZR
+Added Member To Class: ClassName=PowerV2 Member=Component R? CRG0603ZR

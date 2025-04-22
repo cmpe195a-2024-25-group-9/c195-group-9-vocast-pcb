@@ -1,0 +1,15 @@
+Removed Pin From Net: NetName=NetH1_1 Pin=SW?-2
+Added Component: Designator=U?(85300001009)
+Add component (AddParameter): Name = "Arrow Part Number"; Value = "85300001009"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Arrow Price/Stock"; Value = "https://www.arrow.com/en/products/85300001009/littelfuse"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet Link"; Value = "https://www.digikey.ph/en/products/detail/littelfuse-inc/85300001009/653461"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = "32.9mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Name"; Value = "LITTELFUSE"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "85300001009"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Part Number"; Value = "576-85300001009"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Price/Stock"; Value = "https://www.mouser.co.uk/ProductDetail/Littelfuse/85300001009?qs=ImUY93axo1htCnreTZ0QOw%3D%3D"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=NetH1_1 Pin=U?-2
+Added Pin To Net: NetName=NetSW?_2 Pin=SW?-2
+Added Pin To Net: NetName=NetSW?_2 Pin=U?-1
+Added Net: Name=NetSW?_2
+Added Member To Class: ClassName=Power Member=Component U? 85300001009

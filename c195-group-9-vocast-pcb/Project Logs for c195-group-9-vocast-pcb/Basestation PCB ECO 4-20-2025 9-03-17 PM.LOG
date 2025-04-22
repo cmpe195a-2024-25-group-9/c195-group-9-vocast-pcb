@@ -1,0 +1,10 @@
+Added Component: Designator=T?(KA5038BL)
+Add component (AddParameter): Name = "Arrow Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Arrow Price/Stock"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet Link"; Value = "https://www.coilcraft.com/getmedia/fdd1459c-b8f1-4cff-8ba6-fdcc9c4a272d/ka5038.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = "23.24mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Name"; Value = "COILCRAFT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "KA5038-BL"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Part Number"; Value = "994-KA5038-BL"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Price/Stock"; Value = "https://www.mouser.co.uk/ProductDetail/Coilcraft/KA5038-BL?qs=ZYnrCdKdyec69IwUkSfnUQ%3D%3D"; VariantName = "[No Variations]"
+Added Member To Class: ClassName=Power Member=Component T? KA5038-BL

@@ -1,0 +1,84 @@
+Removed Pin From Net: NetName=DC_NEUTRAL Pin=C56-2
+Removed Member From Class: ClassName=PowerV2 Member=C14
+Removed Member From Class: ClassName=DAC Member=C57
+Removed Member From Class: ClassName=DAC Member=C58
+Removed Member From Class: ClassName=DAC Member=C59
+Removed Member From Class: ClassName=DAC Member=C60
+Removed Member From Class: ClassName=DAC Member=C61
+Removed Member From Class: ClassName=DAC Member=C63
+Removed Member From Class: ClassName=DAC Member=C64
+Removed Member From Class: ClassName=DAC Member=IC6
+Removed Member From Class: ClassName=Power Member=IC7
+Removed Member From Class: ClassName=Power Member=Q6
+Removed Member From Class: ClassName=Power Member=Q7
+Removed Member From Class: ClassName=Power Member=Q8
+Removed Member From Class: ClassName=Power Member=Q9
+Removed Member From Class: ClassName=DAC Member=R38
+Removed Member From Class: ClassName=DAC Member=R39
+Removed Member From Class: ClassName=Power Member=U8
+Removed Member From Class: ClassName=Power Member=U9
+Removed Member From Class: ClassName=Power Member=U10
+Added Component: Designator=C?(CAPPRD350W65D825H1250)
+Add component (AddParameter): Name = "Arrow Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Arrow Price/Stock"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet Link"; Value = "http://www.mouser.com/ds/2/315/ABA0000C1047-947484.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = "12.5mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Name"; Value = "Panasonic"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "ECA-2WM010"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Part Number"; Value = "667-ECA-2WM010"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Price/Stock"; Value = "https://www.mouser.com/Search/Refine.aspx?Keyword=667-ECA-2WM010"; VariantName = "[No Variations]"
+Added Component: Designator=L?(SC0110G)
+Add component (AddParameter): Name = "Arrow Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Arrow Price/Stock"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet Link"; Value = "https://content.kemet.com/datasheets/KEM_LF0011_SC-G-GS.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = "23mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Name"; Value = "KEMET"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "SC-01-10G"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Part Number"; Value = "80-SC-01-10G"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Price/Stock"; Value = "https://www.mouser.co.uk/ProductDetail/KEMET/SC-01-10G?qs=BenOyfdfArpzDVRBtNEKMw%3D%3D"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=DC_NEUTRAL Pin=C?-2
+Add Net: Net with name "AC_LIVE" already exists
+Add Net: Net with name "AC_NEUTRAL" already exists
+Add Net: Net with name "DC_NEUTRAL" already exists
+Add Net: Net with name "DC_POSITIVE" already exists
+Add Net: Net with name "GATE_HL" already exists
+Add Net: Net with name "GATE_HR" already exists
+Add Net: Net with name "GATE_LL" already exists
+Add Net: Net with name "GATE_LR" already exists
+Add Net: Net with name "SCHOTTKY_OUT" already exists
+Add Net: Net with name "TRAN_AUX_P" already exists
+Add Net: Net with name "TRAN_IN_P" already exists
+Add Net: Net with name "TRAN_OUT_P" already exists
+Added Member To Class: ClassName=Amplifier Member=Component C2 1206 0.22uF
+Added Member To Class: ClassName=Amplifier Member=Component C7 1206 1000pF
+Added Member To Class: ClassName=Amplifier Member=Component C8 1206 0.22uF
+Added Member To Class: ClassName=Amplifier Member=Component C14 0603 1uF
+Added Member To Class: ClassName=Amplifier Member=Component C15 0603 0.1uF
+Added Member To Class: ClassName=Amplifier Member=Component C20 0603 1000pF
+Added Member To Class: ClassName=Amplifier Member=Component C21 0603 1uF
+Added Member To Class: ClassName=DAC Member=Component C49 0603 10uF 16V
+Added Member To Class: ClassName=DAC Member=Component C50 0603 10uF 16V
+Added Member To Class: ClassName=DAC Member=Component C51 0603 0.1uF 16V
+Added Member To Class: ClassName=DAC Member=Component C52 0603 1uF 16V
+Added Member To Class: ClassName=DAC Member=Component C53 0603 10uF 16V
+Added Member To Class: ClassName=DAC Member=Component C54 0603 4.7nF
+Added Member To Class: ClassName=DAC Member=Component C55 0603 4.7nF
+Added Member To Class: ClassName=PowerV2 Member=Component C? 1uF 450V
+Added Member To Class: ClassName=Power Member=Component IC3 RAPC322X
+Added Member To Class: ClassName=Power Member=Component IC4 TEA2208T_1J
+Added Member To Class: ClassName=DAC Member=Component IC5 TAD5242IRGER
+Added Member To Class: ClassName=PowerV2 Member=Component L? SC-01-10G
+Added Member To Class: ClassName=Power Member=Component Q2 IXTX102N65X2
+Added Member To Class: ClassName=Power Member=Component Q3 IXTX102N65X2
+Added Member To Class: ClassName=Power Member=Component Q4 IXTX102N65X2
+Added Member To Class: ClassName=Power Member=Component Q5 IXTX102N65X2
+Added Member To Class: ClassName=Amplifier Member=Component R9 0603 10k
+Added Member To Class: ClassName=DAC Member=Component R36 0603 1k
+Added Member To Class: ClassName=DAC Member=Component R37 0603 1k
+Added Member To Class: ClassName=PowerV2 Member=Component R43 CRG0603ZR
+Added Member To Class: ClassName=Power Member=Component T1 Z9260-AL
+Added Member To Class: ClassName=Power Member=Component U2 ICE3AR2280JZ
+Added Member To Class: ClassName=Power Member=Component U3 85300001009
+Added Member To Class: ClassName=Power Member=Component U5 LM1085ISX-ADJ/NOPB
+Added Member To Class: ClassName=Power Member=Component U6 LM2937IMPX-3.3/NOPB
+Added Member To Class: ClassName=PowerV2 Member=Component U7 85300001009

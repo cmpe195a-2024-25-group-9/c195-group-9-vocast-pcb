@@ -1,0 +1,42 @@
+Added Component: Designator=T?(WE-FB_EFD25)
+Add component (AddParameter): Name = "Current Rating"; Value = "2.5A"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "DC Resistance (DCR)"; Value = "17mO"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Depth"; Value = "13.69mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Frequency"; Value = "400kHz"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = "13.69mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height - Seated (Max)"; Value = "13.69mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Inductance"; Value = "500µH"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Input Current"; Value = "100A"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Isolation Voltage"; Value = "2.5kV"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Length"; Value = "27.03mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Max DC Current"; Value = "2.5A"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Max Input Voltage"; Value = "400V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Max Operating Temperature"; Value = "125°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Max Switching Frequency"; Value = "400kHz"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Min Input Voltage"; Value = "100V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Min Operating Temperature"; Value = "-40°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mount"; Value = "Surface Mount"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "NexarPartId"; Value = "19122558"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Output Current"; Value = "3A"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Output Power"; Value = "45W"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Output Voltage"; Value = "15V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Packaging"; Value = "Digi-Reel®"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "REACH SVHC"; Value = "No SVHC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RoHS"; Value = "Compliant"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Termination"; Value = "SMD/SMT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Turns Ratio"; Value = "6:1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Width"; Value = "32.31mm"; VariantName = "[No Variations]"
+Add Net: Net with name "DC_NEUTRAL" already exists
+Add Net: Net with name "DC_POSITIVE" already exists
+Add Net: Net with name "SCHOTTKY_OUT" already exists
+Add Net: Net with name "TRAN_AUX_P" already exists
+Add Net: Net with name "TRAN_IN_P" already exists
+Add Net: Net with name "TRAN_OUT_P" already exists
+Added Member To Class: ClassName=PowerV2 Member=Component C? 1uF 160v
+Added Member To Class: ClassName=PowerV2 Member=Component C? 220uF 400v Bulk
+Added Member To Class: ClassName=PowerV2 Member=Component D? Unsure
+Added Member To Class: ClassName=PowerV2 Member=Component D? MBRB20200CT
+Added Member To Class: ClassName=PowerV2 Member=Component R? CRG0603ZR
+Added Member To Class: ClassName=PowerV2 Member=Component R? CRG0603ZR
+Added Member To Class: ClassName=PowerV2 Member=Component R? CRG0603ZR
+Added Member To Class: ClassName=PowerV2 Member=Component T? 750311771

@@ -1,0 +1,27 @@
+Added Component: Designator=C?(B32922C_(18_x_5))
+Add component (AddParameter): Name = "Arrow Part Number"; Value = "B32922C3104K289"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Arrow Price/Stock"; Value = "https://www.arrow.com/en/products/b32922c3104k289/tdk?utm_currency=USD&region=nac"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet Link"; Value = "https://product.tdk.com/system/files/dam/doc/product/capacitor/film/emi/data_sheet/20/20/db/fc_2009/x2_b32921_928.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Name"; Value = "TDK"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "B32922C3104K289"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Part Number"; Value = "871-B32922C3104K289"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Price/Stock"; Value = "https://www.mouser.co.uk/ProductDetail/EPCOS-TDK/B32922C3104K289?qs=w5o0Loj0u7OxRKa1IZTr8g%3D%3D"; VariantName = "[No Variations]"
+Add Net: Net with name "AC_LIVE" already exists
+Added Pin To Net: NetName=AC_L Pin=L?-1
+Added Pin To Net: NetName=AC_L Pin=U7-2
+Added Net: Name=AC_L
+Add Net: Net with name "AC_NEUTRAL" already exists
+Added Pin To Net: NetName=AC_N Pin=IC6-2
+Added Pin To Net: NetName=AC_N Pin=L?-3
+Added Net: Name=AC_N
+Add Net: Net with name "DC_NEUTRAL" already exists
+Add Net: Net with name "DC_POSITIVE" already exists
+Add Net: Net with name "GATE_HL" already exists
+Add Net: Net with name "GATE_HR" already exists
+Add Net: Net with name "GATE_LL" already exists
+Add Net: Net with name "GATE_LR" already exists
+Add Net: Net with name "SCHOTTKY_OUT" already exists
+Add Net: Net with name "TRAN_AUX_P" already exists
+Add Net: Net with name "TRAN_IN_P" already exists
+Add Net: Net with name "TRAN_OUT_P" already exists
+Added Member To Class: ClassName=PowerV2 Member=Component C? 1uF 450V
