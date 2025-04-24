@@ -1,0 +1,56 @@
+Removed Pin From Net: NetName=DC_POSITIVE Pin=L3-2
+Removed Member From Class: ClassName=Power Member=L3
+Added Pin To Net: NetName=DC_POSITIVE Pin=L2-2
+Added Pin To Net: NetName=NetL2_1 Pin=L2-1
+Added Pin To Net: NetName=NetL2_1 Pin=Q5-2
+Added Net: Name=NetL2_1
+Added Member To Class: ClassName=DAC Member=Component C28 0603 0.1uF 16V
+Added Member To Class: ClassName=DAC Member=Component C29 0603 0.1uF 16V
+Added Member To Class: ClassName=DAC Member=Component C30 0603 10uF 16V
+Added Member To Class: ClassName=DAC Member=Component C31 0603 10uF 16V
+Added Member To Class: ClassName=DAC Member=Component C32 0603 0.1uF 16V
+Added Member To Class: ClassName=DAC Member=Component C33 0603 1uF 16V
+Added Member To Class: ClassName=DAC Member=Component C34 0603 10uF 16V
+Added Member To Class: ClassName=DAC Member=Component C35 0603 4.7nF
+Added Member To Class: ClassName=DAC Member=Component C36 0603 4.7nF
+Added Member To Class: ClassName=Power Member=Component C37 0.1uF X2 305VAC
+Added Member To Class: ClassName=Power Member=Component C38 1uF 450V
+Added Member To Class: ClassName=Power Member=Component C39 220nF 50VAC 0805
+Added Member To Class: ClassName=Power Member=Component C40 220nF 50VAC 0805
+Added Member To Class: ClassName=Power Member=Component C41 22uF 25VDC 1210
+Added Member To Class: ClassName=Power Member=Component C42 10uF 25V
+Added Member To Class: ClassName=Power Member=Component C43 10uF 25V Tantalum
+Added Member To Class: ClassName=Power Member=Component C44 0603 1uF 25v
+Added Member To Class: ClassName=Power Member=Component C45 0603 6.3V 10uF
+Added Member To Class: ClassName=Power Member=Component C46 0603 25V 0.1uF
+Added Member To Class: ClassName=Power Member=Component C47 1uF 160v
+Added Member To Class: ClassName=Power Member=Component D4 Unsure
+Added Member To Class: ClassName=Power Member=Component D5 Unsure
+Added Member To Class: ClassName=Power Member=Component D6 MBRB20200CT
+Added Member To Class: ClassName=DAC Member=Component IC2 TAD5242IRGER
+Added Member To Class: ClassName=Power Member=Component IC3 RAPC322X
+Added Member To Class: ClassName=Power Member=Component IC4 TEA2208T_1J
+Added Member To Class: ClassName=Power Member=Component IC5 L4985B
+Added Member To Class: ClassName=Power Member=Component L1 SC-01-10G
+Added Member To Class: ClassName=Power Member=Component L2 MSS1210-155KED
+Added Member To Class: ClassName=Power Member=Component Q1 IXTX102N65X2
+Added Member To Class: ClassName=Power Member=Component Q2 IXTX102N65X2
+Added Member To Class: ClassName=Power Member=Component Q3 IXTX102N65X2
+Added Member To Class: ClassName=Power Member=Component Q4 IXTX102N65X2
+Added Member To Class: ClassName=Power Member=Component Q5 IPB60R165CP
+Added Member To Class: ClassName=DAC Member=Component R16 0603 1k
+Added Member To Class: ClassName=DAC Member=Component R17 0603 1k
+Added Member To Class: ClassName=DAC Member=Component R18 0603 1k
+Added Member To Class: ClassName=DAC Member=Component R19 0603 1k
+Added Member To Class: ClassName=Power Member=Component R20 0603 121 1% 1/3W
+Added Member To Class: ClassName=Power Member=Component R21 0603 1.2k 1% 1/3W
+Added Member To Class: ClassName=Power Member=Component R22 CRG0603ZR
+Added Member To Class: ClassName=Power Member=Component R23 CRG0603ZR
+Added Member To Class: ClassName=Power Member=Component R24 CRG0603ZR
+Added Member To Class: ClassName=Power Member=Component R25 CRG0603ZR
+Added Member To Class: ClassName=Power Member=Component SW1 L101011MS02Q
+Added Member To Class: ClassName=Power Member=Component T1 Z9260-AL
+Added Member To Class: ClassName=Power Member=Component U2 85300001009
+Added Member To Class: ClassName=Power Member=Component U3 LM1085ISX-ADJ/NOPB
+Added Member To Class: ClassName=Power Member=Component U4 LM2937IMPX-3.3/NOPB
+Added Member To Class: ClassName=Power Member=Component U5 ICE3AR2280JZ

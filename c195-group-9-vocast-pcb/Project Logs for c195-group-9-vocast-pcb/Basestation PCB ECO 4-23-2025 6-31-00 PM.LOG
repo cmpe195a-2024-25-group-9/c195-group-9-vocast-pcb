@@ -1,0 +1,30 @@
+Removed Pin From Net: NetName=TRAN_OUT_P Pin=C38-1
+Removed Pin From Net: NetName=TRAN_AUX_P Pin=C44-2
+Remove Pin from Net: Failed to remove Pin
+Remove Pin from Net: Failed to remove Pin
+Remove Pin from Net: Failed to remove Pin
+Removed Pin From Net: NetName=TRAN_OUT_P Pin=T1-4
+Removed Pin From Net: NetName=TRAN_OUT_P Pin=T1-5
+Removed Pin From Net: NetName=TRAN_OUT_P Pin=T1-6
+Remove Pin from Net: Failed to remove Pin
+Remove Pin from Net: Failed to remove Pin
+Removed Pin From Net: NetName=TRAN_AUX_P Pin=T1-11
+Removed Pin From Net: NetName=TRAN_IN_P Pin=T1-12
+Removed Member From Class: ClassName=Power Member=T1
+Added Pin To Net: NetName=TRAN_AUX_P Pin=C39-1
+Added Pin To Net: NetName=TRAN_IN_P Pin=D5-2
+Added Pin To Net: NetName=TRAN_IN_P Pin=Q1-2
+Added Pin To Net: NetName=TRAN_AUX_P Pin=R24-2
+Added Pin To Net: NetName=TRAN_AUX_P Pin=R28-1
+Added Pin To Net: NetName=TRAN_IN_P Pin=T2-2
+Added Pin To Net: NetName=TRAN_AUX_P Pin=T2-6
+Added Pin To Net: NetName=TRAN_OUT_P Pin=T2-12
+Added Pin To Net: NetName=TRAN_OUT_P Pin=T2-13
+Added Pin To Net: NetName=TRAN_OUT_P Pin=T2-14
+Add Net: Net with name "DC_POSITIVE" already exists
+Add Net: Net with name "NetC28_1" already exists
+Add Net: Net with name "NetC33_1" already exists
+Add Net: Net with name "NetC39_2" already exists
+Add Net: Net with name "NetD4_1" already exists
+Add Net: Net with name "TRAN_AUX_P" already exists
+Add Net: Net with name "TRAN_OUT_P" already exists

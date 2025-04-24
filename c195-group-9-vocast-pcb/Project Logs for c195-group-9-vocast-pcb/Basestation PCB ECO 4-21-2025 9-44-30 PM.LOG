@@ -1,0 +1,18 @@
+Removed Pin From Net: NetName=AC_LIVE Pin=C37-1
+Removed Pin From Net: NetName=AC_NEUTRAL Pin=C37-2
+Removed Pin From Net: NetName=AC_LIVE Pin=L1-2
+Removed Pin From Net: NetName=AC_N Pin=L1-3
+Removed Member From Class: ClassName=Power Member=C37
+Added Component: Designator=C?(B32922C_(18_x_5))
+Add component (AddParameter): Name = "Arrow Part Number"; Value = "B32922C3104K289"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Arrow Price/Stock"; Value = "https://www.arrow.com/en/products/b32922c3104k289/tdk?utm_currency=USD&region=nac"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet Link"; Value = "https://product.tdk.com/system/files/dam/doc/product/capacitor/film/emi/data_sheet/20/20/db/fc_2009/x2_b32921_928.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Name"; Value = "TDK"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "B32922C3104K289"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Part Number"; Value = "871-B32922C3104K289"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Price/Stock"; Value = "https://www.mouser.co.uk/ProductDetail/EPCOS-TDK/B32922C3104K289?qs=w5o0Loj0u7OxRKa1IZTr8g%3D%3D"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=AC_NEUTRAL Pin=C?-1
+Added Pin To Net: NetName=AC_LIVE Pin=C?-2
+Added Pin To Net: NetName=AC_N Pin=L1-2
+Added Pin To Net: NetName=AC_LIVE Pin=L1-3
+Added Member To Class: ClassName=Power Member=Component C? 0.1uF X2 305VAC

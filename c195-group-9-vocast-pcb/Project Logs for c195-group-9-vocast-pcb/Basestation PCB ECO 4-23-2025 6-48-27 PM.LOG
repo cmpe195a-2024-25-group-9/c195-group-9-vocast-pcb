@@ -1,0 +1,18 @@
+Add Net: Net with name "DC_POSITIVE" already exists
+Add Net: Net with name "NetC28_1" already exists
+Add Net: Net with name "NetC33_1" already exists
+Add Net: Net with name "NetC39_2" already exists
+Add Net: Net with name "NetD4_1" already exists
+Added Pin To Net: NetName=NetT?_2 Pin=T?-2
+Added Pin To Net: NetName=NetT?_2 Pin=T?-3
+Added Net: Name=NetT?_2
+Added Pin To Net: NetName=NetT?_7 Pin=T?-7
+Added Pin To Net: NetName=NetT?_7 Pin=T?-8
+Added Pin To Net: NetName=NetT?_7 Pin=T?-9
+Added Net: Name=NetT?_7
+Added Pin To Net: NetName=NetT?_10 Pin=T?-10
+Added Pin To Net: NetName=NetT?_10 Pin=T?-11
+Added Pin To Net: NetName=NetT?_10 Pin=T?-12
+Added Net: Name=NetT?_10
+Add Net: Net with name "TRAN_AUX_P" already exists
+Add Net: Net with name "TRAN_OUT_P" already exists

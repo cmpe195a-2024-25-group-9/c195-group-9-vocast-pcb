@@ -1,0 +1,69 @@
+Removed Member From Class: ClassName=Power Member=L?
+Change Component Designator: OldDesignator=C47 NewDesignator=C28
+Change Component Designator: OldDesignator=C48 NewDesignator=C29
+Change Component Designator: OldDesignator=C49 NewDesignator=C30
+Change Component Designator: OldDesignator=C50 NewDesignator=C31
+Change Component Designator: OldDesignator=C51 NewDesignator=C32
+Change Component Designator: OldDesignator=C52 NewDesignator=C33
+Change Component Designator: OldDesignator=C53 NewDesignator=C34
+Change Component Designator: OldDesignator=C54 NewDesignator=C35
+Change Component Designator: OldDesignator=C55 NewDesignator=C36
+Change Component Designator: OldDesignator=C57 NewDesignator=C39
+Change Component Designator: OldDesignator=C58 NewDesignator=C40
+Change Component Designator: OldDesignator=C59 NewDesignator=C41
+Change Component Designator: OldDesignator=C60 NewDesignator=C42
+Change Component Designator: OldDesignator=C61 NewDesignator=C43
+Change Component Designator: OldDesignator=C62 NewDesignator=C44
+Change Component Designator: OldDesignator=C63 NewDesignator=C45
+Change Component Designator: OldDesignator=C64 NewDesignator=C46
+Change Component Designator: OldDesignator=C65 NewDesignator=C47
+Change Component Designator: OldDesignator=C? NewDesignator=C37
+Change Component Designator: OldDesignator=C? NewDesignator=C38
+Change Component Designator: OldDesignator=D10 NewDesignator=D4
+Change Component Designator: OldDesignator=D11 NewDesignator=D5
+Change Component Designator: OldDesignator=D12 NewDesignator=D6
+Change Component Designator: OldDesignator=IC5 NewDesignator=IC2
+Change Component Designator: OldDesignator=IC6 NewDesignator=IC3
+Change Component Designator: OldDesignator=IC7 NewDesignator=IC4
+Change Component Designator: OldDesignator=IC8 NewDesignator=IC5
+Change Component Designator: OldDesignator=L1 NewDesignator=L2
+Change Component Designator: OldDesignator=L2 NewDesignator=L3
+Change Component Designator: OldDesignator=L? NewDesignator=L1
+Change Component Designator: OldDesignator=Q6 NewDesignator=Q1
+Change Component Designator: OldDesignator=Q7 NewDesignator=Q2
+Change Component Designator: OldDesignator=Q8 NewDesignator=Q3
+Change Component Designator: OldDesignator=Q9 NewDesignator=Q4
+Change Component Designator: OldDesignator=Q10 NewDesignator=Q5
+Change Component Designator: OldDesignator=R34 NewDesignator=R16
+Change Component Designator: OldDesignator=R35 NewDesignator=R17
+Change Component Designator: OldDesignator=R36 NewDesignator=R18
+Change Component Designator: OldDesignator=R37 NewDesignator=R19
+Change Component Designator: OldDesignator=R38 NewDesignator=R20
+Change Component Designator: OldDesignator=R39 NewDesignator=R21
+Change Component Designator: OldDesignator=R40 NewDesignator=R22
+Change Component Designator: OldDesignator=R41 NewDesignator=R23
+Change Component Designator: OldDesignator=R42 NewDesignator=R24
+Change Component Designator: OldDesignator=R43 NewDesignator=R25
+Change Component Designator: OldDesignator=SW2 NewDesignator=SW1
+Change Component Designator: OldDesignator=T3 NewDesignator=T1
+Change Component Designator: OldDesignator=U7 NewDesignator=U2
+Change Component Designator: OldDesignator=U8 NewDesignator=U3
+Change Component Designator: OldDesignator=U9 NewDesignator=U4
+Change Component Designator: OldDesignator=U10 NewDesignator=U5
+Change Net Name : Old Net Name=NetC47_1 New Net Name=NetC28_1
+Change Net Name : Old Net Name=NetC52_1 New Net Name=NetC33_1
+Change Net Name : Old Net Name=NetC57_2 New Net Name=NetC39_2
+Change Net Name : Old Net Name=NetC58_2 New Net Name=NetC40_2
+Change Net Name : Old Net Name=NetC59_2 New Net Name=NetC41_2
+Change Net Name : Old Net Name=NetC62_1 New Net Name=NetC44_1
+Change Net Name : Old Net Name=NetC65_2 New Net Name=NetC47_2
+Change Net Name : Old Net Name=NetD10_1 New Net Name=NetD4_1
+Change Net Name : Old Net Name=NetD12_4 New Net Name=NetD6_4
+Change Net Name : Old Net Name=NetIC6_1 New Net Name=NetIC3_1
+Change Net Name : Old Net Name=NetL2_1 New Net Name=NetL3_1
+Change Net Name : Old Net Name=NetQ10_1 New Net Name=NetQ5_1
+Change Net Name : Old Net Name=NetR38_2 New Net Name=NetR20_2
+Change Net Name : Old Net Name=NetR42_2 New Net Name=NetR24_2
+Change Net Name : Old Net Name=NetSW2_2 New Net Name=NetSW1_2
+Added Member To Class: ClassName=Power Member=Component C38 1uF 450V
+Added Member To Class: ClassName=Power Member=Component L3 7447709100

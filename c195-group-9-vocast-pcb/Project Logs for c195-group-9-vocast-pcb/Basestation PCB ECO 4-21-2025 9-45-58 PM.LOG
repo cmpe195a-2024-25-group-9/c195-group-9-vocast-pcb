@@ -1,0 +1,8 @@
+Removed Pin From Net: NetName=AC_NEUTRAL Pin=L?-1
+Removed Pin From Net: NetName=AC_LIVE Pin=L?-2
+Removed Pin From Net: NetName=AC_N Pin=L?-3
+Removed Pin From Net: NetName=AC_L Pin=L?-4
+Added Pin To Net: NetName=AC_LIVE Pin=L?-1
+Added Pin To Net: NetName=AC_NEUTRAL Pin=L?-2
+Added Pin To Net: NetName=AC_L Pin=L?-3
+Added Pin To Net: NetName=AC_N Pin=L?-4

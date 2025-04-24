@@ -1,0 +1,25 @@
+Removed Pin From Net: NetName=DC_NEUTRAL Pin=T?-4
+Removed Pin From Net: NetName=DC_NEUTRAL Pin=T?-7
+Removed Pin From Net: NetName=DC_NEUTRAL Pin=T?-8
+Removed Pin From Net: NetName=DC_NEUTRAL Pin=T?-9
+Added Pin To Net: NetName=TPA311_AGND Pin=T?-4
+Added Pin To Net: NetName=TPA311_AGND Pin=T?-7
+Added Pin To Net: NetName=TPA311_AGND Pin=T?-8
+Added Pin To Net: NetName=TPA311_AGND Pin=T?-9
+Added Member To Class: ClassName=Amplifier Member=Component C14 0603 1uF
+Added Member To Class: ClassName=DAC Member=Component C28 0603 0.1uF 16V
+Added Member To Class: ClassName=DAC Member=Component C29 0603 0.1uF 16V
+Added Member To Class: ClassName=DAC Member=Component C33 0603 1uF 16V
+Added Member To Class: ClassName=DAC Member=Component C34 0603 10uF 16V
+Added Member To Class: ClassName=DAC Member=Component C35 0603 4.7nF
+Added Member To Class: ClassName=Power Member=Component C38 1uF 450V
+Added Member To Class: ClassName=Power Member=Component C39 220nF 50VAC 0805
+Added Member To Class: ClassName=Power Member=Component C42 10uF 25V
+Added Member To Class: ClassName=Power Member=Component Q1 IXTX102N65X2
+Added Member To Class: ClassName=DAC Member=Component R16 0603 1k
+Added Member To Class: ClassName=DAC Member=Component R17 0603 1k
+Added Member To Class: ClassName=DAC Member=Component R18 0603 1k
+Added Member To Class: ClassName=DAC Member=Component R19 0603 1k
+Added Member To Class: ClassName=Power Member=Component R20 0603 121 1% 1/3W
+Added Member To Class: ClassName=Power Member=Component R21 0603 1.2k 1% 1/3W
+Added Member To Class: ClassName=Power Member=Component U4 LM2937IMPX-3.3/NOPB

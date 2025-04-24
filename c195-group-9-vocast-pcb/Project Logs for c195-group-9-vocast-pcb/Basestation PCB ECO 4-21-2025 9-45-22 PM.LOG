@@ -1,0 +1,20 @@
+Removed Pin From Net: NetName=AC_L Pin=L1-1
+Removed Pin From Net: NetName=AC_N Pin=L1-2
+Removed Pin From Net: NetName=AC_LIVE Pin=L1-3
+Removed Pin From Net: NetName=AC_NEUTRAL Pin=L1-4
+Removed Member From Class: ClassName=Power Member=L1
+Added Component: Designator=L?(SC0110G)
+Add component (AddParameter): Name = "Arrow Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Arrow Price/Stock"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet Link"; Value = "https://content.kemet.com/datasheets/KEM_LF0011_SC-G-GS.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = "23mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Name"; Value = "KEMET"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "SC-01-10G"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Part Number"; Value = "80-SC-01-10G"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Price/Stock"; Value = "https://www.mouser.co.uk/ProductDetail/KEMET/SC-01-10G?qs=BenOyfdfArpzDVRBtNEKMw%3D%3D"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=AC_NEUTRAL Pin=L?-1
+Added Pin To Net: NetName=AC_LIVE Pin=L?-2
+Added Pin To Net: NetName=AC_N Pin=L?-3
+Added Pin To Net: NetName=AC_L Pin=L?-4
+Added Member To Class: ClassName=Power Member=Component C? 0.1uF X2 305VAC
+Added Member To Class: ClassName=Power Member=Component L? SC-01-10G
