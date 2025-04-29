@@ -1,0 +1,51 @@
+Removed Pin From Net: NetName=TPA311_AGND Pin=C38-2
+Removed Pin From Net: NetName=TPA311_AGND Pin=C42-1
+Removed Pin From Net: NetName=TPA311_AGND Pin=C43-2
+Removed Pin From Net: NetName=TPA311_AGND Pin=C45-2
+Removed Pin From Net: NetName=TPA311_AGND Pin=C46-2
+Removed Pin From Net: NetName=TPA311_AGND Pin=C47-2
+Removed Pin From Net: NetName=TPA311_AGND Pin=IC4-7
+Removed Pin From Net: NetName=TPA311_AGND Pin=R27-1
+Removed Pin From Net: NetName=TPA311_AGND Pin=R28-2
+Removed Pin From Net: NetName=TPA311_AGND Pin=R33-2
+Removed Pin From Net: NetName=TPA311_AGND Pin=R34-2
+Removed Pin From Net: NetName=TPA311_AGND Pin=R35-2
+Removed Pin From Net: NetName=TPA311_AGND Pin=S1-3
+Removed Pin From Net: NetName=TPA311_AGND Pin=T1-6
+Removed Pin From Net: NetName=TPA311_AGND Pin=U3-17
+Change Component Footprint: Designator=S1 Old Footprint=D6R90F2LFS New Footprint=3983
+Change Component Comment : Designator=S1 Old Comment=D6R90_F2_LFS New Comment=3983
+Change Component Designator: OldDesignator=C26 NewDesignator=C27
+Change Component Designator: OldDesignator=C27 NewDesignator=C26
+Change Component Designator: OldDesignator=R12 NewDesignator=R15
+Change Component Designator: OldDesignator=R13 NewDesignator=R12
+Change Component Designator: OldDesignator=R14 NewDesignator=R13
+Change Component Designator: OldDesignator=R15 NewDesignator=R14
+Change component parameters: Designator = "S1" ("S1"); Footprint = "D6R90F2LFS"; UniqueID = "\VYKVWZPU" ("\VYKVWZPU")
+Change component parameters (AddParameter): Name = "Arrow Part Number"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Arrow Price/Stock"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Datasheet Link"; Value = "https://cdn-shop.adafruit.com/product-files/3983/3983_datasheet.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Height"; Value = "5.2mm"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer_Name"; Value = "Adafruit"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer_Part_Number"; Value = "3983"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mouser Part Number"; Value = "485-3983"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mouser Price/Stock"; Value = "https://www.mouser.co.uk/ProductDetail/Adafruit/3983?qs=u16ybLDytRYaHMDPWU5Anw%3D%3D"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=DC_NEUTRAL Pin=C38-2
+Added Pin To Net: NetName=DC_NEUTRAL Pin=C42-1
+Added Pin To Net: NetName=DC_NEUTRAL Pin=C43-2
+Added Pin To Net: NetName=DC_NEUTRAL Pin=C45-2
+Added Pin To Net: NetName=DC_NEUTRAL Pin=C46-2
+Added Pin To Net: NetName=DC_NEUTRAL Pin=C47-2
+Added Pin To Net: NetName=DC_NEUTRAL Pin=IC4-7
+Added Pin To Net: NetName=DC_NEUTRAL Pin=R27-1
+Added Pin To Net: NetName=DC_NEUTRAL Pin=R28-2
+Added Pin To Net: NetName=DC_NEUTRAL Pin=R33-2
+Added Pin To Net: NetName=DC_NEUTRAL Pin=R34-2
+Added Pin To Net: NetName=DC_NEUTRAL Pin=R35-2
+Added Pin To Net: NetName=TPA311_AGND Pin=S1-1
+Added Pin To Net: NetName=DC_NEUTRAL Pin=T1-6
+Added Pin To Net: NetName=DC_NEUTRAL Pin=U3-17
+Change Net Name : Old Net Name=NetC26_1 New Net Name=NetC27_1
+Change Net Name : Old Net Name=NetC27_1 New Net Name=NetC26_1
+Added Member To Class: ClassName=ESP32 Member=Component IC1 ESP32-S3-WROOM-1U-N16R8
+Added Rule: Name=Schematic Supply Nets_2

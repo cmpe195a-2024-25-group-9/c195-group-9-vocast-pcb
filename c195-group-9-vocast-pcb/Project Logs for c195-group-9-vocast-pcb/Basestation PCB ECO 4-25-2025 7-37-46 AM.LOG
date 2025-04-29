@@ -1,0 +1,65 @@
+Removed Pin From Net: NetName=TPA311_AGND Pin=IC1-1
+Removed Pin From Net: NetName=+3.3 Pin=IC1-2
+Removed Pin From Net: NetName=ESP32_EN Pin=IC1-3
+Removed Pin From Net: NetName=ESP32_IO16 Pin=IC1-8
+Removed Pin From Net: NetName=ESP32_IO16 Pin=IC1-9
+Removed Pin From Net: NetName=TPA311_AGND Pin=IC1-40
+Removed Pin From Net: NetName=TPA311_AGND Pin=IC1-41
+Removed Pin From Net: NetName=TPA311_AGND Pin=IC1-42
+Removed Pin From Net: NetName=TPA311_AGND Pin=IC1-43
+Removed Pin From Net: NetName=TPA311_AGND Pin=IC1-44
+Removed Pin From Net: NetName=TPA311_AGND Pin=IC1-45
+Removed Pin From Net: NetName=TPA311_AGND Pin=IC1-46
+Removed Pin From Net: NetName=TPA311_AGND Pin=IC1-47
+Removed Pin From Net: NetName=TPA311_AGND Pin=IC1-48
+Removed Pin From Net: NetName=TPA311_AGND Pin=IC1-49
+Removed Member From Class: ClassName=ESP32 Member=IC1
+Added Component: Designator=IC?(ESP32S3WROOM1UN16R8)
+Add component (AddParameter): Name = "Arrow Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Arrow Price/Stock"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet Link"; Value = "https://www.espressif.com/sites/default/files/documentation/esp32-s3-wroom-1_wroom-1u_datasheet_en.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = "3.35mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Name"; Value = "Espressif Systems"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "ESP32-S3-WROOM-1U-N16R8"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Part Number"; Value = "356-ESP32S3WM1UN16R8"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Price/Stock"; Value = "https://www.mouser.co.uk/ProductDetail/Espressif-Systems/ESP32-S3-WROOM-1U-N16R8?qs=Li%252BoUPsLEns6V0Pr5KRJtw%3D%3D"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=TPA311_AGND Pin=IC?-1
+Added Pin To Net: NetName=+3.3 Pin=IC?-2
+Added Pin To Net: NetName=ESP32_EN Pin=IC?-3
+Added Pin To Net: NetName=ESP32_IO16 Pin=IC?-8
+Added Pin To Net: NetName=ESP32_IO16 Pin=IC?-9
+Added Pin To Net: NetName=TPA311_AGND Pin=IC?-40
+Added Pin To Net: NetName=TPA311_AGND Pin=IC?-41
+Added Pin To Net: NetName=TPA311_AGND Pin=IC?-42
+Added Pin To Net: NetName=TPA311_AGND Pin=IC?-43
+Added Pin To Net: NetName=TPA311_AGND Pin=IC?-44
+Added Pin To Net: NetName=TPA311_AGND Pin=IC?-45
+Added Pin To Net: NetName=TPA311_AGND Pin=IC?-46
+Added Pin To Net: NetName=TPA311_AGND Pin=IC?-47
+Added Pin To Net: NetName=TPA311_AGND Pin=IC?-48
+Added Pin To Net: NetName=TPA311_AGND Pin=IC?-49
+Added Pin To Net: NetName=NetIC2_2 Pin=IC2-2
+Added Pin To Net: NetName=NetIC2_2 Pin=IC?-24
+Added Net: Name=NetIC2_2
+Added Pin To Net: NetName=NetIC2_3 Pin=IC2-3
+Added Pin To Net: NetName=NetIC2_3 Pin=IC?-22
+Added Net: Name=NetIC2_3
+Added Pin To Net: NetName=NetIC2_5 Pin=IC2-5
+Added Pin To Net: NetName=NetIC2_5 Pin=IC?-23
+Added Net: Name=NetIC2_5
+Added Pin To Net: NetName=NetIC?_20 Pin=IC?-20
+Added Pin To Net: NetName=NetIC?_20 Pin=R3-1
+Added Net: Name=NetIC?_20
+Added Pin To Net: NetName=NetIC?_21 Pin=IC?-21
+Added Pin To Net: NetName=NetIC?_21 Pin=R10-2
+Added Net: Name=NetIC?_21
+Added Pin To Net: NetName=NetIC?_27 Pin=IC?-27
+Added Pin To Net: NetName=NetIC?_27 Pin=P1-1
+Added Net: Name=NetIC?_27
+Added Pin To Net: NetName=NetIC?_36 Pin=IC?-36
+Added Pin To Net: NetName=NetIC?_36 Pin=P2-3
+Added Net: Name=NetIC?_36
+Added Pin To Net: NetName=NetIC?_37 Pin=IC?-37
+Added Pin To Net: NetName=NetIC?_37 Pin=P2-2
+Added Net: Name=NetIC?_37
+Added Member To Class: ClassName=ESP32 Member=Component IC? ESP32-S3-WROOM-1U-N16R8

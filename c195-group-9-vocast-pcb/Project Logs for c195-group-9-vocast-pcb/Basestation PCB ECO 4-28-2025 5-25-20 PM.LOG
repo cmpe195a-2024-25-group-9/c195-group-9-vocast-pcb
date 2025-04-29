@@ -1,0 +1,68 @@
+Removed Pin From Net: NetName=TPA311_AGND Pin=TP_DC-GND1-1
+Removed Member From Class: ClassName=Misc Member=TP_1
+Removed Member From Class: ClassName=Misc Member=TP_2
+Removed Member From Class: ClassName=Misc Member=TP_DC-GND1
+Change Component Designator: OldDesignator=TP1 NewDesignator=TP4
+Added Component: Designator=TP1(KEYSTONE_5194TR)
+Add component (AddParameter): Name = "Check_prices"; Value = "https://www.snapeda.com/parts/5194TR/Keystone+Electronics/view-part/?ref=eda"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Component Type"; Value = "Standard"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Design Item ID"; Value = "5194TR"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Keystone Electronics"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "5194TR"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Pin Count"; Value = "1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/5194TR/Keystone+Electronics/view-part/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Source"; Value = "5194TR.SchLib"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=TP2(KEYSTONE_5190TR)
+Add component (AddParameter): Name = "Check_prices"; Value = "https://www.snapeda.com/parts/5190TR/Keystone+Electronics/view-part/?ref=eda"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Component Type"; Value = "Standard"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Design Item ID"; Value = "5190TR"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Keystone Electronics"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "5190TR"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Pin Count"; Value = "1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/5190TR/Keystone+Electronics/view-part/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Source"; Value = "5190TR.SchLib"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=TP3(KEYSTONE_5191TR)
+Add component (AddParameter): Name = "Check_prices"; Value = "https://www.snapeda.com/parts/5191TR/Keystone+Electronics/view-part/?ref=eda"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Component Type"; Value = "Standard"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Design Item ID"; Value = "5191TR"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Keystone Electronics"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "5191TR"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Pin Count"; Value = "1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/5191TR/Keystone+Electronics/view-part/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Source"; Value = "5191TR.SchLib"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=TP5(KEYSTONE_5196TR)
+Add component (AddParameter): Name = "Check_prices"; Value = "https://www.snapeda.com/parts/5196TR/Keystone+Electronics/view-part/?ref=eda"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Component Type"; Value = "Standard"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Design Item ID"; Value = "5196TR"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Keystone Electronics"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "5196TR"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Pin Count"; Value = "1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/5196TR/Keystone+Electronics/view-part/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Source"; Value = "5196TR.SchLib"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=TP6(KEYSTONE_5199TR)
+Add component (AddParameter): Name = "Check_prices"; Value = "https://www.snapeda.com/parts/5199TR/Keystone+Electronics/view-part/?ref=eda"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Component Type"; Value = "Standard"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Design Item ID"; Value = "5199TR"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Keystone Electronics"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "5199TR"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Pin Count"; Value = "1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/5199TR/Keystone+Electronics/view-part/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Source"; Value = "5199TR.SchLib"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Pin To Net: NetName=TPA311_AGND Pin=TP3-TP
+Added Pin To Net: NetName=NetIC1_23 Pin=TP5-TP
+Added Pin To Net: NetName=NetIC1_24 Pin=TP6-TP
+Added Member To Class: ClassName=Misc Member=Component TP2 5190TR
+Added Member To Class: ClassName=Misc Member=Component TP3 5191TR
+Added Member To Class: ClassName=Misc Member=Component TP4 5197TR
+Added Member To Class: ClassName=Misc Member=Component TP5 5196TR
+Added Member To Class: ClassName=Misc Member=Component TP6 5199TR

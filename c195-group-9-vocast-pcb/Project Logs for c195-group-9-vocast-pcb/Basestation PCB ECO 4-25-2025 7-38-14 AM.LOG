@@ -1,0 +1,9 @@
+Change Component Designator: OldDesignator=IC? NewDesignator=IC1
+Change Net Name : Old Net Name=NetIC2_2 New Net Name=NetIC1_24
+Change Net Name : Old Net Name=NetIC2_3 New Net Name=NetIC1_22
+Change Net Name : Old Net Name=NetIC2_5 New Net Name=NetIC1_23
+Change Net Name : Old Net Name=NetIC?_20 New Net Name=NetIC1_20
+Change Net Name : Old Net Name=NetIC?_21 New Net Name=NetIC1_21
+Change Net Name : Old Net Name=NetIC?_27 New Net Name=NetIC1_27
+Change Net Name : Old Net Name=NetIC?_36 New Net Name=NetIC1_36
+Change Net Name : Old Net Name=NetIC?_37 New Net Name=NetIC1_37
