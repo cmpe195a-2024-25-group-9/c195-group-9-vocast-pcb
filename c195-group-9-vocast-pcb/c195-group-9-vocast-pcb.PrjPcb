@@ -327,6 +327,10 @@ DItemRevisionGUID=
 DocumentPath=Project Outputs for c195-group-9-vocast-pcb\Basestation.TXT
 DItemRevisionGUID=
 
+[GeneratedDocument28]
+DocumentPath=Project Outputs for c195-group-9-vocast-pcb\Design Rule Check - Basestation.html
+DItemRevisionGUID=
+
 [Configuration1]
 Name=Sources
 ParameterCount=0
