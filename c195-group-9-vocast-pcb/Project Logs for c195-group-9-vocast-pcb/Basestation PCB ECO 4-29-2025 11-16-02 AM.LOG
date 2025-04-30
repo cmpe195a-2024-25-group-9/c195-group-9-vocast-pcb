@@ -1,0 +1,9 @@
+Added Pin To Net: NetName=TPA311_PVCCL Pin=TP1-TP
+Added Pin To Net: NetName=+3.3 Pin=TP2-TP
+Added Member To Class: ClassName=Power Member=Component R30 0603 0
+Added Member To Class: ClassName=Power Member=Component R31 0603 0
+Added Member To Class: ClassName=Power Member=Component R32 ERJ-8ENF20R0V
+Added Member To Class: ClassName=Power Member=Component R33 0603 40.2k 100mW
+Added Member To Class: ClassName=Power Member=Component R34 0603 100k 100mW
+Added Member To Class: ClassName=Power Member=Component R36 0603 18.2k 100mW
+Added Member To Class: ClassName=Power Member=Component R37 0603 0
