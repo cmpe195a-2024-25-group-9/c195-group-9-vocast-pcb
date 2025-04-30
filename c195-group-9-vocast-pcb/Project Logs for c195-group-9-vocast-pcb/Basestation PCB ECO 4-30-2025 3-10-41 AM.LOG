@@ -1,0 +1,2 @@
+Removed Pin From Net: NetName=ESP32_IO16 Pin=IC1-8
+Added Pin To Net: NetName=ESP32_IO15 Pin=IC1-8

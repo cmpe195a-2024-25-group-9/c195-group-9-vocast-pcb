@@ -1,0 +1,115 @@
+Removed Pin From Net: NetName=TPA311_AGND Pin=D1-1
+Removed Pin From Net: NetName=TPA311_AGND Pin=D2-1
+Removed Pin From Net: NetName=TPA311_AGND Pin=D3-1
+Removed Member From Class: ClassName=Misc Member=D1
+Removed Member From Class: ClassName=Misc Member=D2
+Removed Member From Class: ClassName=Misc Member=D3
+Added Component: Designator=D?(FP-SML-LX0603IW-TR-MFG)
+Add component (AddParameter): Name = "Approvals"; Value = "UL"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Case Code (Imperial)"; Value = "0603"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Case Code (Metric)"; Value = "1608"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Case/Package"; Value = "0603"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Color"; Value = "Red"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Diameter"; Value = "0.061inch"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Dominant Wavelength"; Value = "635nm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Forward Current"; Value = "20mA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Forward Voltage"; Value = "2V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = "0.6mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Illumination Color"; Value = "Red"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Lead Free"; Value = "Lead Free"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Length"; Value = "1.6mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Lens Color"; Value = "White"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Lens Style"; Value = "Diffused"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Lens Transparency"; Value = "Diffused"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Luminous Intensity"; Value = "14mcd"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Max Operating Temperature"; Value = "85°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Min Operating Temperature"; Value = "-25°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mount"; Value = "Surface Mount"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Number of LEDs"; Value = "1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Number of Pins"; Value = "2"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package Quantity"; Value = "1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Packaging"; Value = "Tape and Reel"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Power Dissipation"; Value = "50mW"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RoHS Compliant"; Value = "Yes"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Test Current"; Value = "20mA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Viewing Angle"; Value = "160°"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Wavelength"; Value = "635nm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Width"; Value = "0.8mm"; VariantName = "[No Variations]"
+Added Component: Designator=DS?(LUMX-SML-LX0603_V)
+Add component (AddParameter): Name = "Color"; Value = "Green"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "COO"; Value = "CN"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet URL"; Value = "http://www.lumex.com/content/files/ProductAttachment/SML-LX0603GW-TR.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet Version"; Value = "Rev. G, 09/2013"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Dimension"; Value = "1.6x0.8x0.6mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Dominant Wavelength"; Value = "N/A"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ECCN"; Value = "EAR99"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Family"; Value = "SML-LX0603GW"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "HTS"; Value = "8541402000"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Intensity"; Value = "18mcd"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LED Material"; Value = "GaP"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Lens Appearance"; Value = "ColorlessDiffused"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Lens Dimensions"; Value = "1x0.8x0.3mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "Lumex"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer URL"; Value = "http://www.lumexinstruments.com/"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mounting"; Value = "SurfaceMount"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mounting Technology"; Value = "SurfaceMount"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Number of LEDs"; Value = "1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Operating Temperature"; Value = "-25to85C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package Description"; Value = "2-Pin Surface Mount Device, Body 1.6 x 0.8 mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package Reference"; Value = "SML-LX00603"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Packaging"; Value = "TapeandReel"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Part No"; Value = "SML-LX0603GW-TR"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Peak Wavelength"; Value = "565nm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Pin_Count"; Value = "2"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Reverse Voltage"; Value = "5(Min)V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RoHS"; Value = "Yes"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier"; Value = "Lumex"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Standard Pack"; Value = "4,000"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier_Package"; Value = "SMD"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "Uni-Color"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Viewing Angle"; Value = "160"; VariantName = "[No Variations]"
+Added Component: Designator=DS?(LUMX-SML-LX0603_V)
+Add component (AddParameter): Name = "Color"; Value = "Yellow"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "COO"; Value = "CN"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet URL"; Value = "http://www.lumex.com/content/files/ProductAttachment/SML-LX0603YW-TR.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet Version"; Value = "Rev. G, 09/2013"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Dimension"; Value = "1.6x0.8x0.6mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Dominant Wavelength"; Value = "N/A"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ECCN"; Value = "EARII"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Family"; Value = "SML-LX0603YW"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "HTS"; Value = "8541402000"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Intensity"; Value = "14mcd"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LED Material"; Value = "GaAsP"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Lens Appearance"; Value = "ColorlessDiffused"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Lens Dimensions"; Value = "1x0.8x0.3mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "Lumex"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer URL"; Value = "http://www.lumexinstruments.com/"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mounting"; Value = "SurfaceMount"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mounting Technology"; Value = "SurfaceMount"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Number of LEDs"; Value = "1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Operating Temperature"; Value = "-25to85C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package Description"; Value = "2-Pin Surface Mount Device, Body 1.6 x 0.8 mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package Reference"; Value = "SML-LX00603"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Packaging"; Value = "TapeandReel"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Part No"; Value = "SML-LX0603YW-TR"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Peak Wavelength"; Value = "585nm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Pin_Count"; Value = "2"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Reverse Voltage"; Value = "5(Min)V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RoHS"; Value = "Unknown"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier"; Value = "Lumex"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier_Package"; Value = "SMD"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "Uni-Color"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Viewing Angle"; Value = "160"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=TPA311_AGND Pin=D?-1
+Added Pin To Net: NetName=TPA311_AGND Pin=DS?-2
+Added Pin To Net: NetName=TPA311_AGND Pin=DS?-2
+Added Pin To Net: NetName=NetD?_2 Pin=D?-2
+Added Pin To Net: NetName=NetD?_2 Pin=R3-2
+Added Net: Name=NetD?_2
+Added Pin To Net: NetName=NetDS?_1 Pin=DS?-1
+Added Pin To Net: NetName=NetDS?_1 Pin=R2-2
+Added Net: Name=NetDS?_1
+Add Net: Net with name "NetDS?_1" already exists
+Added Member To Class: ClassName=Misc Member=Component D? 0603 RED
+Added Member To Class: ClassName=Misc Member=Component DS? 0603 GRN
+Added Member To Class: ClassName=Misc Member=Component DS? 0603 YLW

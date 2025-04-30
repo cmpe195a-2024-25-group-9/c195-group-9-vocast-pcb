@@ -1,0 +1,6 @@
+Removed Member From Class: ClassName=ESP32 Member=SW2
+Added Member To Class: ClassName=ESP32 Member=Component SW1 B3U-1000P-B
+Added Rule: Name=Schematic Supply Nets
+Added Rule: Name=Schematic Supply Nets_1
+Added Rule: Name=Schematic Supply Nets_2
+Added Rule: Name=Schematic Supply Nets_3
