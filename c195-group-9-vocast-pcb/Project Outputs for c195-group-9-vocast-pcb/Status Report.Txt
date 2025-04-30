@@ -2,11 +2,12 @@ Output: NC Drill Files
 Type  : NC Drill
 From  : Project [c195-group-9-vocast-pcb.PrjPcb]
    Generated File[Basestation.TXT]
+   Generated File[Basestation.DRL]
    Generated File[Basestation.LDP]
    Generated File[Basestation.DRR]
 
 
-Files Generated   : 3
+Files Generated   : 4
 Documents Printed : 0
 
-Finished Output Generation At 1:46:34 AM On 4/30/2025
+Finished Output Generation At 4:14:00 PM On 4/30/2025
