@@ -2,8 +2,201 @@
 FileName = Basestation.GBR
 AutoAperture = True
 *************************************************************
-Generating : Top Pad Master
-      File : Basestation_Pads_Top.gbr
+Generating : Bottom Component Center
+      File : Basestation_Bottom_Component_Center.gbr
+
+    Adding Layer      : Bottom Component Center
+
+
+Used DCodes :
+    D12
+*************************************************************
+
+*************************************************************
+Generating : Bottom 3D Body
+      File : Basestation_Bottom_3D_Body.gbr
+
+    Adding Layer      : Bottom 3D Body
+
+
+Used DCodes :
+    D11
+*************************************************************
+
+*************************************************************
+Generating : Bottom Courtyard
+      File : Basestation_Bottom_Courtyard.gbr
+
+    Adding Layer      : Bottom Courtyard
+
+
+Used DCodes :
+    D11
+*************************************************************
+
+*************************************************************
+Generating : Bottom Assembly
+      File : Basestation_Bottom_Assembly.gbr
+
+    Adding Layer      : Bottom Assembly
+
+
+Used DCodes :
+    D11
+*************************************************************
+
+*************************************************************
+Generating : Top Designator
+      File : Basestation_Top_Designator.gbr
+
+    Adding Layer      : Top Designator
+
+
+Used DCodes :
+    D12
+    D13
+*************************************************************
+
+*************************************************************
+Generating : Top Component Center
+      File : Basestation_Top_Component_Center.gbr
+
+    Adding Layer      : Top Component Center
+
+
+Used DCodes :
+    D12
+    D213
+*************************************************************
+
+*************************************************************
+Generating : Mechanical 15
+      File : Basestation_Mechanical_15.gbr
+
+    Adding Layer      : Mechanical 15
+
+
+Used DCodes :
+    D12
+    D213
+*************************************************************
+
+*************************************************************
+Generating : Mechanical 13
+      File : Basestation_Mechanical_13.gbr
+
+    Adding Layer      : Mechanical 13
+
+
+Used DCodes :
+    D11
+    D12
+    D15
+*************************************************************
+
+*************************************************************
+Generating : Top Component Outline
+      File : Basestation_Top_Component_Outline.gbr
+
+    Adding Layer      : Top Component Outline
+
+
+Used DCodes :
+    D12
+*************************************************************
+
+*************************************************************
+Generating : Top Assembly
+      File : Basestation_Top_Assembly.gbr
+
+    Adding Layer      : Top Assembly
+
+
+Used DCodes :
+    D11
+    D12
+*************************************************************
+
+*************************************************************
+Generating : Top Courtyard
+      File : Basestation_Top_Courtyard.gbr
+
+    Adding Layer      : Top Courtyard
+
+
+Used DCodes :
+    D11
+    D213
+*************************************************************
+
+*************************************************************
+Generating : Top 3D Body
+      File : Basestation_Top_3D_Body.gbr
+
+    Adding Layer      : Top 3D Body
+
+
+Used DCodes :
+    D11
+    D12
+    D13
+*************************************************************
+
+*************************************************************
+Generating : Mechanical 1
+      File : Basestation_Mechanical_1.gbr
+
+    Adding Layer      : Mechanical 1
+
+
+Used DCodes :
+    D13
+*************************************************************
+
+*************************************************************
+Generating : Keep-Out Layer
+      File : Basestation_Keep-out.gbr
+
+    Adding Layer      : Keep-Out Layer
+
+
+Used DCodes :
+    D176
+    D214
+*************************************************************
+
+*************************************************************
+Generating : Bottom Overlay
+      File : Basestation_Legend_Bot.gbr
+
+    Adding Layer      : Bottom Overlay
+
+
+Used DCodes :
+    D11
+    D17
+*************************************************************
+
+*************************************************************
+Generating : Bottom Paste
+      File : Basestation_Paste_Bot.gbr
+
+    Adding Layer      : Bottom Paste
+
+    Adding Layer      : Bottom Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D71
+*************************************************************
+
+*************************************************************
+Generating : Top Paste
+      File : Basestation_Paste_Top.gbr
+
+    Adding Layer      : Top Paste
 
     Adding Layer      : Top Layer
 
@@ -11,6 +204,11 @@ Generating : Top Pad Master
 
 
 Used DCodes :
+    D19
+    D20
+    D21
+    D22
+    D23
     D24
     D25
     D26
@@ -80,55 +278,53 @@ Used DCodes :
     D90
     D91
     D92
-    D103
-    D110
-    D139
-    D144
-    D145
-    D154
-    D155
-    D158
-    D162
-    D166
-    D189
-    D190
-    D191
-    D192
-    D193
-    D194
-    D195
-    D196
-    D197
-    D198
-    D199
-    D200
-    D201
-    D202
-    D203
-    D204
-    D205
-    D206
-    D207
-    D208
 *************************************************************
 
 *************************************************************
-Generating : Top Overlay
-      File : Basestation_Legend_Top.gbr
+Generating : Bottom Solder
+      File : Basestation_Soldermask_Bot.gbr
 
-    Adding Layer      : Top Overlay
+    Adding Layer      : Bottom Solder
+
+    Adding Layer      : Bottom Layer
+
+    Adding Layer      : Multi-Layer
 
 
 Used DCodes :
-    D10
-    D11
-    D12
-    D13
-    D14
-    D15
-    D16
-    D17
-    D18
+    D71
+    D140
+    D141
+    D142
+    D143
+    D144
+    D145
+    D146
+    D147
+    D148
+    D149
+    D150
+    D151
+    D152
+    D153
+    D154
+    D155
+    D156
+    D157
+    D158
+    D159
+    D160
+    D161
+    D162
+    D163
+    D164
+    D165
+    D166
+    D167
+    D168
+    D169
+    D170
+    D171
 *************************************************************
 
 *************************************************************
@@ -252,57 +448,27 @@ Used DCodes :
 *************************************************************
 
 *************************************************************
-Generating : Bottom Solder
-      File : Basestation_Soldermask_Bot.gbr
+Generating : Top Overlay
+      File : Basestation_Legend_Top.gbr
 
-    Adding Layer      : Bottom Solder
-
-    Adding Layer      : Bottom Layer
-
-    Adding Layer      : Multi-Layer
+    Adding Layer      : Top Overlay
 
 
 Used DCodes :
-    D71
-    D140
-    D141
-    D142
-    D143
-    D144
-    D145
-    D146
-    D147
-    D148
-    D149
-    D150
-    D151
-    D152
-    D153
-    D154
-    D155
-    D156
-    D157
-    D158
-    D159
-    D160
-    D161
-    D162
-    D163
-    D164
-    D165
-    D166
-    D167
-    D168
-    D169
-    D170
-    D171
+    D10
+    D11
+    D12
+    D13
+    D14
+    D15
+    D16
+    D17
+    D18
 *************************************************************
 
 *************************************************************
-Generating : Top Paste
-      File : Basestation_Paste_Top.gbr
-
-    Adding Layer      : Top Paste
+Generating : Top Pad Master
+      File : Basestation_Pads_Top.gbr
 
     Adding Layer      : Top Layer
 
@@ -310,11 +476,6 @@ Generating : Top Paste
 
 
 Used DCodes :
-    D19
-    D20
-    D21
-    D22
-    D23
     D24
     D25
     D26
@@ -384,20 +545,9 @@ Used DCodes :
     D90
     D91
     D92
-*************************************************************
-
-*************************************************************
-Generating : Bottom Layer
-      File : Basestation_Copper_Signal_Bot.gbr
-
-    Adding Layer      : Bottom Layer
-
-    Adding Layer      : Multi-Layer
-
-
-Used DCodes :
-    D15
-    D71
+    D103
+    D110
+    D139
     D144
     D145
     D154
@@ -405,11 +555,6 @@ Used DCodes :
     D158
     D162
     D166
-    D172
-    D173
-    D175
-    D176
-    D179
     D189
     D190
     D191
@@ -430,80 +575,6 @@ Used DCodes :
     D206
     D207
     D208
-    D209
-    D210
-    D211
-    D212
-*************************************************************
-
-*************************************************************
-Generating : Bottom Component Center
-      File : Basestation_Bottom_Component_Center.gbr
-
-    Adding Layer      : Bottom Component Center
-
-
-Used DCodes :
-    D12
-*************************************************************
-
-*************************************************************
-Generating : Bottom 3D Body
-      File : Basestation_Bottom_3D_Body.gbr
-
-    Adding Layer      : Bottom 3D Body
-
-
-Used DCodes :
-    D11
-*************************************************************
-
-*************************************************************
-Generating : Top Component Center
-      File : Basestation_Top_Component_Center.gbr
-
-    Adding Layer      : Top Component Center
-
-
-Used DCodes :
-    D12
-    D213
-*************************************************************
-
-*************************************************************
-Generating : Bottom Courtyard
-      File : Basestation_Bottom_Courtyard.gbr
-
-    Adding Layer      : Bottom Courtyard
-
-
-Used DCodes :
-    D11
-*************************************************************
-
-*************************************************************
-Generating : Mechanical 15
-      File : Basestation_Mechanical_15.gbr
-
-    Adding Layer      : Mechanical 15
-
-
-Used DCodes :
-    D12
-    D213
-*************************************************************
-
-*************************************************************
-Generating : Mechanical 13
-      File : Basestation_Mechanical_13.gbr
-
-    Adding Layer      : Mechanical 13
-
-
-Used DCodes :
-    D11
-    D12
-    D15
 *************************************************************
 
 *************************************************************
@@ -544,17 +615,6 @@ Used DCodes :
     D206
     D207
     D208
-*************************************************************
-
-*************************************************************
-Generating : Top Component Outline
-      File : Basestation_Top_Component_Outline.gbr
-
-    Adding Layer      : Top Component Outline
-
-
-Used DCodes :
-    D12
 *************************************************************
 
 *************************************************************
@@ -691,58 +751,8 @@ Used DCodes :
 *************************************************************
 
 *************************************************************
-Generating : Top Assembly
-      File : Basestation_Top_Assembly.gbr
-
-    Adding Layer      : Top Assembly
-
-
-Used DCodes :
-    D11
-    D12
-*************************************************************
-
-*************************************************************
-Generating : Keep-Out Layer
-      File : Basestation_Keep-out.gbr
-
-    Adding Layer      : Keep-Out Layer
-
-
-Used DCodes :
-    D176
-    D214
-*************************************************************
-
-*************************************************************
-Generating : Top Courtyard
-      File : Basestation_Top_Courtyard.gbr
-
-    Adding Layer      : Top Courtyard
-
-
-Used DCodes :
-    D11
-    D213
-*************************************************************
-
-*************************************************************
-Generating : Bottom Overlay
-      File : Basestation_Legend_Bot.gbr
-
-    Adding Layer      : Bottom Overlay
-
-
-Used DCodes :
-    D11
-    D17
-*************************************************************
-
-*************************************************************
-Generating : Bottom Paste
-      File : Basestation_Paste_Bot.gbr
-
-    Adding Layer      : Bottom Paste
+Generating : Bottom Layer
+      File : Basestation_Copper_Signal_Bot.gbr
 
     Adding Layer      : Bottom Layer
 
@@ -750,54 +760,44 @@ Generating : Bottom Paste
 
 
 Used DCodes :
+    D15
     D71
-*************************************************************
-
-*************************************************************
-Generating : Top Designator
-      File : Basestation_Top_Designator.gbr
-
-    Adding Layer      : Top Designator
-
-
-Used DCodes :
-    D12
-    D13
-*************************************************************
-
-*************************************************************
-Generating : Bottom Assembly
-      File : Basestation_Bottom_Assembly.gbr
-
-    Adding Layer      : Bottom Assembly
-
-
-Used DCodes :
-    D11
-*************************************************************
-
-*************************************************************
-Generating : Top 3D Body
-      File : Basestation_Top_3D_Body.gbr
-
-    Adding Layer      : Top 3D Body
-
-
-Used DCodes :
-    D11
-    D12
-    D13
-*************************************************************
-
-*************************************************************
-Generating : Mechanical 1
-      File : Basestation_Mechanical_1.gbr
-
-    Adding Layer      : Mechanical 1
-
-
-Used DCodes :
-    D13
+    D144
+    D145
+    D154
+    D155
+    D158
+    D162
+    D166
+    D172
+    D173
+    D175
+    D176
+    D179
+    D189
+    D190
+    D191
+    D192
+    D193
+    D194
+    D195
+    D196
+    D197
+    D198
+    D199
+    D200
+    D201
+    D202
+    D203
+    D204
+    D205
+    D206
+    D207
+    D208
+    D209
+    D210
+    D211
+    D212
 *************************************************************
 
 *************************************************************

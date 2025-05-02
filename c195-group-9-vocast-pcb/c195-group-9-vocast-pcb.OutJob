@@ -140,7 +140,7 @@ OutputEnabled2_OutputMedium2=2
 OutputEnabled2_OutputMedium3=0
 OutputEnabled2_OutputMedium4=0
 OutputDefault2=0
-PageOptions2=Record=PageOptions|CenterHorizontal=True|CenterVertical=True|PrintScale=1.56|XCorrection=1.00|YCorrection=1.00|PrintKind=0|BorderSize=5000000|LeftOffset=0|BottomOffset=0|Orientation=2|PaperLength=1000|PaperWidth=1000|Scale=100|PaperSource=7|PrintQuality=-3|MediaType=1|DitherType=10|PrintScaleMode=1|PaperKind=Letter|PaperIndex=1
+PageOptions2=Record=PageOptions|CenterHorizontal=True|CenterVertical=True|PrintScale=1.81|XCorrection=1.00|YCorrection=1.00|PrintKind=0|BorderSize=5000000|LeftOffset=0|BottomOffset=0|Orientation=2|PaperLength=1000|PaperWidth=1000|Scale=100|PaperSource=7|PrintQuality=-3|MediaType=1|DitherType=10|PrintScaleMode=1|PaperKind=Letter|PaperIndex=1
 Configuration2_Name1=OutputConfigurationParameter1
 Configuration2_Item1=DesignatorDisplayMode=Physical|PrintArea=DesignExtent|PrintAreaLowerLeftCornerX=0|PrintAreaLowerLeftCornerY=0|PrintAreaUpperRightCornerX=0|PrintAreaUpperRightCornerY=0|Record=PcbPrintView|DocumentPath=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc
 Configuration2_Name2=OutputConfigurationParameter2
@@ -193,11 +193,15 @@ Configuration3_Item2=False
 Configuration3_Name3=General
 Configuration3_Item3=TemplateFilename=Board Stack Report.XLT
 Configuration3_Name4=GroupOrder
-Configuration3_Item4=Comment=True|Footprint=True
+Configuration3_Item4=
 Configuration3_Name5=SortOrder
-Configuration3_Item5=Designator=Up|Comment=Up|Footprint=Up
+Configuration3_Item5=Supplier 1=Up
 Configuration3_Name6=VisibleOrder
-Configuration3_Item6=Comment=120|Description=120|Designator=120|Footprint=120|LibRef=120|Quantity=120|Mouser Price/Stock=100|Mouser Part Number=100
-Configuration3_Name7=VisibleOrder_Flat
-Configuration3_Item7=Comment=120|Description=120|Designator=120|Footprint=120|LibRef=120|Quantity=120|Mouser Price/Stock=100|Mouser Part Number=100
+Configuration3_Item6=Line #=52|Comment=102|Description=109|Designator=75|Mouser Part Number=124|Manufacturer 1=97|Manufacturer Part Number 1=161|Manufacturer Lifecycle 1=141|Supplier 1=72|Supplier Part Number 1=136|Supplier Unit Price 1=121|Supplier Subtotal 1=115
+Configuration3_Name7=VisibleOrder_Base
+Configuration3_Item7=Line #=52|Comment=102|Description=109|Designator=75|Quantity=64|Manufacturer 1=97|Manufacturer Part Number 1=161|Manufacturer Lifecycle 1=141|Supplier 1=72|Supplier Part Number 1=136|Supplier Unit Price 1=121|Supplier Subtotal 1=115
+Configuration3_Name8=VisibleOrder_Consolidated
+Configuration3_Item8=Line #=52|Comment=102|Description=109|Designator=75|Quantity=64|Manufacturer 1=97|Manufacturer Part Number 1=161|Manufacturer Lifecycle 1=141|Supplier 1=72|Supplier Part Number 1=136|Supplier Unit Price 1=121|Supplier Subtotal 1=115
+Configuration3_Name9=VisibleOrder_Flat
+Configuration3_Item9=Line #=52|Comment=102|Description=109|Designator=75|Mouser Part Number=124|Manufacturer 1=97|Manufacturer Part Number 1=161|Manufacturer Lifecycle 1=141|Supplier 1=72|Supplier Part Number 1=136|Supplier Unit Price 1=121|Supplier Subtotal 1=115
 

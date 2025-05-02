@@ -1,0 +1,922 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<style type="text/css">
+		h1, h2, h3, h4, h5, h6 {
+			font-family : segoe ui;
+			color : black;
+			background-color : #EDE7D9;
+			padding: 0.3em;
+		}
+
+		h1 {
+			font-size: 1.2em;
+		}		
+
+		h2 {
+			font-size: 1.2em;
+		}
+
+		body {
+			font-family : segoe ui;
+		}
+
+		td, th {
+			padding: 0.5em;
+			text-align : left;
+			width: 10em;
+		}
+		th {
+			background-color : #EEEEEE;
+
+		}
+		th.column1, td.column1 {
+			text-align: left;
+			width : auto;
+		}
+		table {
+			width : 100%;
+			font-size: 0.9em;
+		}
+
+		.DRC_summary_header {
+			padding-bottom : 0.1em;
+			border : 0px solid black;
+			width: 100%;
+			align: left;
+		}
+
+		.DRC_summary_header_col1,
+		.DRC_summary_header_col2, 
+		.DRC_summary_header_col3 {
+			color : black;
+			font-size:100%;
+			padding : 0em;
+			padding-top : 0.2em;
+			padding-bottom 0.2em;
+			border : 0px solid black;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.DRC_summary_header_col1 {
+			font-weight: bold;
+			width: 9em;
+		}
+
+		.DRC_summary_header_col2 {
+			width: 0.1em;
+		
+		}
+
+		.DRC_summary_header_col3 {
+			width : auto;
+		}
+
+		.header_holder {
+		    Width = 100%;
+		    border = 0px solid green;
+		    padding = 0;
+		}
+
+
+		.front_matter, .front_matter_column1, .front_matter_column2, .front_matter_column3
+		{
+			left : 0;
+			top : 0;
+			padding: 0em;
+			padding-top : 0.1em;
+			border : 0px solid black;
+			width : 100%;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.front_matter_column1 {
+			width : 8em;
+			font-weight: bold;
+		}
+
+		.front_matter_column2 {
+			width: 0.1em;
+		}
+
+		.front_matter_column3 {
+			width : auto;
+		}
+
+		.total_column1, .total_column {
+			font-weight : bold;
+		}
+		.total_column1 {
+			text-align : left;
+		}
+		.warning, .error {
+			color : red;
+			font-weight : bold;
+		}
+		tr.onmouseout_odd {
+			background-color : #white;
+		}
+		tr.onmouseout_even { 
+			background-color : #FAFAFA;
+		}
+		tr.onmouseover_odd, tr.onmouseover_even { 
+			background-color : #EEEEEE;
+		} 
+		a:link, a:visited, .q a:link,.q a:active,.q {
+			color: #21489e; 
+		}
+		a:link.callback, a:visited.callback { 
+			color: #21489e;
+		}
+		a:link.customize, a:visited.customize {
+			color: #C0C0C0;
+			position: absolute; 
+			right: 10px;
+		}	
+		p.contents_level1 {
+			font-weight : bold;
+			font-size : 110%;
+			margin : 0.5em;
+		}
+		p.contents_level2 {
+			position : relative;
+			left : 20px;
+			margin : 0.5em;
+		}
+	</style><script type="text/javascript">
+		function coordToMils(coord) {
+			var number = coord / 10000;
+			
+			if (number != number.toFixed(3))
+				number = number.toFixed(3);
+
+			return number + 'mil'
+		}
+
+		function coordToMM(coord) {
+			var number = 0.0254 * coord / 10000;
+			
+			if (number != number.toFixed(4))
+				number = number.toFixed(4);
+			
+			return number + 'mm'
+		}
+	
+		function convertCoord(coordNode, units) {
+			for (var i = 0; i < coordNode.childNodes.length; i++) {
+				coordNode.removeChild(coordNode.childNodes[i]);
+			}
+
+			var coord = coordNode.getAttribute('value');
+			if (coord != null) {
+				if (units == 'mm') {
+					textNode = document.createTextNode(coordToMM(coord));
+					coordNode.appendChild(textNode);
+				} else if (units == 'mil') {
+					textNode = document.createTextNode(coordToMils(coord));		
+					coordNode.appendChild(textNode);	
+				}
+			}
+		}
+	
+		function convertUnits(unitNode, units) {
+			for (var i = 0; i < unitNode.childNodes.length; i++) {
+				unitNode.removeChild(unitNode.childNodes[i]);		
+			}
+		
+			textNode = document.createTextNode(units); 
+			unitNode.appendChild(textNode);
+		}
+	
+		function changeUnits(radio_input, units) {
+			if (radio_input.checked) {
+			
+				var elements = document.getElementsByName('coordinate');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertCoord(elements[i], units);
+					}
+				}
+	
+				var elements = document.getElementsByName('units');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertUnits(elements[i], units);
+					}
+				}
+			}
+		}
+	</script><title>Design Rule Verification Report</title>
+</head>
+<body onload=""><img ALT="Altium" src="
+			file://C:\Users\Public\Documents\Altium\AD25\Templates\AD_logo.png
+		"><h1>Design Rule Verification Report</h1>
+<table class="header_holder">
+<td class="column1">
+<table class="front_matter">
+<tr class="front_matter">
+<td class="front_matter_column1">Date:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">5/1/2025</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">7:17:17 PM</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Elapsed Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">00:00:01</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Filename:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3"><a href="file:///C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc" class="file"><acronym title="C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc">C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc</acronym></a></td>
+</tr>
+</table>
+</td>
+<td class="column2">
+<table class="DRC_summary_header">
+<tr>
+<td class="DRC_summary_header_col1">Warnings:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3">0</td></tr>
+<tr>
+<td class="DRC_summary_header_col1">Rule Violations:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3" style="color : red">99</td></tr>
+<tr>
+<td class="DRC_summary_header_col1">Waived Violations:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3" style="color : red">68</td></tr>
+</table>
+</td>
+</table><a name="IDSSROHGLO3NKRIVRO2TWO0P42JE1IHDDRZC0UGLGXUQ5JJUOXOJTN"><h2>Summary</h2></a><table>
+<tr>
+<th class="column1">Warnings</th>
+<th class="column2">Count</th>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">0</td>
+</tr>
+</table><br><table>
+<tr>
+<th class="column1">Rule Violations</th>
+<th class="column2">Count</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDCU3KJKYGEQSTGSNLBRGJ11HOUE1MOSVDBMBYE2ISSV15YZBZLHFB">Clearance Constraint (Gap=7.874mil) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDDJ3DJQC0UCCTH3A4BUTRG40AYF34Q2EOFV0CCQOH2VQ04DRF50MO">Clearance Constraint (Gap=8mil) (OnLayer('Bottom Layer')),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDGEYE4ZXBRCQ0NY4CERLF3CD5SNW422I1NBNMIPFNK11DES0HPISJ">Clearance Constraint (Gap=8mil) (OnLayer('Top Layer')),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDN5YYHKBEXT1PQ4YRZBV23DDUKF4LWIELGVMKTAJLXKN4GE4JSJ">Clearance Constraint (Gap=100mil) (InNamedPolygon('NONET_L02_P003')),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDUBL3NSXHAGKCEFP2NZYYRB2UUGW1R2HTTEKPQ3MXSAO14PWZOXHL">Clearance Constraint (Gap=7.874mil) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDZ2XGBVQIZAKTK4Y0CEWG5PVJKGJ3LQGAER4LRBFLXS4KAYYUFVKP">Short-Circuit Constraint (Allowed=No) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDKRMF22LG5KJIMSLWZJVE4LAVNPKNOATRPVRT44YICX0RA0BK41M">Un-Routed Net Constraint ( (All) )</a></td>
+<td class="column2">1</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDCBLIB1ECLTKTGJUTOUNBOASLMCOD4Q21CHDRQIMVA23JSBWFC5BB">Modified Polygon (Allow modified: No), (Allow shelved: No)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDNVTFE0TPM5DHK2S44CFDQCQHWLQBPDA1HU035OOUO1PQNVNG0AEI">Width Constraint (Min=3.5mil) (Max=100mil) (Preferred=15mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDCEWUNJYDMR04Y2KDFYZNUIDLM0D053EHJXTWCLA1DZ3C1N2GPDH">Routing Topology Rule(Topology=Shortest) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID0JTFMPM32OYYPXRSJCPZ51SP5EOGT1LQVE234AOVMMJB2XPELO5L">Power Plane Connect Rule(Relief Connect )(Expansion=20mil) (Conductor Width=10mil) (Air Gap=10mil) (Entries=4) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDVXBZKS4RSJ4SKNK0ZHETSI0AOXQTZUCXJVPS5GMZSW4ZHEMNRPJ">Minimum Annular Ring (Minimum=5.118mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDGGX0OT4BGVHGE2BQ0CPY45Z52OLWSTFPJVY50DMVS5HYNDXHHN2L">Hole Size Constraint (Min=7.874mil) (Max=248.031mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDTSZ4PRCEDSUVJU33KKASO04JHJGBZJVTS0TV3SCT5JOI0P1LF32B">Hole To Hole Clearance (Gap=10mil) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDJ0RBDF5CWF1VKTKU4HDYKZOAYNKQFEVNQNWEWQPVK5X5PMJCL22">Minimum Solder Mask Sliver (Gap=3.937mil) (All),(All)</a></td>
+<td class="column2">79</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDOFUJFXRFX140IB0ZE0LG11EX2BBLQZXPWUXAV5JTSOUNHI44PJ0I">Silk To Solder Mask (Clearance=3.937mil) (IsPad),(All)</a></td>
+<td class="column2">14</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDBIRLQND3ELFIM4G5YF5APWVSHI0UDZTPMZUGTYLYBEWPWCF0KAAP">Silk to Silk (Clearance=3.937mil) (All),(All)</a></td>
+<td class="column2">5</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDU3HRMTFPRG31EVXX4WFB3MBQ2JDMJGCRYLSQOEDMZXPOAEGY11XP">Net Antennae (Tolerance=0mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID2532JX2OWNONPI0W3K4Y3SB3ZNKNSXL04GNM4NG4KLNHSJBWZX1I">Board Clearance Constraint (Gap=0mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDZI4NAYO0DXWAFBZUZJ1ASVYMGNRCAFNWPIYKZ4NVLQ2LK2LLXVHO">Height Constraint (Min=0mil) (Max=1000mil) (Prefered=500mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">99</td>
+</tr>
+</table><br><table>
+<tr>
+<th class="column1">Waived Violations</th>
+<th class="column2">Count</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDFECVM0S1QPPEPXBFH5ESQ3XDGIKFQ33C2N14CFFFTRTNABANTSVN">Clearance Constraint (Gap=7.874mil) (All),(All)</a></td>
+<td class="column2">18</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDC41DHFCEJZRKZ2Y42NFBMVUKJY3RWOEKAJ0LGITBAICZ4ACFRNJ">Clearance Constraint (Gap=7.874mil) (All),(All)</a></td>
+<td class="column2">17</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDRRFTYHGLKP1THUDLP42XPGV55IGOZ1UATNJNPRODXO0QGKGDUO2E">Short-Circuit Constraint (Allowed=No) (All),(All)</a></td>
+<td class="column2">15</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDGE0VV31Z140MNAGQ1SCQHPMZLISKGFAUZE2BUDFBATTNAEO3QUKO">Net Antennae (Tolerance=0mil) (All)</a></td>
+<td class="column2">16</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID530ZJBQDQD4MP4XBH4Z1VY2NUNMQYIIXRH3RRNPVSGXMLRCEHUTF">Height Constraint (Min=0mil) (Max=1000mil) (Prefered=500mil) (All)</a></td>
+<td class="column2">2</td>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">68</td>
+</tr>
+</table><br><a name="IDA4UOSMF34RSJBVKEBUQEHEGY1NPOVR530JERXKFHKIRTAC5PARKC"><h2>Rule Violations</h2></a><a name="IDKRMF22LG5KJIMSLWZJVE4LAVNPKNOATRPVRT44YICX0RA0BK41M"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Un-Routed Net Constraint ( (All) )</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=950mil|Location2.X=4950mil|Location1.Y=946.811mil|Location2.Y=4030mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=950mil|Location2.X=4950mil|Location1.Y=946.811mil|Location2.Y=4030mil|Absolute=True">Un-Routed Net Constraint: Polygon  (NONET_L02_P003) on Bottom Layer Dead Copper - Net Not Assigned.</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDJ0RBDF5CWF1VKTKU4HDYKZOAYNKQFEVNQNWEWQPVK5X5PMJCL22"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Minimum Solder Mask Sliver (Gap=3.937mil) (All),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5902.407mil|Location2.X=5907.593mil|Location1.Y=2168.182mil|Location2.Y=2173.369mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5902.407mil|Location2.X=5907.593mil|Location1.Y=2168.182mil|Location2.Y=2173.369mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (1mil &lt; 3.937mil) Between Pad C29-1(5910mil,2154.528mil) on Top Layer And Via (5905mil,2185.276mil) from Top Layer to Bottom Layer [Top Solder] Mask Sliver [1mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6017.407mil|Location2.X=6022.593mil|Location1.Y=2499.798mil|Location2.Y=2504.985mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6017.407mil|Location2.X=6022.593mil|Location1.Y=2499.798mil|Location2.Y=2504.985mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (1.784mil &lt; 3.937mil) Between Pad C5-1(6015.394mil,2525mil) on Top Layer And Via (6020mil,2485mil) from Top Layer to Bottom Layer [Top Solder] Mask Sliver [1.784mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6017.418mil|Location2.X=6022.605mil|Location1.Y=2595.53mil|Location2.Y=2600.717mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6017.418mil|Location2.X=6022.605mil|Location1.Y=2595.53mil|Location2.Y=2600.717mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (2.815mil &lt; 3.937mil) Between Pad C6-1(6015.394mil,2575mil) on Top Layer And Via (6020.011mil,2616.031mil) from Top Layer to Bottom Layer [Top Solder] Mask Sliver [2.815mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5793.036mil|Location2.X=5798.223mil|Location1.Y=2191.792mil|Location2.Y=2196.979mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5793.036mil|Location2.X=5798.223mil|Location1.Y=2191.792mil|Location2.Y=2196.979mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (2.236mil &lt; 3.937mil) Between Pad IC2-1(5785.787mil,2210.197mil) on Top Layer And Pad IC2-2(5805.472mil,2210.197mil) on Top Layer [Top Solder] Mask Sliver [2.236mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5773.942mil|Location2.X=5780.895mil|Location1.Y=2223.942mil|Location2.Y=2230.966mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5773.942mil|Location2.X=5780.895mil|Location1.Y=2223.942mil|Location2.Y=2230.966mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (1.492mil &lt; 3.937mil) Between Pad IC2-1(5785.787mil,2210.197mil) on Top Layer And Pad IC2-24(5760.197mil,2235.787mil) on Top Layer [Top Solder] Mask Sliver [1.492mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5773.942mil|Location2.X=5779.129mil|Location1.Y=2223.414mil|Location2.Y=2228.601mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5773.942mil|Location2.X=5779.129mil|Location1.Y=2223.414mil|Location2.Y=2228.601mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (1.055mil &lt; 3.937mil) Between Pad IC2-1(5785.787mil,2210.197mil) on Top Layer And Pad IC2-A1(5767.087mil,2217.087mil) on Top Layer [Top Solder] Mask Sliver [1.055mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5923.021mil|Location2.X=5928.208mil|Location1.Y=2302.091mil|Location2.Y=2307.278mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5923.021mil|Location2.X=5928.208mil|Location1.Y=2302.091mil|Location2.Y=2307.278mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (2.236mil &lt; 3.937mil) Between Pad IC2-10(5909.803mil,2294.843mil) on Top Layer And Pad IC2-11(5909.803mil,2314.528mil) on Top Layer [Top Solder] Mask Sliver [2.236mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5923.021mil|Location2.X=5928.208mil|Location1.Y=2282.407mil|Location2.Y=2287.593mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5923.021mil|Location2.X=5928.208mil|Location1.Y=2282.407mil|Location2.Y=2287.593mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (2.236mil &lt; 3.937mil) Between Pad IC2-10(5909.803mil,2294.843mil) on Top Layer And Pad IC2-9(5909.803mil,2275.157mil) on Top Layer [Top Solder] Mask Sliver [2.236mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5923.021mil|Location2.X=5928.208mil|Location1.Y=2321.777mil|Location2.Y=2326.964mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5923.021mil|Location2.X=5928.208mil|Location1.Y=2321.777mil|Location2.Y=2326.964mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (2.236mil &lt; 3.937mil) Between Pad IC2-11(5909.803mil,2314.528mil) on Top Layer And Pad IC2-12(5909.803mil,2334.213mil) on Top Layer [Top Solder] Mask Sliver [2.236mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5890.871mil|Location2.X=5897.825mil|Location1.Y=2340.871mil|Location2.Y=2347.895mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5890.871mil|Location2.X=5897.825mil|Location1.Y=2340.871mil|Location2.Y=2347.895mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (1.492mil &lt; 3.937mil) Between Pad IC2-12(5909.803mil,2334.213mil) on Top Layer And Pad IC2-13(5884.213mil,2359.803mil) on Top Layer [Top Solder] Mask Sliver [1.492mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5909.241mil|Location2.X=5914.428mil|Location1.Y=2340.871mil|Location2.Y=2346.058mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5909.241mil|Location2.X=5914.428mil|Location1.Y=2340.871mil|Location2.Y=2346.058mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (1.055mil &lt; 3.937mil) Between Pad IC2-12(5909.803mil,2334.213mil) on Top Layer And Pad IC2-A3(5902.913mil,2352.913mil) on Top Layer [Top Solder] Mask Sliver [1.055mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5871.777mil|Location2.X=5876.964mil|Location1.Y=2341.399mil|Location2.Y=2346.586mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5871.777mil|Location2.X=5876.964mil|Location1.Y=2341.399mil|Location2.Y=2346.586mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (2.236mil &lt; 3.937mil) Between Pad IC2-13(5884.213mil,2359.803mil) on Top Layer And Pad IC2-14(5864.528mil,2359.803mil) on Top Layer [Top Solder] Mask Sliver [2.236mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5890.871mil|Location2.X=5896.058mil|Location1.Y=2341.399mil|Location2.Y=2346.586mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5890.871mil|Location2.X=5896.058mil|Location1.Y=2341.399mil|Location2.Y=2346.586mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (1.055mil &lt; 3.937mil) Between Pad IC2-13(5884.213mil,2359.803mil) on Top Layer And Pad IC2-A3(5902.913mil,2352.913mil) on Top Layer [Top Solder] Mask Sliver [1.055mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5852.092mil|Location2.X=5857.279mil|Location1.Y=2341.399mil|Location2.Y=2346.586mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5852.092mil|Location2.X=5857.279mil|Location1.Y=2341.399mil|Location2.Y=2346.586mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (2.236mil &lt; 3.937mil) Between Pad IC2-14(5864.528mil,2359.803mil) on Top Layer And Pad IC2-15(5844.842mil,2359.803mil) on Top Layer [Top Solder] Mask Sliver [2.236mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5832.407mil|Location2.X=5837.593mil|Location1.Y=2341.399mil|Location2.Y=2346.586mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5832.407mil|Location2.X=5837.593mil|Location1.Y=2341.399mil|Location2.Y=2346.586mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (2.236mil &lt; 3.937mil) Between Pad IC2-15(5844.842mil,2359.803mil) on Top Layer And Pad IC2-16(5825.158mil,2359.803mil) on Top Layer [Top Solder] Mask Sliver [2.236mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5812.721mil|Location2.X=5817.908mil|Location1.Y=2341.399mil|Location2.Y=2346.586mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5812.721mil|Location2.X=5817.908mil|Location1.Y=2341.399mil|Location2.Y=2346.586mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (2.236mil &lt; 3.937mil) Between Pad IC2-16(5825.158mil,2359.803mil) on Top Layer And Pad IC2-17(5805.472mil,2359.803mil) on Top Layer [Top Solder] Mask Sliver [2.236mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5793.036mil|Location2.X=5798.223mil|Location1.Y=2341.399mil|Location2.Y=2346.586mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5793.036mil|Location2.X=5798.223mil|Location1.Y=2341.399mil|Location2.Y=2346.586mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (2.236mil &lt; 3.937mil) Between Pad IC2-17(5805.472mil,2359.803mil) on Top Layer And Pad IC2-18(5785.787mil,2359.803mil) on Top Layer [Top Solder] Mask Sliver [2.236mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5773.942mil|Location2.X=5780.966mil|Location1.Y=2339.104mil|Location2.Y=2346.058mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5773.942mil|Location2.X=5780.966mil|Location1.Y=2339.104mil|Location2.Y=2346.058mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (1.492mil &lt; 3.937mil) Between Pad IC2-18(5785.787mil,2359.803mil) on Top Layer And Pad IC2-19(5760.197mil,2334.213mil) on Top Layer [Top Solder] Mask Sliver [1.492mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5773.942mil|Location2.X=5779.129mil|Location1.Y=2359.241mil|Location2.Y=2364.428mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5773.942mil|Location2.X=5779.129mil|Location1.Y=2359.241mil|Location2.Y=2364.428mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (1.055mil &lt; 3.937mil) Between Pad IC2-18(5785.787mil,2359.803mil) on Top Layer And Pad IC2-A4(5767.087mil,2352.913mil) on Top Layer [Top Solder] Mask Sliver [1.055mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5773.414mil|Location2.X=5778.601mil|Location1.Y=2321.777mil|Location2.Y=2326.964mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5773.414mil|Location2.X=5778.601mil|Location1.Y=2321.777mil|Location2.Y=2326.964mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (2.236mil &lt; 3.937mil) Between Pad IC2-19(5760.197mil,2334.213mil) on Top Layer And Pad IC2-20(5760.197mil,2314.528mil) on Top Layer [Top Solder] Mask Sliver [2.236mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5773.414mil|Location2.X=5778.601mil|Location1.Y=2340.871mil|Location2.Y=2346.058mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5773.414mil|Location2.X=5778.601mil|Location1.Y=2340.871mil|Location2.Y=2346.058mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (1.055mil &lt; 3.937mil) Between Pad IC2-19(5760.197mil,2334.213mil) on Top Layer And Pad IC2-A4(5767.087mil,2352.913mil) on Top Layer [Top Solder] Mask Sliver [1.055mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5812.721mil|Location2.X=5817.908mil|Location1.Y=2191.792mil|Location2.Y=2196.979mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5812.721mil|Location2.X=5817.908mil|Location1.Y=2191.792mil|Location2.Y=2196.979mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (2.236mil &lt; 3.937mil) Between Pad IC2-2(5805.472mil,2210.197mil) on Top Layer And Pad IC2-3(5825.158mil,2210.197mil) on Top Layer [Top Solder] Mask Sliver [2.236mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5773.414mil|Location2.X=5778.601mil|Location1.Y=2302.091mil|Location2.Y=2307.278mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5773.414mil|Location2.X=5778.601mil|Location1.Y=2302.091mil|Location2.Y=2307.278mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (2.236mil &lt; 3.937mil) Between Pad IC2-20(5760.197mil,2314.528mil) on Top Layer And Pad IC2-21(5760.197mil,2294.843mil) on Top Layer [Top Solder] Mask Sliver [2.236mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5773.414mil|Location2.X=5778.601mil|Location1.Y=2282.407mil|Location2.Y=2287.593mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5773.414mil|Location2.X=5778.601mil|Location1.Y=2282.407mil|Location2.Y=2287.593mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (2.236mil &lt; 3.937mil) Between Pad IC2-21(5760.197mil,2294.843mil) on Top Layer And Pad IC2-22(5760.197mil,2275.157mil) on Top Layer [Top Solder] Mask Sliver [2.236mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5773.414mil|Location2.X=5778.601mil|Location1.Y=2262.721mil|Location2.Y=2267.908mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5773.414mil|Location2.X=5778.601mil|Location1.Y=2262.721mil|Location2.Y=2267.908mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (2.236mil &lt; 3.937mil) Between Pad IC2-22(5760.197mil,2275.157mil) on Top Layer And Pad IC2-23(5760.197mil,2255.472mil) on Top Layer [Top Solder] Mask Sliver [2.236mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5741.058mil|Location2.X=5748.001mil|Location1.Y=2260.692mil|Location2.Y=2268.443mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5741.058mil|Location2.X=5748.001mil|Location1.Y=2260.692mil|Location2.Y=2268.443mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (1.876mil &lt; 3.937mil) Between Pad IC2-22(5760.197mil,2275.157mil) on Top Layer And Via (5730mil,2255mil) from Top Layer to Bottom Layer [Top Solder] Mask Sliver [1.876mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5773.414mil|Location2.X=5778.601mil|Location1.Y=2243.036mil|Location2.Y=2248.223mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5773.414mil|Location2.X=5778.601mil|Location1.Y=2243.036mil|Location2.Y=2248.223mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (2.236mil &lt; 3.937mil) Between Pad IC2-23(5760.197mil,2255.472mil) on Top Layer And Pad IC2-24(5760.197mil,2235.787mil) on Top Layer [Top Solder] Mask Sliver [2.236mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5773.414mil|Location2.X=5778.601mil|Location1.Y=2223.942mil|Location2.Y=2229.129mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5773.414mil|Location2.X=5778.601mil|Location1.Y=2223.942mil|Location2.Y=2229.129mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (1.055mil &lt; 3.937mil) Between Pad IC2-24(5760.197mil,2235.787mil) on Top Layer And Pad IC2-A1(5767.087mil,2217.087mil) on Top Layer [Top Solder] Mask Sliver [1.055mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5741.266mil|Location2.X=5748.101mil|Location1.Y=2242.302mil|Location2.Y=2250.39mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5741.266mil|Location2.X=5748.101mil|Location1.Y=2242.302mil|Location2.Y=2250.39mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (1.303mil &lt; 3.937mil) Between Pad IC2-24(5760.197mil,2235.787mil) on Top Layer And Via (5730mil,2255mil) from Top Layer to Bottom Layer [Top Solder] Mask Sliver [1.303mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5832.407mil|Location2.X=5837.593mil|Location1.Y=2191.792mil|Location2.Y=2196.979mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5832.407mil|Location2.X=5837.593mil|Location1.Y=2191.792mil|Location2.Y=2196.979mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (2.236mil &lt; 3.937mil) Between Pad IC2-3(5825.158mil,2210.197mil) on Top Layer And Pad IC2-4(5844.842mil,2210.197mil) on Top Layer [Top Solder] Mask Sliver [2.236mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5852.092mil|Location2.X=5857.279mil|Location1.Y=2191.792mil|Location2.Y=2196.979mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5852.092mil|Location2.X=5857.279mil|Location1.Y=2191.792mil|Location2.Y=2196.979mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (2.236mil &lt; 3.937mil) Between Pad IC2-4(5844.842mil,2210.197mil) on Top Layer And Pad IC2-5(5864.528mil,2210.197mil) on Top Layer [Top Solder] Mask Sliver [2.236mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5871.777mil|Location2.X=5876.964mil|Location1.Y=2191.792mil|Location2.Y=2196.979mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5871.777mil|Location2.X=5876.964mil|Location1.Y=2191.792mil|Location2.Y=2196.979mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (2.236mil &lt; 3.937mil) Between Pad IC2-5(5864.528mil,2210.197mil) on Top Layer And Pad IC2-6(5884.213mil,2210.197mil) on Top Layer [Top Solder] Mask Sliver [2.236mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5890.871mil|Location2.X=5897.895mil|Location1.Y=2222.175mil|Location2.Y=2229.129mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5890.871mil|Location2.X=5897.895mil|Location1.Y=2222.175mil|Location2.Y=2229.129mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (1.492mil &lt; 3.937mil) Between Pad IC2-6(5884.213mil,2210.197mil) on Top Layer And Pad IC2-7(5909.803mil,2235.787mil) on Top Layer [Top Solder] Mask Sliver [1.492mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5890.871mil|Location2.X=5896.058mil|Location1.Y=2223.414mil|Location2.Y=2228.601mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5890.871mil|Location2.X=5896.058mil|Location1.Y=2223.414mil|Location2.Y=2228.601mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (1.055mil &lt; 3.937mil) Between Pad IC2-6(5884.213mil,2210.197mil) on Top Layer And Pad IC2-A2(5902.913mil,2217.087mil) on Top Layer [Top Solder] Mask Sliver [1.055mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5890.789mil|Location2.X=5897.636mil|Location1.Y=2191.456mil|Location2.Y=2199.433mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5890.789mil|Location2.X=5897.636mil|Location1.Y=2191.456mil|Location2.Y=2199.433mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (1.117mil &lt; 3.937mil) Between Pad IC2-6(5884.213mil,2210.197mil) on Top Layer And Via (5905mil,2185.276mil) from Top Layer to Bottom Layer [Top Solder] Mask Sliver [1.117mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5923.021mil|Location2.X=5928.208mil|Location1.Y=2243.036mil|Location2.Y=2248.223mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5923.021mil|Location2.X=5928.208mil|Location1.Y=2243.036mil|Location2.Y=2248.223mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (2.236mil &lt; 3.937mil) Between Pad IC2-7(5909.803mil,2235.787mil) on Top Layer And Pad IC2-8(5909.803mil,2255.472mil) on Top Layer [Top Solder] Mask Sliver [2.236mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5909.241mil|Location2.X=5914.428mil|Location1.Y=2223.942mil|Location2.Y=2229.129mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5909.241mil|Location2.X=5914.428mil|Location1.Y=2223.942mil|Location2.Y=2229.129mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (1.055mil &lt; 3.937mil) Between Pad IC2-7(5909.803mil,2235.787mil) on Top Layer And Pad IC2-A2(5902.913mil,2217.087mil) on Top Layer [Top Solder] Mask Sliver [1.055mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5923.021mil|Location2.X=5928.208mil|Location1.Y=2262.721mil|Location2.Y=2267.908mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5923.021mil|Location2.X=5928.208mil|Location1.Y=2262.721mil|Location2.Y=2267.908mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (2.236mil &lt; 3.937mil) Between Pad IC2-8(5909.803mil,2255.472mil) on Top Layer And Pad IC2-9(5909.803mil,2275.157mil) on Top Layer [Top Solder] Mask Sliver [2.236mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6168.076mil|Location2.X=6173.263mil|Location1.Y=2801.383mil|Location2.Y=2806.57mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6168.076mil|Location2.X=6173.263mil|Location1.Y=2801.383mil|Location2.Y=2806.57mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (3.811mil &lt; 3.937mil) Between Pad U1-1(6150mil,2816.772mil) on Top Layer And Pad U1-2(6150mil,2791.181mil) on Top Layer [Top Solder] Mask Sliver [3.811mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6168.076mil|Location2.X=6173.263mil|Location1.Y=2571.068mil|Location2.Y=2576.255mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6168.076mil|Location2.X=6173.263mil|Location1.Y=2571.068mil|Location2.Y=2576.255mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (3.811mil &lt; 3.937mil) Between Pad U1-10(6150mil,2586.457mil) on Top Layer And Pad U1-11(6150mil,2560.866mil) on Top Layer [Top Solder] Mask Sliver [3.811mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6168.076mil|Location2.X=6173.263mil|Location1.Y=2596.658mil|Location2.Y=2601.845mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6168.076mil|Location2.X=6173.263mil|Location1.Y=2596.658mil|Location2.Y=2601.845mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (3.811mil &lt; 3.937mil) Between Pad U1-10(6150mil,2586.457mil) on Top Layer And Pad U1-9(6150mil,2612.047mil) on Top Layer [Top Solder] Mask Sliver [3.811mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6168.076mil|Location2.X=6173.263mil|Location1.Y=2545.477mil|Location2.Y=2550.664mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6168.076mil|Location2.X=6173.263mil|Location1.Y=2545.477mil|Location2.Y=2550.664mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (3.811mil &lt; 3.937mil) Between Pad U1-11(6150mil,2560.866mil) on Top Layer And Pad U1-12(6150mil,2535.276mil) on Top Layer [Top Solder] Mask Sliver [3.811mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6168.076mil|Location2.X=6173.263mil|Location1.Y=2519.887mil|Location2.Y=2525.074mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6168.076mil|Location2.X=6173.263mil|Location1.Y=2519.887mil|Location2.Y=2525.074mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (3.811mil &lt; 3.937mil) Between Pad U1-12(6150mil,2535.276mil) on Top Layer And Pad U1-13(6150mil,2509.685mil) on Top Layer [Top Solder] Mask Sliver [3.811mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6168.076mil|Location2.X=6173.263mil|Location1.Y=2494.296mil|Location2.Y=2499.483mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6168.076mil|Location2.X=6173.263mil|Location1.Y=2494.296mil|Location2.Y=2499.483mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (3.811mil &lt; 3.937mil) Between Pad U1-13(6150mil,2509.685mil) on Top Layer And Pad U1-14(6150mil,2484.095mil) on Top Layer [Top Solder] Mask Sliver [3.811mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6388.548mil|Location2.X=6393.735mil|Location1.Y=2494.296mil|Location2.Y=2499.483mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6388.548mil|Location2.X=6393.735mil|Location1.Y=2494.296mil|Location2.Y=2499.483mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (3.811mil &lt; 3.937mil) Between Pad U1-15(6370.472mil,2484.095mil) on Top Layer And Pad U1-16(6370.472mil,2509.685mil) on Top Layer [Top Solder] Mask Sliver [3.811mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6388.548mil|Location2.X=6393.735mil|Location1.Y=2519.887mil|Location2.Y=2525.074mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6388.548mil|Location2.X=6393.735mil|Location1.Y=2519.887mil|Location2.Y=2525.074mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (3.811mil &lt; 3.937mil) Between Pad U1-16(6370.472mil,2509.685mil) on Top Layer And Pad U1-17(6370.472mil,2535.276mil) on Top Layer [Top Solder] Mask Sliver [3.811mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6388.548mil|Location2.X=6393.735mil|Location1.Y=2545.477mil|Location2.Y=2550.664mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6388.548mil|Location2.X=6393.735mil|Location1.Y=2545.477mil|Location2.Y=2550.664mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (3.811mil &lt; 3.937mil) Between Pad U1-17(6370.472mil,2535.276mil) on Top Layer And Pad U1-18(6370.472mil,2560.866mil) on Top Layer [Top Solder] Mask Sliver [3.811mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6388.548mil|Location2.X=6393.735mil|Location1.Y=2571.068mil|Location2.Y=2576.255mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6388.548mil|Location2.X=6393.735mil|Location1.Y=2571.068mil|Location2.Y=2576.255mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (3.811mil &lt; 3.937mil) Between Pad U1-18(6370.472mil,2560.866mil) on Top Layer And Pad U1-19(6370.472mil,2586.457mil) on Top Layer [Top Solder] Mask Sliver [3.811mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6388.548mil|Location2.X=6393.735mil|Location1.Y=2596.658mil|Location2.Y=2601.845mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6388.548mil|Location2.X=6393.735mil|Location1.Y=2596.658mil|Location2.Y=2601.845mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (3.811mil &lt; 3.937mil) Between Pad U1-19(6370.472mil,2586.457mil) on Top Layer And Pad U1-20(6370.472mil,2612.047mil) on Top Layer [Top Solder] Mask Sliver [3.811mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6168.076mil|Location2.X=6173.263mil|Location1.Y=2775.792mil|Location2.Y=2780.979mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6168.076mil|Location2.X=6173.263mil|Location1.Y=2775.792mil|Location2.Y=2780.979mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (3.811mil &lt; 3.937mil) Between Pad U1-2(6150mil,2791.181mil) on Top Layer And Pad U1-3(6150mil,2765.591mil) on Top Layer [Top Solder] Mask Sliver [3.811mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6388.548mil|Location2.X=6393.735mil|Location1.Y=2622.249mil|Location2.Y=2627.436mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6388.548mil|Location2.X=6393.735mil|Location1.Y=2622.249mil|Location2.Y=2627.436mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (3.811mil &lt; 3.937mil) Between Pad U1-20(6370.472mil,2612.047mil) on Top Layer And Pad U1-21(6370.472mil,2637.638mil) on Top Layer [Top Solder] Mask Sliver [3.811mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6388.548mil|Location2.X=6393.735mil|Location1.Y=2647.84mil|Location2.Y=2653.026mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6388.548mil|Location2.X=6393.735mil|Location1.Y=2647.84mil|Location2.Y=2653.026mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (3.811mil &lt; 3.937mil) Between Pad U1-21(6370.472mil,2637.638mil) on Top Layer And Pad U1-22(6370.472mil,2663.228mil) on Top Layer [Top Solder] Mask Sliver [3.811mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6388.548mil|Location2.X=6393.735mil|Location1.Y=2673.43mil|Location2.Y=2678.617mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6388.548mil|Location2.X=6393.735mil|Location1.Y=2673.43mil|Location2.Y=2678.617mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (3.811mil &lt; 3.937mil) Between Pad U1-22(6370.472mil,2663.228mil) on Top Layer And Pad U1-23(6370.472mil,2688.819mil) on Top Layer [Top Solder] Mask Sliver [3.811mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6388.548mil|Location2.X=6393.735mil|Location1.Y=2699.021mil|Location2.Y=2704.208mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6388.548mil|Location2.X=6393.735mil|Location1.Y=2699.021mil|Location2.Y=2704.208mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (3.811mil &lt; 3.937mil) Between Pad U1-23(6370.472mil,2688.819mil) on Top Layer And Pad U1-24(6370.472mil,2714.41mil) on Top Layer [Top Solder] Mask Sliver [3.811mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6388.548mil|Location2.X=6393.735mil|Location1.Y=2724.611mil|Location2.Y=2729.798mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6388.548mil|Location2.X=6393.735mil|Location1.Y=2724.611mil|Location2.Y=2729.798mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (3.811mil &lt; 3.937mil) Between Pad U1-24(6370.472mil,2714.41mil) on Top Layer And Pad U1-25(6370.472mil,2740mil) on Top Layer [Top Solder] Mask Sliver [3.811mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6388.548mil|Location2.X=6393.735mil|Location1.Y=2750.202mil|Location2.Y=2755.389mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6388.548mil|Location2.X=6393.735mil|Location1.Y=2750.202mil|Location2.Y=2755.389mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (3.811mil &lt; 3.937mil) Between Pad U1-25(6370.472mil,2740mil) on Top Layer And Pad U1-26(6370.472mil,2765.591mil) on Top Layer [Top Solder] Mask Sliver [3.811mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6388.548mil|Location2.X=6393.735mil|Location1.Y=2775.792mil|Location2.Y=2780.979mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6388.548mil|Location2.X=6393.735mil|Location1.Y=2775.792mil|Location2.Y=2780.979mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (3.811mil &lt; 3.937mil) Between Pad U1-26(6370.472mil,2765.591mil) on Top Layer And Pad U1-27(6370.472mil,2791.181mil) on Top Layer [Top Solder] Mask Sliver [3.811mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6388.548mil|Location2.X=6393.735mil|Location1.Y=2801.383mil|Location2.Y=2806.57mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6388.548mil|Location2.X=6393.735mil|Location1.Y=2801.383mil|Location2.Y=2806.57mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (3.811mil &lt; 3.937mil) Between Pad U1-27(6370.472mil,2791.181mil) on Top Layer And Pad U1-28(6370.472mil,2816.772mil) on Top Layer [Top Solder] Mask Sliver [3.811mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6335.108mil|Location2.X=6340.295mil|Location1.Y=2813.459mil|Location2.Y=2818.646mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6335.108mil|Location2.X=6340.295mil|Location1.Y=2813.459mil|Location2.Y=2818.646mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (2.466mil &lt; 3.937mil) Between Pad U1-28(6370.472mil,2816.772mil) on Top Layer And Via (6320mil,2815mil) from Top Layer to Bottom Layer [Top Solder] Mask Sliver [2.466mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6168.076mil|Location2.X=6173.263mil|Location1.Y=2750.202mil|Location2.Y=2755.389mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6168.076mil|Location2.X=6173.263mil|Location1.Y=2750.202mil|Location2.Y=2755.389mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (3.811mil &lt; 3.937mil) Between Pad U1-3(6150mil,2765.591mil) on Top Layer And Pad U1-4(6150mil,2740mil) on Top Layer [Top Solder] Mask Sliver [3.811mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6168.076mil|Location2.X=6173.263mil|Location1.Y=2724.611mil|Location2.Y=2729.798mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6168.076mil|Location2.X=6173.263mil|Location1.Y=2724.611mil|Location2.Y=2729.798mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (3.811mil &lt; 3.937mil) Between Pad U1-4(6150mil,2740mil) on Top Layer And Pad U1-5(6150mil,2714.41mil) on Top Layer [Top Solder] Mask Sliver [3.811mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6168.076mil|Location2.X=6173.263mil|Location1.Y=2699.021mil|Location2.Y=2704.208mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6168.076mil|Location2.X=6173.263mil|Location1.Y=2699.021mil|Location2.Y=2704.208mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (3.811mil &lt; 3.937mil) Between Pad U1-5(6150mil,2714.41mil) on Top Layer And Pad U1-6(6150mil,2688.819mil) on Top Layer [Top Solder] Mask Sliver [3.811mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6168.076mil|Location2.X=6173.263mil|Location1.Y=2673.43mil|Location2.Y=2678.617mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6168.076mil|Location2.X=6173.263mil|Location1.Y=2673.43mil|Location2.Y=2678.617mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (3.811mil &lt; 3.937mil) Between Pad U1-6(6150mil,2688.819mil) on Top Layer And Pad U1-7(6150mil,2663.228mil) on Top Layer [Top Solder] Mask Sliver [3.811mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6168.076mil|Location2.X=6173.263mil|Location1.Y=2647.84mil|Location2.Y=2653.026mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6168.076mil|Location2.X=6173.263mil|Location1.Y=2647.84mil|Location2.Y=2653.026mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (3.811mil &lt; 3.937mil) Between Pad U1-7(6150mil,2663.228mil) on Top Layer And Pad U1-8(6150mil,2637.638mil) on Top Layer [Top Solder] Mask Sliver [3.811mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6168.076mil|Location2.X=6173.263mil|Location1.Y=2622.249mil|Location2.Y=2627.436mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6168.076mil|Location2.X=6173.263mil|Location1.Y=2622.249mil|Location2.Y=2627.436mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (3.811mil &lt; 3.937mil) Between Pad U1-8(6150mil,2637.638mil) on Top Layer And Pad U1-9(6150mil,2612.047mil) on Top Layer [Top Solder] Mask Sliver [3.811mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2547.249mil|Location2.X=2552.436mil|Location1.Y=2193.627mil|Location2.Y=2198.814mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2547.249mil|Location2.X=2552.436mil|Location1.Y=2193.627mil|Location2.Y=2198.814mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (1.842mil &lt; 3.937mil) Between Pad U3-1(2540mil,2173.583mil) on Top Layer And Pad U3-2(2559.685mil,2173.583mil) on Top Layer [Top Solder] Mask Sliver [1.842mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2645.674mil|Location2.X=2650.861mil|Location1.Y=2355.044mil|Location2.Y=2360.231mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2645.674mil|Location2.X=2650.861mil|Location1.Y=2355.044mil|Location2.Y=2360.231mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (1.843mil &lt; 3.937mil) Between Pad U3-10(2658.11mil,2335mil) on Top Layer And Pad U3-11(2638.425mil,2335mil) on Top Layer [Top Solder] Mask Sliver [1.843mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2665.359mil|Location2.X=2670.546mil|Location1.Y=2355.044mil|Location2.Y=2360.231mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2665.359mil|Location2.X=2670.546mil|Location1.Y=2355.044mil|Location2.Y=2360.231mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (1.842mil &lt; 3.937mil) Between Pad U3-10(2658.11mil,2335mil) on Top Layer And Pad U3-9(2677.795mil,2335mil) on Top Layer [Top Solder] Mask Sliver [1.842mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2625.989mil|Location2.X=2631.176mil|Location1.Y=2355.044mil|Location2.Y=2360.231mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2625.989mil|Location2.X=2631.176mil|Location1.Y=2355.044mil|Location2.Y=2360.231mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (1.842mil &lt; 3.937mil) Between Pad U3-11(2638.425mil,2335mil) on Top Layer And Pad U3-12(2618.74mil,2335mil) on Top Layer [Top Solder] Mask Sliver [1.842mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2606.304mil|Location2.X=2611.491mil|Location1.Y=2355.044mil|Location2.Y=2360.231mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2606.304mil|Location2.X=2611.491mil|Location1.Y=2355.044mil|Location2.Y=2360.231mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (1.843mil &lt; 3.937mil) Between Pad U3-12(2618.74mil,2335mil) on Top Layer And Pad U3-13(2599.055mil,2335mil) on Top Layer [Top Solder] Mask Sliver [1.843mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2586.619mil|Location2.X=2591.806mil|Location1.Y=2355.044mil|Location2.Y=2360.231mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2586.619mil|Location2.X=2591.806mil|Location1.Y=2355.044mil|Location2.Y=2360.231mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (1.842mil &lt; 3.937mil) Between Pad U3-13(2599.055mil,2335mil) on Top Layer And Pad U3-14(2579.37mil,2335mil) on Top Layer [Top Solder] Mask Sliver [1.842mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2566.934mil|Location2.X=2572.121mil|Location1.Y=2355.044mil|Location2.Y=2360.231mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2566.934mil|Location2.X=2572.121mil|Location1.Y=2355.044mil|Location2.Y=2360.231mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (1.843mil &lt; 3.937mil) Between Pad U3-14(2579.37mil,2335mil) on Top Layer And Pad U3-15(2559.685mil,2335mil) on Top Layer [Top Solder] Mask Sliver [1.843mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2547.249mil|Location2.X=2552.436mil|Location1.Y=2355.044mil|Location2.Y=2360.231mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2547.249mil|Location2.X=2552.436mil|Location1.Y=2355.044mil|Location2.Y=2360.231mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (1.842mil &lt; 3.937mil) Between Pad U3-15(2559.685mil,2335mil) on Top Layer And Pad U3-16(2540mil,2335mil) on Top Layer [Top Solder] Mask Sliver [1.842mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2566.934mil|Location2.X=2572.121mil|Location1.Y=2193.627mil|Location2.Y=2198.814mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2566.934mil|Location2.X=2572.121mil|Location1.Y=2193.627mil|Location2.Y=2198.814mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (1.843mil &lt; 3.937mil) Between Pad U3-2(2559.685mil,2173.583mil) on Top Layer And Pad U3-3(2579.37mil,2173.583mil) on Top Layer [Top Solder] Mask Sliver [1.843mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2586.619mil|Location2.X=2591.806mil|Location1.Y=2193.627mil|Location2.Y=2198.814mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2586.619mil|Location2.X=2591.806mil|Location1.Y=2193.627mil|Location2.Y=2198.814mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (1.842mil &lt; 3.937mil) Between Pad U3-3(2579.37mil,2173.583mil) on Top Layer And Pad U3-4(2599.055mil,2173.583mil) on Top Layer [Top Solder] Mask Sliver [1.842mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2606.304mil|Location2.X=2611.491mil|Location1.Y=2193.627mil|Location2.Y=2198.814mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2606.304mil|Location2.X=2611.491mil|Location1.Y=2193.627mil|Location2.Y=2198.814mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (1.843mil &lt; 3.937mil) Between Pad U3-4(2599.055mil,2173.583mil) on Top Layer And Pad U3-5(2618.74mil,2173.583mil) on Top Layer [Top Solder] Mask Sliver [1.843mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2625.989mil|Location2.X=2631.176mil|Location1.Y=2193.627mil|Location2.Y=2198.814mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2625.989mil|Location2.X=2631.176mil|Location1.Y=2193.627mil|Location2.Y=2198.814mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (1.842mil &lt; 3.937mil) Between Pad U3-5(2618.74mil,2173.583mil) on Top Layer And Pad U3-6(2638.425mil,2173.583mil) on Top Layer [Top Solder] Mask Sliver [1.842mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2645.674mil|Location2.X=2650.861mil|Location1.Y=2193.627mil|Location2.Y=2198.814mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2645.674mil|Location2.X=2650.861mil|Location1.Y=2193.627mil|Location2.Y=2198.814mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (1.842mil &lt; 3.937mil) Between Pad U3-6(2638.425mil,2173.583mil) on Top Layer And Pad U3-7(2658.11mil,2173.583mil) on Top Layer [Top Solder] Mask Sliver [1.842mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2665.359mil|Location2.X=2670.546mil|Location1.Y=2193.627mil|Location2.Y=2198.814mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2665.359mil|Location2.X=2670.546mil|Location1.Y=2193.627mil|Location2.Y=2198.814mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (1.843mil &lt; 3.937mil) Between Pad U3-7(2658.11mil,2173.583mil) on Top Layer And Pad U3-8(2677.795mil,2173.583mil) on Top Layer [Top Solder] Mask Sliver [1.843mil]</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDOFUJFXRFX140IB0ZE0LG11EX2BBLQZXPWUXAV5JTSOUNHI44PJ0I"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Silk To Solder Mask (Clearance=3.937mil) (IsPad),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6482.4mil|Location2.X=6487.587mil|Location1.Y=2912.818mil|Location2.Y=2918.005mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6482.4mil|Location2.X=6487.587mil|Location1.Y=2912.818mil|Location2.Y=2918.005mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (3.186mil &lt; 3.937mil) Between Pad C2-2(6455mil,2895.118mil) on Bottom Layer And Text "C8" (6489.992mil,2920.005mil) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [3.186mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6293.235mil|Location2.X=6298.422mil|Location1.Y=2177.034mil|Location2.Y=2182.221mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6293.235mil|Location2.X=6298.422mil|Location1.Y=2177.034mil|Location2.Y=2182.221mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (3.579mil &lt; 3.937mil) Between Pad C22-1(6313.645mil,2160mil) on Top Layer And Track (6249.484mil,2185.354mil)(6330.516mil,2185.354mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [3.579mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6281.578mil|Location2.X=6286.765mil|Location1.Y=2177.034mil|Location2.Y=2182.221mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6281.578mil|Location2.X=6286.765mil|Location1.Y=2177.034mil|Location2.Y=2182.221mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (3.579mil &lt; 3.937mil) Between Pad C22-2(6266.355mil,2160mil) on Top Layer And Track (6249.484mil,2185.354mil)(6330.516mil,2185.354mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [3.579mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6278.642mil|Location2.X=6283.829mil|Location1.Y=2198.546mil|Location2.Y=2203.733mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6278.642mil|Location2.X=6283.829mil|Location1.Y=2198.546mil|Location2.Y=2203.733mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (3.539mil &lt; 3.937mil) Between Pad C23-1(6265.36mil,2220mil) on Top Layer And Track (6248.539mil,2195.433mil)(6331.461mil,2195.433mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [3.539mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6327.922mil|Location2.X=6333.109mil|Location1.Y=2198.546mil|Location2.Y=2203.733mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6327.922mil|Location2.X=6333.109mil|Location1.Y=2198.546mil|Location2.Y=2203.733mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (3.539mil &lt; 3.937mil) Between Pad C23-2(6314.64mil,2220mil) on Top Layer And Track (6248.539mil,2195.433mil)(6331.461mil,2195.433mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [3.539mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6231.716mil|Location2.X=6236.903mil|Location1.Y=2035.097mil|Location2.Y=2040.284mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6231.716mil|Location2.X=6236.903mil|Location1.Y=2035.097mil|Location2.Y=2040.284mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (1.453mil &lt; 3.937mil) Between Pad C24-2(6250mil,2047.441mil) on Top Layer And Track (6229.646mil,1999.484mil)(6229.646mil,2080.516mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [1.453mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2786.692mil|Location2.X=2790.316mil|Location1.Y=2432.755mil|Location2.Y=2436.379mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2786.692mil|Location2.X=2790.316mil|Location1.Y=2432.755mil|Location2.Y=2436.379mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 3.937mil) Between Pad C43-1(2791.457mil,2415mil) on Top Layer And Track (2788.504mil,2434.567mil)(2851.496mil,2434.567mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [0mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2828.03mil|Location2.X=2831.655mil|Location1.Y=2432.755mil|Location2.Y=2436.379mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2828.03mil|Location2.X=2831.655mil|Location1.Y=2432.755mil|Location2.Y=2436.379mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 3.937mil) Between Pad C43-2(2848.543mil,2415mil) on Top Layer And Track (2788.504mil,2434.567mil)(2851.496mil,2434.567mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [0mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6279.917mil|Location2.X=6285.104mil|Location1.Y=1992.478mil|Location2.Y=1997.665mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6279.917mil|Location2.X=6285.104mil|Location1.Y=1992.478mil|Location2.Y=1997.665mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (3.867mil &lt; 3.937mil) Between Pad FB2-1(6306.26mil,1934.082mil) on Top Layer And Text "R11" (6282.511mil,2000.005mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [3.867mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6314.906mil|Location2.X=6320.093mil|Location1.Y=2032.055mil|Location2.Y=2037.242mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6314.906mil|Location2.X=6320.093mil|Location1.Y=2032.055mil|Location2.Y=2037.242mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (3.307mil &lt; 3.937mil) Between Pad R11-2(6315mil,2050.772mil) on Top Layer And Text "R11" (6282.511mil,2000.005mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [3.307mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2523.155mil|Location2.X=2528.342mil|Location1.Y=2064.08mil|Location2.Y=2069.267mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2523.155mil|Location2.X=2528.342mil|Location1.Y=2064.08mil|Location2.Y=2069.267mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (1.85mil &lt; 3.937mil) Between Pad R34-1(2543.465mil,2050mil) on Top Layer And Track (2480.391mil,2071.535mil)(2559.609mil,2071.535mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [1.85mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2491.658mil|Location2.X=2496.845mil|Location1.Y=2064.08mil|Location2.Y=2069.267mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2491.658mil|Location2.X=2496.845mil|Location1.Y=2064.08mil|Location2.Y=2069.267mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (1.85mil &lt; 3.937mil) Between Pad R34-2(2476.535mil,2050mil) on Top Layer And Track (2480.391mil,2071.535mil)(2559.609mil,2071.535mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [1.85mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2537.407mil|Location2.X=2542.594mil|Location1.Y=2141.617mil|Location2.Y=2146.804mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2537.407mil|Location2.X=2542.594mil|Location1.Y=2141.617mil|Location2.Y=2146.804mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (3.617mil &lt; 3.937mil) Between Pad U3-1(2540mil,2173.583mil) on Top Layer And Track (2480.391mil,2138.465mil)(2559.609mil,2138.465mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [3.617mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2557.073mil|Location2.X=2562.26mil|Location1.Y=2141.617mil|Location2.Y=2146.804mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2557.073mil|Location2.X=2562.26mil|Location1.Y=2141.617mil|Location2.Y=2146.804mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (3.618mil &lt; 3.937mil) Between Pad U3-2(2559.685mil,2173.583mil) on Top Layer And Track (2480.391mil,2138.465mil)(2559.609mil,2138.465mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [3.618mil]</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDBIRLQND3ELFIM4G5YF5APWVSHI0UDZTPMZUGTYLYBEWPWCF0KAAP"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Silk to Silk (Clearance=3.937mil) (All),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6664.898mil|Location2.X=6670.085mil|Location1.Y=2491.719mil|Location2.Y=2496.906mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6664.898mil|Location2.X=6670.085mil|Location1.Y=2491.719mil|Location2.Y=2496.906mil|Absolute=True">Silk To Silk Clearance Constraint: (2.635mil &lt; 3.937mil) Between Text "C11" (6607.511mil,2460.005mil) on Top Overlay And Track (6663.346mil,2499.567mil)(6706.654mil,2499.567mil) on Top Overlay Silk Text to Silk Clearance [2.635mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6016.158mil|Location2.X=6021.346mil|Location1.Y=2342.403mil|Location2.Y=2347.59mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6016.158mil|Location2.X=6021.346mil|Location1.Y=2342.403mil|Location2.Y=2347.59mil|Absolute=True">Silk To Silk Clearance Constraint: (1.52mil &lt; 3.937mil) Between Text "C17" (6022.512mil,2320.005mil) on Top Overlay And Text "R7" (5965.008mil,2320.005mil) on Top Overlay Silk Text to Silk Clearance [1.52mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6144.906mil|Location2.X=6151.858mil|Location1.Y=2184.907mil|Location2.Y=2191.932mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6144.906mil|Location2.X=6151.858mil|Location1.Y=2184.907mil|Location2.Y=2191.932mil|Absolute=True">Silk To Silk Clearance Constraint: (1.095mil &lt; 3.937mil) Between Text "C24" (6145.013mil,2155.005mil) on Top Overlay And Text "C32" (6065.013mil,2190.005mil) on Top Overlay Silk Text to Silk Clearance [1.095mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1050.7mil|Location2.X=1054.324mil|Location1.Y=2108.183mil|Location2.Y=2111.807mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1050.7mil|Location2.X=1054.324mil|Location1.Y=2108.183mil|Location2.Y=2111.807mil|Absolute=True">Silk To Silk Clearance Constraint: (Collision &lt; 3.937mil) Between Text "IC3" (1052.512mil,2080.005mil) on Top Overlay And Track (1047.598mil,2054.016mil)(1047.598mil,2805.984mil) on Top Overlay Silk Text to Silk Clearance [0mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6348.423mil|Location2.X=6353.61mil|Location1.Y=1997.856mil|Location2.Y=2003.043mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6348.423mil|Location2.X=6353.61mil|Location1.Y=1997.856mil|Location2.Y=2003.043mil|Absolute=True">Silk To Silk Clearance Constraint: (1.109mil &lt; 3.937mil) Between Text "R11" (6282.511mil,2000.005mil) on Top Overlay And Track (6355.472mil,2001.012mil)(6469.646mil,2001.012mil) on Top Overlay Silk Text to Silk Clearance [1.109mil]</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDLL3HYHX05Q3DTLSAZ2MUSMZOFANMJO542CWRGHI2ZXAVGTVN32M"><h2>Waived Violations</h2></a><a name="IDFECVM0S1QPPEPXBFH5ESQ3XDGIKFQ33C2N14CFFFTRTNABANTSVN"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="waived">Clearance Constraint (Gap=7.874mil) (All),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6236.416mil|Location2.X=6240.749mil|Location1.Y=2539.999mil|Location2.Y=2544.332mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6236.416mil|Location2.X=6240.749mil|Location1.Y=2539.999mil|Location2.Y=2544.332mil|Absolute=True">Clearance Constraint: (Collision &lt; 5mil) Between Pad U1-29(6260.236mil,2650.433mil) on Top Layer And Via (6238.583mil,2542.165mil) from Top Layer to Bottom Layer </acronym></a><br>Waived by Ayman Alamayri at 4/30/2025 3:41:10 PM<br>This is all one IC</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6236.416mil|Location2.X=6240.749mil|Location1.Y=2583.306mil|Location2.Y=2587.639mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6236.416mil|Location2.X=6240.749mil|Location1.Y=2583.306mil|Location2.Y=2587.639mil|Absolute=True">Clearance Constraint: (Collision &lt; 5mil) Between Pad U1-29(6260.236mil,2650.433mil) on Top Layer And Via (6238.583mil,2585.472mil) from Top Layer to Bottom Layer </acronym></a><br>Waived by Ayman Alamayri at 4/30/2025 3:41:10 PM<br>This is all one IC</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6236.416mil|Location2.X=6240.749mil|Location1.Y=2626.613mil|Location2.Y=2630.946mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6236.416mil|Location2.X=6240.749mil|Location1.Y=2626.613mil|Location2.Y=2630.946mil|Absolute=True">Clearance Constraint: (Collision &lt; 5mil) Between Pad U1-29(6260.236mil,2650.433mil) on Top Layer And Via (6238.583mil,2628.78mil) from Top Layer to Bottom Layer </acronym></a><br>Waived by Ayman Alamayri at 4/30/2025 3:41:10 PM<br>This is all one IC</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6236.416mil|Location2.X=6240.749mil|Location1.Y=2669.92mil|Location2.Y=2674.253mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6236.416mil|Location2.X=6240.749mil|Location1.Y=2669.92mil|Location2.Y=2674.253mil|Absolute=True">Clearance Constraint: (Collision &lt; 5mil) Between Pad U1-29(6260.236mil,2650.433mil) on Top Layer And Via (6238.583mil,2672.087mil) from Top Layer to Bottom Layer </acronym></a><br>Waived by Ayman Alamayri at 4/30/2025 3:41:10 PM<br>This is all one IC</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6236.416mil|Location2.X=6240.749mil|Location1.Y=2713.227mil|Location2.Y=2717.56mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6236.416mil|Location2.X=6240.749mil|Location1.Y=2713.227mil|Location2.Y=2717.56mil|Absolute=True">Clearance Constraint: (Collision &lt; 5mil) Between Pad U1-29(6260.236mil,2650.433mil) on Top Layer And Via (6238.583mil,2715.394mil) from Top Layer to Bottom Layer </acronym></a><br>Waived by Ayman Alamayri at 4/30/2025 3:41:10 PM<br>This is all one IC</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6236.416mil|Location2.X=6240.749mil|Location1.Y=2756.534mil|Location2.Y=2760.867mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6236.416mil|Location2.X=6240.749mil|Location1.Y=2756.534mil|Location2.Y=2760.867mil|Absolute=True">Clearance Constraint: (Collision &lt; 5mil) Between Pad U1-29(6260.236mil,2650.433mil) on Top Layer And Via (6238.583mil,2758.701mil) from Top Layer to Bottom Layer </acronym></a><br>Waived by Ayman Alamayri at 4/30/2025 3:41:10 PM<br>This is all one IC</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6279.723mil|Location2.X=6284.056mil|Location1.Y=2539.999mil|Location2.Y=2544.332mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6279.723mil|Location2.X=6284.056mil|Location1.Y=2539.999mil|Location2.Y=2544.332mil|Absolute=True">Clearance Constraint: (Collision &lt; 5mil) Between Pad U1-29(6260.236mil,2650.433mil) on Top Layer And Via (6281.89mil,2542.165mil) from Top Layer to Bottom Layer </acronym></a><br>Waived by Ayman Alamayri at 4/30/2025 3:41:10 PM<br>This is all one IC</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6279.723mil|Location2.X=6284.056mil|Location1.Y=2583.306mil|Location2.Y=2587.639mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6279.723mil|Location2.X=6284.056mil|Location1.Y=2583.306mil|Location2.Y=2587.639mil|Absolute=True">Clearance Constraint: (Collision &lt; 5mil) Between Pad U1-29(6260.236mil,2650.433mil) on Top Layer And Via (6281.89mil,2585.472mil) from Top Layer to Bottom Layer </acronym></a><br>Waived by Ayman Alamayri at 4/30/2025 3:41:10 PM<br>This is all one IC</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6279.723mil|Location2.X=6284.056mil|Location1.Y=2626.613mil|Location2.Y=2630.946mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6279.723mil|Location2.X=6284.056mil|Location1.Y=2626.613mil|Location2.Y=2630.946mil|Absolute=True">Clearance Constraint: (Collision &lt; 5mil) Between Pad U1-29(6260.236mil,2650.433mil) on Top Layer And Via (6281.89mil,2628.78mil) from Top Layer to Bottom Layer </acronym></a><br>Waived by Ayman Alamayri at 4/30/2025 3:41:10 PM<br>This is all one IC</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6279.723mil|Location2.X=6284.056mil|Location1.Y=2669.92mil|Location2.Y=2674.253mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6279.723mil|Location2.X=6284.056mil|Location1.Y=2669.92mil|Location2.Y=2674.253mil|Absolute=True">Clearance Constraint: (Collision &lt; 5mil) Between Pad U1-29(6260.236mil,2650.433mil) on Top Layer And Via (6281.89mil,2672.087mil) from Top Layer to Bottom Layer </acronym></a><br>Waived by Ayman Alamayri at 4/30/2025 3:41:10 PM<br>This is all one IC</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6279.723mil|Location2.X=6284.056mil|Location1.Y=2713.227mil|Location2.Y=2717.56mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6279.723mil|Location2.X=6284.056mil|Location1.Y=2713.227mil|Location2.Y=2717.56mil|Absolute=True">Clearance Constraint: (Collision &lt; 5mil) Between Pad U1-29(6260.236mil,2650.433mil) on Top Layer And Via (6281.89mil,2715.394mil) from Top Layer to Bottom Layer </acronym></a><br>Waived by Ayman Alamayri at 4/30/2025 3:41:10 PM<br>This is all one IC</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6279.723mil|Location2.X=6284.056mil|Location1.Y=2756.534mil|Location2.Y=2760.867mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6279.723mil|Location2.X=6284.056mil|Location1.Y=2756.534mil|Location2.Y=2760.867mil|Absolute=True">Clearance Constraint: (Collision &lt; 5mil) Between Pad U1-29(6260.236mil,2650.433mil) on Top Layer And Via (6281.89mil,2758.701mil) from Top Layer to Bottom Layer </acronym></a><br>Waived by Ayman Alamayri at 4/30/2025 3:41:10 PM<br>This is all one IC</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2563.424mil|Location2.X=2567.757mil|Location1.Y=2230.471mil|Location2.Y=2234.804mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2563.424mil|Location2.X=2567.757mil|Location1.Y=2230.471mil|Location2.Y=2234.804mil|Absolute=True">Clearance Constraint: (Collision &lt; 5mil) Between Pad U3-17(2608.898mil,2254.291mil) on Top Layer And Via (2565.591mil,2232.638mil) from Top Layer to Bottom Layer </acronym></a><br>Waived by Ayman Alamayri at 4/30/2025 3:41:10 PM<br>This is all one IC</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2563.424mil|Location2.X=2567.757mil|Location1.Y=2273.778mil|Location2.Y=2278.111mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2563.424mil|Location2.X=2567.757mil|Location1.Y=2273.778mil|Location2.Y=2278.111mil|Absolute=True">Clearance Constraint: (Collision &lt; 5mil) Between Pad U3-17(2608.898mil,2254.291mil) on Top Layer And Via (2565.591mil,2275.945mil) from Top Layer to Bottom Layer </acronym></a><br>Waived by Ayman Alamayri at 4/30/2025 3:41:10 PM<br>This is all one IC</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2606.731mil|Location2.X=2611.064mil|Location1.Y=2230.471mil|Location2.Y=2234.804mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2606.731mil|Location2.X=2611.064mil|Location1.Y=2230.471mil|Location2.Y=2234.804mil|Absolute=True">Clearance Constraint: (Collision &lt; 5mil) Between Pad U3-17(2608.898mil,2254.291mil) on Top Layer And Via (2608.898mil,2232.638mil) from Top Layer to Bottom Layer </acronym></a><br>Waived by Ayman Alamayri at 4/30/2025 3:41:10 PM<br>This is all one IC</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2606.731mil|Location2.X=2611.064mil|Location1.Y=2273.778mil|Location2.Y=2278.111mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2606.731mil|Location2.X=2611.064mil|Location1.Y=2273.778mil|Location2.Y=2278.111mil|Absolute=True">Clearance Constraint: (Collision &lt; 5mil) Between Pad U3-17(2608.898mil,2254.291mil) on Top Layer And Via (2608.898mil,2275.945mil) from Top Layer to Bottom Layer </acronym></a><br>Waived by Ayman Alamayri at 4/30/2025 3:41:10 PM<br>This is all one IC</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2650.038mil|Location2.X=2654.371mil|Location1.Y=2230.471mil|Location2.Y=2234.804mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2650.038mil|Location2.X=2654.371mil|Location1.Y=2230.471mil|Location2.Y=2234.804mil|Absolute=True">Clearance Constraint: (Collision &lt; 5mil) Between Pad U3-17(2608.898mil,2254.291mil) on Top Layer And Via (2652.205mil,2232.638mil) from Top Layer to Bottom Layer </acronym></a><br>Waived by Ayman Alamayri at 4/30/2025 3:41:10 PM<br>This is all one IC</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2650.038mil|Location2.X=2654.371mil|Location1.Y=2273.778mil|Location2.Y=2278.111mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2650.038mil|Location2.X=2654.371mil|Location1.Y=2273.778mil|Location2.Y=2278.111mil|Absolute=True">Clearance Constraint: (Collision &lt; 5mil) Between Pad U3-17(2608.898mil,2254.291mil) on Top Layer And Via (2652.205mil,2275.945mil) from Top Layer to Bottom Layer </acronym></a><br>Waived by Ayman Alamayri at 4/30/2025 3:41:10 PM<br>This is all one IC</td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDC41DHFCEJZRKZ2Y42NFBMVUKJY3RWOEKAJ0LGITBAICZ4ACFRNJ"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="waived">Clearance Constraint (Gap=7.874mil) (All),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5041.875mil|Location2.X=5048.125mil|Location1.Y=2781.875mil|Location2.Y=2788.125mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5041.875mil|Location2.X=5048.125mil|Location1.Y=2781.875mil|Location2.Y=2788.125mil|Absolute=True">Clearance Constraint: (Collision &lt; 7.874mil) Between Area Fill (5045mil,915mil) (5250mil,4090mil) on Keep-Out Layer And Track (4060mil,2785mil)(5428.898mil,2785mil) on Top Layer </acronym></a><br>Waived by Ayman Alamayri at 4/30/2025 3:42:12 PM<br>These are the only two traces allowed to cross the keep out</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5041.875mil|Location2.X=5048.125mil|Location1.Y=3625.419mil|Location2.Y=3631.668mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5041.875mil|Location2.X=5048.125mil|Location1.Y=3625.419mil|Location2.Y=3631.668mil|Absolute=True">Clearance Constraint: (Collision &lt; 7.874mil) Between Area Fill (5045mil,915mil) (5250mil,4090mil) on Keep-Out Layer And Track (4715mil,3628.543mil)(5393.346mil,3628.543mil) on Top Layer </acronym></a><br>Waived by Ayman Alamayri at 4/30/2025 3:42:12 PM<br>These are the only two traces allowed to cross the keep out</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3162.545mil|Location2.X=3168.794mil|Location1.Y=1461.875mil|Location2.Y=1468.125mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3162.545mil|Location2.X=3168.794mil|Location1.Y=1461.875mil|Location2.Y=1468.125mil|Absolute=True">Clearance Constraint: (Collision &lt; 7.874mil) Between Pad Q1-9(3165.669mil,1465mil) on Top Layer And Region (0 hole(s)) Top Layer </acronym></a><br>Waived by Ayman Alamayri at 4/30/2025 3:49:18 PM<br>Weird mosfet error</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4656.206mil|Location2.X=4662.455mil|Location1.Y=1461.875mil|Location2.Y=1468.125mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4656.206mil|Location2.X=4662.455mil|Location1.Y=1461.875mil|Location2.Y=1468.125mil|Absolute=True">Clearance Constraint: (Collision &lt; 7.874mil) Between Pad Q2-9(4659.331mil,1465mil) on Top Layer And Region (0 hole(s)) Top Layer </acronym></a><br>Waived by Ayman Alamayri at 4/30/2025 3:49:18 PM<br>Weird mosfet error</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3162.545mil|Location2.X=3168.794mil|Location1.Y=2161.875mil|Location2.Y=2168.125mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3162.545mil|Location2.X=3168.794mil|Location1.Y=2161.875mil|Location2.Y=2168.125mil|Absolute=True">Clearance Constraint: (Collision &lt; 7.874mil) Between Pad Q4-9(3165.669mil,2165mil) on Top Layer And Region (0 hole(s)) Top Layer </acronym></a><br>Waived by Ayman Alamayri at 4/30/2025 3:49:18 PM<br>Weird mosfet error</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4656.206mil|Location2.X=4662.455mil|Location1.Y=2161.875mil|Location2.Y=2168.125mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4656.206mil|Location2.X=4662.455mil|Location1.Y=2161.875mil|Location2.Y=2168.125mil|Absolute=True">Clearance Constraint: (Collision &lt; 7.874mil) Between Pad Q5-9(4659.331mil,2165mil) on Top Layer And Region (0 hole(s)) Top Layer </acronym></a><br>Waived by Ayman Alamayri at 4/30/2025 3:49:18 PM<br>Weird mosfet error</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3005.064mil|Location2.X=3011.314mil|Location1.Y=1511.509mil|Location2.Y=1517.758mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3005.064mil|Location2.X=3011.314mil|Location1.Y=1511.509mil|Location2.Y=1517.758mil|Absolute=True">Clearance Constraint: (Collision &lt; 7.874mil) Between Region (0 hole(s)) Top Layer And Track (2722.823mil,1800mil)(3057.823mil,1465mil) on Top Layer </acronym></a><br>Waived by Ayman Alamayri at 4/30/2025 3:49:56 PM<br>Weird mosfet error</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3005.064mil|Location2.X=3011.314mil|Location1.Y=2135.064mil|Location2.Y=2141.314mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3005.064mil|Location2.X=3011.314mil|Location1.Y=2135.064mil|Location2.Y=2141.314mil|Absolute=True">Clearance Constraint: (Collision &lt; 7.874mil) Between Region (0 hole(s)) Top Layer And Track (2950mil,2080mil)(3035mil,2165mil) on Top Layer </acronym></a><br>Waived by Ayman Alamayri at 4/30/2025 3:49:56 PM<br>Weird mosfet error</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3031.875mil|Location2.X=3038.125mil|Location1.Y=2161.875mil|Location2.Y=2168.125mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3031.875mil|Location2.X=3038.125mil|Location1.Y=2161.875mil|Location2.Y=2168.125mil|Absolute=True">Clearance Constraint: (Collision &lt; 7.874mil) Between Region (0 hole(s)) Top Layer And Track (3035mil,2165mil)(3165.669mil,2165mil) on Top Layer </acronym></a><br>Waived by Ayman Alamayri at 4/30/2025 3:49:56 PM<br>Weird mosfet error</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3054.698mil|Location2.X=3060.947mil|Location1.Y=1461.875mil|Location2.Y=1468.125mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3054.698mil|Location2.X=3060.947mil|Location1.Y=1461.875mil|Location2.Y=1468.125mil|Absolute=True">Clearance Constraint: (Collision &lt; 7.874mil) Between Region (0 hole(s)) Top Layer And Track (3057.823mil,1465mil)(3165.669mil,1465mil) on Top Layer </acronym></a><br>Waived by Ayman Alamayri at 4/30/2025 3:49:56 PM<br>Weird mosfet error</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3162.545mil|Location2.X=3168.794mil|Location1.Y=1461.875mil|Location2.Y=1468.125mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3162.545mil|Location2.X=3168.794mil|Location1.Y=1461.875mil|Location2.Y=1468.125mil|Absolute=True">Clearance Constraint: (Collision &lt; 7.874mil) Between Region (0 hole(s)) Top Layer And Track (3165.669mil,1465mil)(3165.669mil,1695.669mil) on Top Layer </acronym></a><br>Waived by Ayman Alamayri at 4/30/2025 3:49:56 PM<br>Weird mosfet error</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3162.545mil|Location2.X=3168.794mil|Location1.Y=2161.875mil|Location2.Y=2168.125mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3162.545mil|Location2.X=3168.794mil|Location1.Y=2161.875mil|Location2.Y=2168.125mil|Absolute=True">Clearance Constraint: (Collision &lt; 7.874mil) Between Region (0 hole(s)) Top Layer And Track (3165.669mil,2165mil)(3165.669mil,2430.669mil) on Top Layer </acronym></a><br>Waived by Ayman Alamayri at 4/30/2025 3:49:56 PM<br>Weird mosfet error</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4498.726mil|Location2.X=4504.975mil|Location1.Y=1619.356mil|Location2.Y=1625.605mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4498.726mil|Location2.X=4504.975mil|Location1.Y=1619.356mil|Location2.Y=1625.605mil|Absolute=True">Clearance Constraint: (Collision &lt; 7.874mil) Between Region (0 hole(s)) Top Layer And Track (4468.976mil,1655.354mil)(4534.724mil,1589.606mil) on Top Layer </acronym></a><br>Waived by Ayman Alamayri at 4/30/2025 3:49:56 PM<br>Weird mosfet error</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4531.6mil|Location2.X=4537.849mil|Location1.Y=1586.482mil|Location2.Y=1592.731mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4531.6mil|Location2.X=4537.849mil|Location1.Y=1586.482mil|Location2.Y=1592.731mil|Absolute=True">Clearance Constraint: (Collision &lt; 7.874mil) Between Region (0 hole(s)) Top Layer And Track (4534.724mil,1589.606mil)(4659.331mil,1465mil) on Top Layer </acronym></a><br>Waived by Ayman Alamayri at 4/30/2025 3:49:56 PM<br>Weird mosfet error</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4574.982mil|Location2.X=4581.231mil|Location1.Y=1270.93mil|Location2.Y=1277.18mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4574.982mil|Location2.X=4581.231mil|Location1.Y=1270.93mil|Location2.Y=1277.18mil|Absolute=True">Clearance Constraint: (Collision &lt; 7.874mil) Between Region (0 hole(s)) Top Layer And Track (4578.107mil,1221.328mil)(4578.107mil,1383.776mil) on Top Layer </acronym></a><br>Waived by Ayman Alamayri at 4/30/2025 3:49:56 PM<br>Weird mosfet error</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4574.982mil|Location2.X=4581.231mil|Location1.Y=1380.651mil|Location2.Y=1386.9mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4574.982mil|Location2.X=4581.231mil|Location1.Y=1380.651mil|Location2.Y=1386.9mil|Absolute=True">Clearance Constraint: (Collision &lt; 7.874mil) Between Region (0 hole(s)) Top Layer And Track (4578.107mil,1383.776mil)(4659.331mil,1465mil) on Top Layer </acronym></a><br>Waived by Ayman Alamayri at 4/30/2025 3:49:56 PM<br>Weird mosfet error</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4656.206mil|Location2.X=4662.455mil|Location1.Y=2161.875mil|Location2.Y=2168.125mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4656.206mil|Location2.X=4662.455mil|Location1.Y=2161.875mil|Location2.Y=2168.125mil|Absolute=True">Clearance Constraint: (Collision &lt; 7.874mil) Between Region (0 hole(s)) Top Layer And Track (4659.331mil,2165mil)(4659.331mil,2450.669mil) on Top Layer </acronym></a><br>Waived by Ayman Alamayri at 4/30/2025 3:49:56 PM<br>Weird mosfet error</td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDRRFTYHGLKP1THUDLP42XPGV55IGOZ1UATNJNPRODXO0QGKGDUO2E"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="waived">Short-Circuit Constraint (Allowed=No) (All),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2963.575mil|Location2.X=3367.764mil|Location1.Y=1262.906mil|Location2.Y=1667.094mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2963.575mil|Location2.X=3367.764mil|Location1.Y=1262.906mil|Location2.Y=1667.094mil|Absolute=True">Short-Circuit Constraint: Between Pad Q1-9(3165.669mil,1465mil) on Top Layer And Region (0 hole(s)) Top Layer Location : [X = 3165.669mil][Y = 1465mil]</acronym></a><br>Waived by Ayman Alamayri at 4/30/2025 3:50:31 PM<br>Weird mosfet error</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4457.236mil|Location2.X=4861.425mil|Location1.Y=1262.906mil|Location2.Y=1667.094mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4457.236mil|Location2.X=4861.425mil|Location1.Y=1262.906mil|Location2.Y=1667.094mil|Absolute=True">Short-Circuit Constraint: Between Pad Q2-9(4659.331mil,1465mil) on Top Layer And Region (0 hole(s)) Top Layer Location : [X = 4659.331mil][Y = 1465mil]</acronym></a><br>Waived by Ayman Alamayri at 4/30/2025 3:50:31 PM<br>Weird mosfet error</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2963.575mil|Location2.X=3367.764mil|Location1.Y=1962.906mil|Location2.Y=2367.094mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2963.575mil|Location2.X=3367.764mil|Location1.Y=1962.906mil|Location2.Y=2367.094mil|Absolute=True">Short-Circuit Constraint: Between Pad Q4-9(3165.669mil,2165mil) on Top Layer And Region (0 hole(s)) Top Layer Location : [X = 3165.669mil][Y = 2165mil]</acronym></a><br>Waived by Ayman Alamayri at 4/30/2025 3:50:31 PM<br>Weird mosfet error</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4457.236mil|Location2.X=4861.425mil|Location1.Y=1962.906mil|Location2.Y=2367.094mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4457.236mil|Location2.X=4861.425mil|Location1.Y=1962.906mil|Location2.Y=2367.094mil|Absolute=True">Short-Circuit Constraint: Between Pad Q5-9(4659.331mil,2165mil) on Top Layer And Region (0 hole(s)) Top Layer Location : [X = 4659.331mil][Y = 2165mil]</acronym></a><br>Waived by Ayman Alamayri at 4/30/2025 3:50:31 PM<br>Weird mosfet error</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2977.451mil|Location2.X=3113.681mil|Location1.Y=1426.905mil|Location2.Y=1563.135mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2977.451mil|Location2.X=3113.681mil|Location1.Y=1426.905mil|Location2.Y=1563.135mil|Absolute=True">Short-Circuit Constraint: Between Region (0 hole(s)) Top Layer And Track (2722.823mil,1800mil)(3057.823mil,1465mil) on Top Layer Location : [X = 3045.566mil][Y = 1495.02mil]</acronym></a><br>Waived by Ayman Alamayri at 4/30/2025 3:50:31 PM<br>Weird mosfet error</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2981.798mil|Location2.X=3086.512mil|Location1.Y=2094.034mil|Location2.Y=2198.749mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2981.798mil|Location2.X=3086.512mil|Location1.Y=2094.034mil|Location2.Y=2198.749mil|Absolute=True">Short-Circuit Constraint: Between Region (0 hole(s)) Top Layer And Track (2950mil,2080mil)(3035mil,2165mil) on Top Layer Location : [X = 3034.155mil][Y = 2146.392mil]</acronym></a><br>Waived by Ayman Alamayri at 4/30/2025 3:50:31 PM<br>Weird mosfet error</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3004.956mil|Location2.X=3195.714mil|Location1.Y=2069.621mil|Location2.Y=2260.379mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3004.956mil|Location2.X=3195.714mil|Location1.Y=2069.621mil|Location2.Y=2260.379mil|Absolute=True">Short-Circuit Constraint: Between Region (0 hole(s)) Top Layer And Track (3035mil,2165mil)(3165.669mil,2165mil) on Top Layer Location : [X = 3100.335mil][Y = 2165mil]</acronym></a><br>Waived by Ayman Alamayri at 4/30/2025 3:50:31 PM<br>Weird mosfet error</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3027.306mil|Location2.X=3196.186mil|Location1.Y=1380.56mil|Location2.Y=1549.44mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3027.306mil|Location2.X=3196.186mil|Location1.Y=1380.56mil|Location2.Y=1549.44mil|Absolute=True">Short-Circuit Constraint: Between Region (0 hole(s)) Top Layer And Track (3057.823mil,1465mil)(3165.669mil,1465mil) on Top Layer Location : [X = 3111.746mil][Y = 1465mil]</acronym></a><br>Waived by Ayman Alamayri at 4/30/2025 3:50:31 PM<br>Weird mosfet error</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3053.254mil|Location2.X=3278.084mil|Location1.Y=1435.497mil|Location2.Y=1660.327mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3053.254mil|Location2.X=3278.084mil|Location1.Y=1435.497mil|Location2.Y=1660.327mil|Absolute=True">Short-Circuit Constraint: Between Region (0 hole(s)) Top Layer And Track (3165.669mil,1465mil)(3165.669mil,1695.669mil) on Top Layer Location : [X = 3165.669mil][Y = 1547.912mil]</acronym></a><br>Waived by Ayman Alamayri at 4/30/2025 3:50:31 PM<br>Weird mosfet error</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3053.254mil|Location2.X=3278.084mil|Location1.Y=2135.497mil|Location2.Y=2360.327mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3053.254mil|Location2.X=3278.084mil|Location1.Y=2135.497mil|Location2.Y=2360.327mil|Absolute=True">Short-Circuit Constraint: Between Region (0 hole(s)) Top Layer And Track (3165.669mil,2165mil)(3165.669mil,2430.669mil) on Top Layer Location : [X = 3165.669mil][Y = 2247.912mil]</acronym></a><br>Waived by Ayman Alamayri at 4/30/2025 3:50:31 PM<br>Weird mosfet error</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4475.199mil|Location2.X=4586.496mil|Location1.Y=1554.567mil|Location2.Y=1665.864mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4475.199mil|Location2.X=4586.496mil|Location1.Y=1554.567mil|Location2.Y=1665.864mil|Absolute=True">Short-Circuit Constraint: Between Region (0 hole(s)) Top Layer And Track (4468.976mil,1655.354mil)(4534.724mil,1589.606mil) on Top Layer Location : [X = 4530.848mil][Y = 1610.215mil]</acronym></a><br>Waived by Ayman Alamayri at 4/30/2025 3:50:31 PM<br>Weird mosfet error</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4471.891mil|Location2.X=4722.164mil|Location1.Y=1402.167mil|Location2.Y=1652.439mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4471.891mil|Location2.X=4722.164mil|Location1.Y=1402.167mil|Location2.Y=1652.439mil|Absolute=True">Short-Circuit Constraint: Between Region (0 hole(s)) Top Layer And Track (4534.724mil,1589.606mil)(4659.331mil,1465mil) on Top Layer Location : [X = 4597.028mil][Y = 1527.303mil]</acronym></a><br>Waived by Ayman Alamayri at 4/30/2025 3:50:31 PM<br>Weird mosfet error</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4504.658mil|Location2.X=4651.556mil|Location1.Y=1268.027mil|Location2.Y=1414.925mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4504.658mil|Location2.X=4651.556mil|Location1.Y=1268.027mil|Location2.Y=1414.925mil|Absolute=True">Short-Circuit Constraint: Between Region (0 hole(s)) Top Layer And Track (4578.107mil,1221.328mil)(4578.107mil,1383.776mil) on Top Layer Location : [X = 4578.107mil][Y = 1341.476mil]</acronym></a><br>Waived by Ayman Alamayri at 4/30/2025 3:50:31 PM<br>Weird mosfet error</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4524.258mil|Location2.X=4713.179mil|Location1.Y=1329.927mil|Location2.Y=1518.848mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4524.258mil|Location2.X=4713.179mil|Location1.Y=1329.927mil|Location2.Y=1518.848mil|Absolute=True">Short-Circuit Constraint: Between Region (0 hole(s)) Top Layer And Track (4578.107mil,1383.776mil)(4659.331mil,1465mil) on Top Layer Location : [X = 4618.719mil][Y = 1424.388mil]</acronym></a><br>Waived by Ayman Alamayri at 4/30/2025 3:50:31 PM<br>Weird mosfet error</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4546.916mil|Location2.X=4771.746mil|Location1.Y=2135.497mil|Location2.Y=2360.327mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4546.916mil|Location2.X=4771.746mil|Location1.Y=2135.497mil|Location2.Y=2360.327mil|Absolute=True">Short-Circuit Constraint: Between Region (0 hole(s)) Top Layer And Track (4659.331mil,2165mil)(4659.331mil,2450.669mil) on Top Layer Location : [X = 4659.331mil][Y = 2247.912mil]</acronym></a><br>Waived by Ayman Alamayri at 4/30/2025 3:50:31 PM<br>Weird mosfet error</td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDGE0VV31Z140MNAGQ1SCQHPMZLISKGFAUZE2BUDFBATTNAEO3QUKO"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="waived">Net Antennae (Tolerance=0mil) (All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2548.248mil|Location2.X=2591.086mil|Location1.Y=2258.602mil|Location2.Y=2324.825mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2548.248mil|Location2.X=2591.086mil|Location1.Y=2258.602mil|Location2.Y=2324.825mil|Absolute=True">Net Antennae: Via (2565.591mil,2275.945mil) from Top Layer to Bottom Layer </acronym></a><br>Waived by Ayman Alamayri at 4/30/2025 7:11:05 AM<br>gnd pad</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2591.555mil|Location2.X=2634.394mil|Location1.Y=2215.295mil|Location2.Y=2281.518mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2591.555mil|Location2.X=2634.394mil|Location1.Y=2215.295mil|Location2.Y=2281.518mil|Absolute=True">Net Antennae: Via (2608.898mil,2232.638mil) from Top Layer to Bottom Layer </acronym></a><br>Waived by Ayman Alamayri at 4/30/2025 7:10:41 AM<br>gnd pad</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2591.555mil|Location2.X=2634.394mil|Location1.Y=2258.602mil|Location2.Y=2324.825mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2591.555mil|Location2.X=2634.394mil|Location1.Y=2258.602mil|Location2.Y=2324.825mil|Absolute=True">Net Antennae: Via (2608.898mil,2275.945mil) from Top Layer to Bottom Layer </acronym></a><br>Waived by Ayman Alamayri at 4/30/2025 7:11:00 AM<br>gnd pad</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2634.862mil|Location2.X=2677.701mil|Location1.Y=2215.295mil|Location2.Y=2281.518mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2634.862mil|Location2.X=2677.701mil|Location1.Y=2215.295mil|Location2.Y=2281.518mil|Absolute=True">Net Antennae: Via (2652.205mil,2232.638mil) from Top Layer to Bottom Layer </acronym></a><br>Waived by Ayman Alamayri at 4/30/2025 7:10:20 AM<br>gnd pad</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6221.24mil|Location2.X=6264.078mil|Location1.Y=2524.823mil|Location2.Y=2591.046mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6221.24mil|Location2.X=6264.078mil|Location1.Y=2524.823mil|Location2.Y=2591.046mil|Absolute=True">Net Antennae: Via (6238.583mil,2542.165mil) from Top Layer to Bottom Layer </acronym></a><br>Waived by Ayman Alamayri at 4/30/2025 7:11:11 AM<br>gnd pad</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6221.24mil|Location2.X=6264.078mil|Location1.Y=2568.13mil|Location2.Y=2634.353mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6221.24mil|Location2.X=6264.078mil|Location1.Y=2568.13mil|Location2.Y=2634.353mil|Absolute=True">Net Antennae: Via (6238.583mil,2585.472mil) from Top Layer to Bottom Layer </acronym></a><br>Waived by Ayman Alamayri at 4/30/2025 7:11:16 AM<br>gnd pad</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6221.24mil|Location2.X=6264.078mil|Location1.Y=2611.437mil|Location2.Y=2677.66mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6221.24mil|Location2.X=6264.078mil|Location1.Y=2611.437mil|Location2.Y=2677.66mil|Absolute=True">Net Antennae: Via (6238.583mil,2628.78mil) from Top Layer to Bottom Layer </acronym></a><br>Waived by Ayman Alamayri at 4/30/2025 7:11:35 AM<br>gnd pad</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6221.24mil|Location2.X=6264.078mil|Location1.Y=2654.744mil|Location2.Y=2720.967mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6221.24mil|Location2.X=6264.078mil|Location1.Y=2654.744mil|Location2.Y=2720.967mil|Absolute=True">Net Antennae: Via (6238.583mil,2672.087mil) from Top Layer to Bottom Layer </acronym></a><br>Waived by Ayman Alamayri at 4/30/2025 7:11:35 AM<br>gnd pad</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6221.24mil|Location2.X=6264.078mil|Location1.Y=2698.051mil|Location2.Y=2764.274mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6221.24mil|Location2.X=6264.078mil|Location1.Y=2698.051mil|Location2.Y=2764.274mil|Absolute=True">Net Antennae: Via (6238.583mil,2715.394mil) from Top Layer to Bottom Layer </acronym></a><br>Waived by Ayman Alamayri at 4/30/2025 7:11:35 AM<br>gnd pad</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6221.24mil|Location2.X=6264.078mil|Location1.Y=2741.358mil|Location2.Y=2807.581mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6221.24mil|Location2.X=6264.078mil|Location1.Y=2741.358mil|Location2.Y=2807.581mil|Absolute=True">Net Antennae: Via (6238.583mil,2758.701mil) from Top Layer to Bottom Layer </acronym></a><br>Waived by Ayman Alamayri at 4/30/2025 7:11:35 AM<br>gnd pad</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6264.547mil|Location2.X=6307.386mil|Location1.Y=2524.823mil|Location2.Y=2591.046mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6264.547mil|Location2.X=6307.386mil|Location1.Y=2524.823mil|Location2.Y=2591.046mil|Absolute=True">Net Antennae: Via (6281.89mil,2542.165mil) from Top Layer to Bottom Layer </acronym></a><br>Waived by Ayman Alamayri at 4/30/2025 7:11:35 AM<br>gnd pad</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6264.547mil|Location2.X=6307.386mil|Location1.Y=2568.13mil|Location2.Y=2634.353mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6264.547mil|Location2.X=6307.386mil|Location1.Y=2568.13mil|Location2.Y=2634.353mil|Absolute=True">Net Antennae: Via (6281.89mil,2585.472mil) from Top Layer to Bottom Layer </acronym></a><br>Waived by Ayman Alamayri at 4/30/2025 7:11:35 AM<br>gnd pad</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6264.547mil|Location2.X=6307.386mil|Location1.Y=2611.437mil|Location2.Y=2677.66mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6264.547mil|Location2.X=6307.386mil|Location1.Y=2611.437mil|Location2.Y=2677.66mil|Absolute=True">Net Antennae: Via (6281.89mil,2628.78mil) from Top Layer to Bottom Layer </acronym></a><br>Waived by Ayman Alamayri at 4/30/2025 7:11:35 AM<br>gnd pad</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6264.547mil|Location2.X=6307.386mil|Location1.Y=2654.744mil|Location2.Y=2720.967mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6264.547mil|Location2.X=6307.386mil|Location1.Y=2654.744mil|Location2.Y=2720.967mil|Absolute=True">Net Antennae: Via (6281.89mil,2672.087mil) from Top Layer to Bottom Layer </acronym></a><br>Waived by Ayman Alamayri at 4/30/2025 7:11:35 AM<br>gnd pad</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6264.547mil|Location2.X=6307.386mil|Location1.Y=2698.051mil|Location2.Y=2764.274mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6264.547mil|Location2.X=6307.386mil|Location1.Y=2698.051mil|Location2.Y=2764.274mil|Absolute=True">Net Antennae: Via (6281.89mil,2715.394mil) from Top Layer to Bottom Layer </acronym></a><br>Waived by Ayman Alamayri at 4/30/2025 7:11:35 AM<br>gnd pad</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6264.547mil|Location2.X=6307.386mil|Location1.Y=2741.358mil|Location2.Y=2807.581mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6264.547mil|Location2.X=6307.386mil|Location1.Y=2741.358mil|Location2.Y=2807.581mil|Absolute=True">Net Antennae: Via (6281.89mil,2758.701mil) from Top Layer to Bottom Layer </acronym></a><br>Waived by Ayman Alamayri at 4/30/2025 7:11:35 AM<br>gnd pad</td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="ID530ZJBQDQD4MP4XBH4Z1VY2NUNMQYIIXRH3RRNPVSGXMLRCEHUTF"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="waived">Height Constraint (Min=0mil) (Max=1000mil) (Prefered=500mil) (All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1575.299mil|Location2.X=1577.299mil|Location1.Y=2329mil|Location2.Y=2331mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1575.299mil|Location2.X=1577.299mil|Location1.Y=2329mil|Location2.Y=2331mil|Absolute=True">Height Constraint: Small Component U2-85300001009 (1576.299mil,2330mil) on Top Layer Actual Height = 1329.921mil</acronym></a><br>Waived by Ayman Alamayri at 4/30/2025 3:38:42 PM<br>Height is not an issue</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2574mil|Location2.X=2576mil|Location1.Y=2489mil|Location2.Y=2491mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Owner\Documents\GitHub\c195-group-9-vocast-pcb\c195-group-9-vocast-pcb\Basestation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2574mil|Location2.X=2576mil|Location1.Y=2489mil|Location2.Y=2491mil|Absolute=True">Height Constraint: SMT Small Component C45-0603 4.7uF 25V (2575mil,2490mil) on Top Layer Actual Height = 1169.291mil</acronym></a><br>Waived by Ayman Alamayri at 4/30/2025 3:38:54 PM<br>For some reason the 3d print is missing</td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br></body>
+</html>
