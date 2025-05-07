@@ -186,7 +186,7 @@ GenerateClassCluster=0
 DocumentUniqueId=
 
 [Document9]
-DocumentPath=Project Outputs for c195-group-9-vocast-pcb\Others\CAMtastic1.Cam
+DocumentPath=Other Project Outputs for c195-group-9-vocast-pcb\CAMtastic1.Cam
 AnnotationEnabled=1
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
@@ -203,7 +203,7 @@ GenerateClassCluster=0
 DocumentUniqueId=
 
 [Document10]
-DocumentPath=Project Outputs for c195-group-9-vocast-pcb\Others\CAMtastic2.Cam
+DocumentPath=Other Project Outputs for c195-group-9-vocast-pcb\CAMtastic2.Cam
 AnnotationEnabled=1
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
